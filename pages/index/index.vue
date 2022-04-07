@@ -9,14 +9,18 @@
 		<div class="list">
 			<div class="left">
 				<div class="video" v-for="(item,index) in list_main" v-if="index % 2 === 0">
-					<image :src="item.pic" mode=""></image>
-					<text>{{ item.title }}</text>
+					<navigator :url="'../player/player?id=' + item.bvid + '&title=' + item.title">
+						<image :src="item.pic" mode=""></image>
+						<text>{{ item.title }}</text>
+					</navigator>
 				</div>
 			</div>
 			<div class="right">
 				<div class="video" v-for="(item,index) in list_main" v-if="index % 2 !== 0">
-					<image :src="item.pic" mode=""></image>
-					<text>{{ item.title }}</text>
+					<navigator :url="'../player/player?id=' + item.bvid + '&title=' + item.title">
+						<image :src="item.pic" mode=""></image>
+						<text>{{ item.title }}</text>
+					</navigator>
 				</div>
 			</div>
 		</div>
@@ -28,6 +32,7 @@
 		data() {
 			return {
 				mobile: '',
+				page: 1,
 				list_main: []
 			}
 		},
@@ -37,33 +42,39 @@
 			} else {
 				this.mobile = 'other'
 			}
-			this.getList()
+			this.getList(false, 1)
+			this.getList(false, false)
 		},
 		onPullDownRefresh() {
 			setTimeout(() => {
 				uni.stopPullDownRefresh();
-				this.getList()
+				this.getList(false, 1)
 			}, 1000);
 		},
 		onReachBottom () {
+			var page = this.page = this.page + 1 
+			uni.showToast({
+				icon: 'loading',
+				duration: 1600
+			})
 			setTimeout(() => {
-				this.getList(true)
-			},1500)
+				this.getList(true, page)
+			}, 1500)
 		},
 		methods: {
-			getList(bottom) {
-				if (!bottom) {
+			getList(bottom, page) {
+				var list = []
+				if (!bottom && page) {
 					uni.request({
-						url:'https://bili.tnyl.xyz/index/ding.json',
+						url:'https://bili.tnyl.xyz/index/ding.json?page=' + this.page,
 						success: (res) => {
 							this.list_main = res.data.douga
 						}
 					})
-				} else {
-					var list = []
+				} else if (bottom && page) {
 					list = Object.values(this.list_main)
 					uni.request({
-						url:'https://bili.tnyl.xyz/index/ding.json',
+						url:'https://bili.tnyl.xyz/index/ding.json?page=' + page,
 						success: (res) => {
 							let more_list = Object.values(res.data.douga)
 							this.list_main = [...list, ...more_list]
