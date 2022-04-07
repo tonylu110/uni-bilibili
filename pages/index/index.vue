@@ -9,7 +9,7 @@
 		<div class="list">
 			<div class="left">
 				<div class="video" v-for="(item,index) in list_main" v-if="index % 2 === 0">
-					<navigator :url="'../player/player?id=' + item.bvid + '&title=' + item.title">
+					<navigator :url="'../player/player?id=' + item.bvid + '&title=' + item.title + '&img=' + item.owner.face + '&name=' + item.owner.name + '&desc=' + item.desc">
 						<image :src="item.pic" mode=""></image>
 						<text>{{ item.title }}</text>
 					</navigator>
@@ -17,7 +17,7 @@
 			</div>
 			<div class="right">
 				<div class="video" v-for="(item,index) in list_main" v-if="index % 2 !== 0">
-					<navigator :url="'../player/player?id=' + item.bvid + '&title=' + item.title">
+					<navigator :url="'../player/player?id=' + item.bvid + '&title=' + item.title + '&img=' + item.owner.face + '&name=' + item.owner.name + '&desc=' + item.desc">
 						<image :src="item.pic" mode=""></image>
 						<text>{{ item.title }}</text>
 					</navigator>

@@ -1,14 +1,18 @@
 <template>
 	<view class="content">
-		<view class="player">
-			<yy-video-player 
-			    :auto-play="false" 
-			    :url="src"  
-			    :poster="poster" 
-			    :danmu-list="danmuList"  
-			    :show-back-btn="false"
-				style="width: 750rpx;"
-			  ></yy-video-player>
+		<video :src="src" autoplay="true" danmu-btn="true" enable-danmu="true"></video>
+		<view class="owner">
+			<image :src="ownerImg" mode=""></image>
+			<view class="owner_text">
+				<text class="ownm">{{ ownerName }}</text>
+				<uni-collapse accordion :show-animation="true">
+					<uni-collapse-item title="简介" :border="false" titleBorder="none">
+						<view class="colcon">
+							<text>{{ vInfo }}</text>
+						</view>
+					</uni-collapse-item>
+				</uni-collapse>
+			</view>
 		</view>
 	</view>
 </template>
@@ -18,7 +22,10 @@
 		data() {
 			return {
 				src: '',
-				title: ''
+				title: '',
+				ownerImg: '',
+				ownerName: '',
+				vInfo: ''
 			}
 		},
 		onLoad(option) {
@@ -28,7 +35,6 @@
 					url: 'https://www.bilibili.com/video/' + option.id
 				},
 				success: (res) => {
-					console.log(res.data)
 					this.src = res.data.url
 				}
 			})
@@ -36,6 +42,9 @@
 				title:option.title
 			})
 			this.title = option.title
+			this.ownerImg = option.img
+			this.ownerName = option.name
+			this.vInfo = option.desc
 		},
 		methods: {
 			
@@ -45,4 +54,8 @@
 
 <style>
 	@import url("./player.css");
+</style>
+
+<style lang="scss">
+	
 </style>
