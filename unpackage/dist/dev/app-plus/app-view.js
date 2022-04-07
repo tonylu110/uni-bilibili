@@ -272,61 +272,75 @@ var render = function() {
         1
       ),
       _c("div", { attrs: { id: "list_top", _i: 4 } }),
-      _vm._l(_vm._$g(5, "f"), function(item, index, $20, $30) {
-        return _c(
-          "div",
-          {
-            key: item,
-            staticClass: _vm._$g("5-" + $30, "sc"),
-            attrs: { _i: "5-" + $30 }
-          },
-          [
-            _c(
-              "div",
-              {
-                staticClass: _vm._$g("6-" + $30, "sc"),
-                attrs: { _i: "6-" + $30 }
-              },
-              [
-                _c("v-uni-image", {
-                  attrs: {
-                    src: _vm._$g("7-" + $30, "a-src"),
-                    mode: "",
-                    _i: "7-" + $30
-                  }
-                }),
-                _c("v-uni-text", { attrs: { _i: "8-" + $30 } }, [
-                  _vm._v(_vm._$g("8-" + $30, "t0-0"))
-                ])
-              ],
-              1
-            ),
-            _c(
-              "div",
-              {
-                staticClass: _vm._$g("9-" + $30, "sc"),
-                attrs: { _i: "9-" + $30 }
-              },
-              [
-                _c("v-uni-image", {
-                  attrs: {
-                    src: _vm._$g("10-" + $30, "a-src"),
-                    mode: "",
-                    _i: "10-" + $30
-                  }
-                }),
-                _c("v-uni-text", { attrs: { _i: "11-" + $30 } }, [
-                  _vm._v("hsuahkfjhd")
-                ])
-              ],
-              1
-            )
-          ],
-          1
-        )
-      })
+      _c(
+        "div",
+        { staticClass: _vm._$g(5, "sc"), attrs: { _i: 5 } },
+        [
+          _c(
+            "div",
+            { staticClass: _vm._$g(6, "sc"), attrs: { _i: 6 } },
+            _vm._l(_vm._$g(7, "f"), function(item, index, $20, $30) {
+              return _vm._$g("7-" + $30, "i")
+                ? _c(
+                    "div",
+                    {
+                      key: item,
+                      staticClass: _vm._$g("7-" + $30, "sc"),
+                      attrs: { _i: "7-" + $30 }
+                    },
+                    [
+                      _c("v-uni-image", {
+                        attrs: {
+                          src: _vm._$g("8-" + $30, "a-src"),
+                          mode: "",
+                          _i: "8-" + $30
+                        }
+                      }),
+                      _c("v-uni-text", { attrs: { _i: "9-" + $30 } }, [
+                        _vm._v(_vm._$g("9-" + $30, "t0-0"))
+                      ])
+                    ],
+                    1
+                  )
+                : _vm._e()
+            }),
+            1
+          ),
+          _c(
+            "div",
+            { staticClass: _vm._$g(10, "sc"), attrs: { _i: 10 } },
+            _vm._l(_vm._$g(11, "f"), function(item, index, $21, $31) {
+              return _vm._$g("11-" + $31, "i")
+                ? _c(
+                    "div",
+                    {
+                      key: item,
+                      staticClass: _vm._$g("11-" + $31, "sc"),
+                      attrs: { _i: "11-" + $31 }
+                    },
+                    [
+                      _c("v-uni-image", {
+                        attrs: {
+                          src: _vm._$g("12-" + $31, "a-src"),
+                          mode: "",
+                          _i: "12-" + $31
+                        }
+                      }),
+                      _c("v-uni-text", { attrs: { _i: "13-" + $31 } }, [
+                        _vm._v(_vm._$g("13-" + $31, "t0-0"))
+                      ])
+                    ],
+                    1
+                  )
+                : _vm._e()
+            }),
+            1
+          )
+        ],
+        1
+      )
     ],
-    2
+    1
   )
 }
 var recyclableRender = false
@@ -1199,7 +1213,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../Application/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 13);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\n.content {\n\tdisplay: flex;\n\tflex-direction: column;\n\talign-items: center;\n\tjustify-content: center;\n}\n#top_area{\n\tposition: fixed;\n\ttop: 0;\n\tleft: 0;\n\twidth: 100%;\n\tbackground-color: #ffffff90;\n\t-webkit-backdrop-filter: blur(20px);\n\t        backdrop-filter: blur(20px);\n\tdisplay: flex;\n\tjustify-content: center;\n\tz-index: 2;\n}\n.other{\n\tmargin-top: 44px;\n}\n.search_area{\n\tmargin-top: 20rpx;\n\tmargin-bottom: 20rpx;\n\tbackground-color: #00000010;\n\twidth: 90%;\n\theight: 70rpx;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\tborder-radius: 10rpx;\n}\n#searchb{\n\twidth: 730rpx;\n}\n#list_top{\n\theight: 120rpx;\n}\n.video{\n\tdisplay: flex;\n\tflex-direction: column;\n\tmargin: 0px 15rpx 20rpx 15rpx;\n\tborder: 1px solid #00000010;\n\tjustify-content: center;\n\talign-items: center;\n\tborder-radius: 20rpx;\n}\n.video uni-image{\n\twidth: 320rpx;\n\theight: 200rpx;\n\tborder-radius: 20rpx;\n}\n.video uni-text{\n\tmargin: 10rpx 0px 10rpx 0px;\n\tmax-width: 300rpx;\n\toverflow: hidden;\n\ttext-overflow: ellipsis;\n\twhite-space: nowrap\n}\n.list{\n\tdisplay: flex;\n\tflex-direction: row;\n}\n\n\n", ""]);
+exports.push([module.i, ".content {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\talign-items: center;\r\n\tjustify-content: center;\n}\n#top_area{\r\n\tposition: fixed;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\twidth: 100%;\r\n\tbackground-color: #ffffffdd;\r\n\t-webkit-backdrop-filter: blur(20px);\r\n\t        backdrop-filter: blur(20px);\r\n\tdisplay: flex;\r\n\tjustify-content: center;\r\n\tz-index: 2;\r\n\tborder-bottom: 1px solid #00000010;\n}\n.other{\r\n\tmargin-top: 43px;\n}\n.search_area{\r\n\tmargin-top: 20rpx;\r\n\tmargin-bottom: 20rpx;\r\n\tbackground-color: #00000010;\r\n\twidth: 90%;\r\n\theight: 70rpx;\r\n\tdisplay: flex;\r\n\tjustify-content: center;\r\n\talign-items: center;\r\n\tborder-radius: 10rpx;\n}\n#searchb{\r\n\twidth: 730rpx;\n}\n#list_top{\r\n\theight: 120rpx;\n}\n.video{\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tmargin: 0px 15rpx 20rpx 15rpx;\r\n\tborder: 1px solid #00000010;\r\n\tjustify-content: center;\r\n\talign-items: center;\r\n\tborder-radius: 20rpx;\n}\n.video uni-image{\r\n\twidth: 320rpx;\r\n\theight: 200rpx;\r\n\tborder-radius: 20rpx;\n}\n.video uni-text{\r\n\tmargin: 10rpx 0px 10rpx 0px;\r\n\tmax-width: 300rpx;\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis;\r\n\twhite-space: nowrap\n}\n.list{\r\n\tdisplay: flex;\r\n\tflex-direction: row;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 

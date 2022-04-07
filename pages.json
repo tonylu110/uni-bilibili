@@ -48,5 +48,27 @@
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#20b0e3",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/tabbar/bilibili.png",
+			"selectedIconPath": "static/tabbar/bilibili_sel.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/like/like",
+			"iconPath": "static/tabbar/like.png",
+			"selectedIconPath": "static/tabbar/like_sel.png",
+			"text": "动态"
+		}, {
+			"pagePath": "pages/mine/mine",
+			"iconPath": "static/tabbar/mine.png",
+			"selectedIconPath": "static/tabbar/mine_sel.png",
+			"text": "我的"
+		}]
 	}
 }
