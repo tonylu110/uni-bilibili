@@ -3,7 +3,9 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "首页"
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 20
 			}
 		}
 	    ,{
@@ -42,18 +44,28 @@
             }
             
         }
+        ,{
+            "path" : "pages/player/player",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
+		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarBackgroundColor": "#20b0e3",
 		"backgroundColor": "#F8F8F8"
 	},
 	"tabBar": {
 		"color": "#7A7E83",
 		"selectedColor": "#20b0e3",
-		"borderStyle": "black",
-		"backgroundColor": "#ffffff",
+		"borderStyle": "white",
+		"backgroundColor": "#fafafa",
+		"height": "60px",
 		"list": [{
 			"pagePath": "pages/index/index",
 			"iconPath": "static/tabbar/bilibili.png",
