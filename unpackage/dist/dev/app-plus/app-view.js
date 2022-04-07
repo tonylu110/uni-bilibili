@@ -1805,6 +1805,8 @@ __webpack_require__.r(__webpack_exports__);
 var components
 try {
   components = {
+    uniIcons: __webpack_require__(/*! @/uni_modules/uni-icons/components/uni-icons/uni-icons.vue */ 5)
+      .default,
     uniCollapse: __webpack_require__(/*! @/uni_modules/uni-collapse/components/uni-collapse/uni-collapse.vue */ 47)
       .default,
     uniCollapseItem: __webpack_require__(/*! @/uni_modules/uni-collapse/components/uni-collapse-item/uni-collapse-item.vue */ 55)
@@ -1848,32 +1850,53 @@ var render = function() {
         "v-uni-view",
         { staticClass: _vm._$g(2, "sc"), attrs: { _i: 2 } },
         [
+          _c("v-uni-input", {
+            attrs: {
+              type: "text",
+              placeholder: "发送友谊的弹幕吧",
+              value: "",
+              _i: 3
+            }
+          }),
+          _c(
+            "div",
+            { staticClass: _vm._$g(4, "sc"), attrs: { _i: 4 } },
+            [_c("uni-icons", { attrs: { _i: 5 } })],
+            1
+          )
+        ],
+        1
+      ),
+      _c(
+        "v-uni-view",
+        { staticClass: _vm._$g(6, "sc"), attrs: { _i: 6 } },
+        [
           _c("v-uni-image", {
-            attrs: { src: _vm._$g(3, "a-src"), mode: "", _i: 3 }
+            attrs: { src: _vm._$g(7, "a-src"), mode: "", _i: 7 }
           }),
           _c(
             "v-uni-view",
-            { staticClass: _vm._$g(4, "sc"), attrs: { _i: 4 } },
+            { staticClass: _vm._$g(8, "sc"), attrs: { _i: 8 } },
             [
               _c(
                 "v-uni-text",
-                { staticClass: _vm._$g(5, "sc"), attrs: { _i: 5 } },
-                [_vm._v(_vm._$g(5, "t0-0"))]
+                { staticClass: _vm._$g(9, "sc"), attrs: { _i: 9 } },
+                [_vm._v(_vm._$g(9, "t0-0"))]
               ),
               _c(
                 "uni-collapse",
-                { attrs: { _i: 6 } },
+                { attrs: { _i: 10 } },
                 [
                   _c(
                     "uni-collapse-item",
-                    { attrs: { _i: 7 } },
+                    { attrs: { _i: 11 } },
                     [
                       _c(
                         "v-uni-view",
-                        { staticClass: _vm._$g(8, "sc"), attrs: { _i: 8 } },
+                        { staticClass: _vm._$g(12, "sc"), attrs: { _i: 12 } },
                         [
-                          _c("v-uni-text", { attrs: { _i: 9 } }, [
-                            _vm._v(_vm._$g(9, "t0-0"))
+                          _c("v-uni-text", { attrs: { _i: 13 } }, [
+                            _vm._v(_vm._$g(13, "t0-0"))
                           ])
                         ],
                         1
@@ -2451,7 +2474,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../Application/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 13);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".content {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\talign-items: center;\r\n\tjustify-content: center;\n}\n.player{\r\n\twidth: 750rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tjustify-content: center;\r\n\talign-items: center;\n}\nuni-video{\r\n\twidth: 100%;\r\n\theight: 422rpx;\n}\n.owner{\r\n\tmargin-top: 20rpx;\r\n\twidth: 750rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: row;\n}\n.owner uni-image{\r\n\tmargin-left: 20rpx;\r\n\twidth: 80rpx;\r\n\theight: 80rpx;\r\n\tborder-radius: 40rpx;\n}\n.owner_text{\r\n\tmargin-left: 20rpx;\r\n\twidth: 610rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\n}\n.ownm{\r\n\tfont-weight: bold;\n}\r\n", ""]);
+exports.push([module.i, ".content {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\talign-items: center;\r\n\tjustify-content: center;\n}\n.player{\r\n\twidth: 750rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tjustify-content: center;\r\n\talign-items: center;\n}\nuni-video{\r\n\twidth: 100%;\r\n\theight: 422rpx;\n}\n.owner{\r\n\tmargin-top: 20rpx;\r\n\twidth: 750rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: row;\n}\n.owner uni-image{\r\n\tmargin-left: 20rpx;\r\n\twidth: 80rpx;\r\n\theight: 80rpx;\r\n\tborder-radius: 40rpx;\n}\n.owner_text{\r\n\tmargin-left: 20rpx;\r\n\twidth: 610rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\n}\n.ownm{\r\n\tfont-weight: bold;\n}\n.danmu_main{\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\twidth: 750rpx;\n}\n.danmu_main uni-input{\r\n\tbackground-color: #f5f5f5;\r\n\tpadding: 15rpx;\r\n\tflex: 1;\r\n\theight: auto;\n}\n.send{\r\n\tbackground-color: #20b0e3;\r\n\twidth: 80rpx;\r\n\theight: 80rpx;\r\n\ttext-align: center;\r\n\tline-height: 80rpx;\n}\n.send:active{\r\n\tbackground-color: #1783a7;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 

@@ -1,6 +1,12 @@
 <template>
 	<view class="content">
 		<video :src="src" autoplay="true" danmu-btn="true" enable-danmu="true"></video>
+		<view class="danmu_main">
+			<input type="text" placeholder="发送友谊的弹幕吧" value="" />
+			<div class="send">
+				<uni-icons type="paperplane-filled" size="30" color="white"></uni-icons>
+			</div>
+		</view>
 		<view class="owner">
 			<image :src="ownerImg" mode=""></image>
 			<view class="owner_text">
@@ -54,8 +60,4 @@
 
 <style>
 	@import url("./player.css");
-</style>
-
-<style lang="scss">
-	
 </style>
