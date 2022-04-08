@@ -12,7 +12,7 @@
 		</view>
 		<view style="margin-top: 56px;"></view>
 		<view v-for="(item,index) in videoInfo" :key="index">
-			<navigator class="video_list" :url="'../player/player?id=' + item.bvid + '&title=视频播放' + '&img=' + item.upic + '&name=' + item.author + '&desc=' + item.description">
+			<navigator class="video_list" hover-stay-time="0" :url="'../player/player?id=' + item.bvid + '&title=视频播放' + '&img=' + item.upic + '&name=' + item.author + '&desc=' + item.description + '&pic=' + item.pic">
 				<image :src="item.pic" mode="" class="video_img"></image>
 				<view class="video_info">
 					<rich-text :nodes="item.title" class="video_title"></rich-text>
@@ -52,9 +52,6 @@
 				page: 1
 			}
 		},
-		onLoad() {
-			
-		},
 		onReachBottom() {
 			this.page = this.page + 1
 			this.getList()
@@ -68,7 +65,6 @@
 						page: this.page
 					},success: (res) => {
 						this.videoInfo = [...this.videoInfo, ...res.data.data.result[10].data]
-						console.log(res.data.data.result[10].data)
 					}
 				})
 			},
