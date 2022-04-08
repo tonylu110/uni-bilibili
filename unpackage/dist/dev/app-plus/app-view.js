@@ -1912,6 +1912,39 @@ var render = function() {
           )
         ],
         1
+      ),
+      _c(
+        "v-uni-view",
+        { staticClass: _vm._$g(14, "sc"), attrs: { _i: 14 } },
+        [
+          _c(
+            "v-uni-view",
+            { staticClass: _vm._$g(15, "sc"), attrs: { _i: 15 } },
+            [_c("uni-icons", { attrs: { _i: 16 } })],
+            1
+          ),
+          _c(
+            "v-uni-view",
+            { staticClass: _vm._$g(17, "sc"), attrs: { _i: 17 } },
+            [_c("uni-icons", { attrs: { _i: 18 } })],
+            1
+          ),
+          _c(
+            "v-uni-view",
+            {
+              staticClass: _vm._$g(19, "sc"),
+              attrs: { _i: 19 },
+              on: {
+                click: function($event) {
+                  return _vm.$handleViewEvent($event)
+                }
+              }
+            },
+            [_c("uni-icons", { attrs: { _i: 20 } })],
+            1
+          )
+        ],
+        1
       )
     ],
     1
@@ -2474,7 +2507,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../Application/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 13);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".content {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\talign-items: center;\r\n\tjustify-content: center;\n}\n.player{\r\n\twidth: 750rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tjustify-content: center;\r\n\talign-items: center;\n}\nuni-video{\r\n\twidth: 100%;\r\n\theight: 422rpx;\n}\n.owner{\r\n\tmargin-top: 20rpx;\r\n\twidth: 750rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: row;\n}\n.owner uni-image{\r\n\tmargin-left: 20rpx;\r\n\twidth: 80rpx;\r\n\theight: 80rpx;\r\n\tborder-radius: 40rpx;\n}\n.owner_text{\r\n\tmargin-left: 20rpx;\r\n\twidth: 610rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\n}\n.ownm{\r\n\tfont-weight: bold;\n}\n.danmu_main{\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\twidth: 750rpx;\n}\n.danmu_main uni-input{\r\n\tbackground-color: #f5f5f5;\r\n\tpadding: 15rpx;\r\n\tflex: 1;\r\n\theight: auto;\n}\n.send{\r\n\tbackground-color: #20b0e3;\r\n\twidth: 80rpx;\r\n\theight: 80rpx;\r\n\ttext-align: center;\r\n\tline-height: 80rpx;\n}\n.send:active{\r\n\tbackground-color: #1783a7;\n}\r\n", ""]);
+exports.push([module.i, ".content {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\talign-items: center;\n}\n.player{\r\n\twidth: 750rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tjustify-content: center;\r\n\talign-items: center;\n}\nuni-video{\r\n\twidth: 100%;\r\n\theight: 422rpx;\r\n\tposition: fixed;\r\n\tz-index: 10;\n}\n.owner{\r\n\tmargin-top: 522rpx;\r\n\twidth: 750rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: row;\n}\n.owner uni-image{\r\n\tmargin-left: 20rpx;\r\n\twidth: 80rpx;\r\n\theight: 80rpx;\r\n\tborder-radius: 40rpx;\n}\n.owner_text{\r\n\tmargin-left: 20rpx;\r\n\twidth: 610rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\n}\n.ownm{\r\n\tfont-weight: bold;\n}\n.danmu_main{\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\twidth: 750rpx;\r\n\tmargin-top: 422rpx;\r\n\tposition: fixed;\r\n\tz-index: 10;\n}\n.danmu_main uni-input{\r\n\tbackground-color: #f5f5f5;\r\n\tpadding: 15rpx;\r\n\tflex: 1;\r\n\theight: auto;\n}\n.send{\r\n\tbackground-color: #20b0e3;\r\n\twidth: 80rpx;\r\n\theight: 80rpx;\r\n\ttext-align: center;\r\n\tline-height: 80rpx;\n}\n.send:active{\r\n\tbackground-color: #1783a7;\n}\n.fe_bar{\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tmargin-top: 10rpx;\n}\n.fe{\r\n\tmargin: 0px 50rpx 0px 50rpx;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 

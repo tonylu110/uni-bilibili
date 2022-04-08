@@ -20,6 +20,17 @@
 				</uni-collapse>
 			</view>
 		</view>
+		<view class="fe_bar">
+			<view class="fe">
+				<uni-icons type="hand-up-filled" size="40" color="gray"></uni-icons>
+			</view>
+			<view class="fe">
+				<uni-icons type="checkbox-filled" size="40" color="gray"></uni-icons>
+			</view>
+			<view class="fe" @click="onShare()">
+				<uni-icons type="redo-filled" size="40" color="gray"></uni-icons>
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -31,7 +42,8 @@
 				title: '',
 				ownerImg: '',
 				ownerName: '',
-				vInfo: ''
+				vInfo: '',
+				videoUrl: ''
 			}
 		},
 		onLoad(option) {
@@ -51,9 +63,15 @@
 			this.ownerImg = option.img
 			this.ownerName = option.name
 			this.vInfo = option.desc
+			this.videoUrl = 'https://www.bilibili.com/video/' + option.id
 		},
 		methods: {
-			
+			onShare() {
+				uni.shareWithSystem({
+					summary: this.title,
+					href: this.videoUrl
+				})
+			}
 		}
 	}
 </script>
