@@ -22,6 +22,7 @@ video{
 	width: 750rpx;
 	display: flex;
 	flex-direction: row;
+	border-bottom: 1px solid #00000010;
 }
 .owner image{
 	margin-left: 20rpx;
@@ -64,10 +65,17 @@ video{
 }
 
 .fe_bar{
+	width: 750rpx;
 	display: flex;
 	flex-direction: row;
 	margin-top: 10rpx;
+	border-bottom: 1px solid #00000010;
+	justify-content: center;
 }
 .fe{
-	margin: 0px 50rpx 0px 50rpx;
+	margin: 0px 50rpx 10rpx 50rpx;
+}
+
+.keyword{
+	font-style: normal;
 }

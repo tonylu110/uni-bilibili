@@ -13,7 +13,8 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "搜索",
-                "enablePullDownRefresh": false
+                "enablePullDownRefresh": false,
+				"onReachBottomDistance": 50
             }
             
         }

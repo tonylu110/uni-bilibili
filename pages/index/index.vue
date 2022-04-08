@@ -55,18 +55,18 @@
 			var page = this.page = this.page + 1 
 			uni.showToast({
 				icon: 'loading',
-				duration: 1600
+				duration: 1100
 			})
 			setTimeout(() => {
 				this.getList(true, page)
-			}, 1500)
+			}, 1000)
 		},
 		methods: {
 			getList(bottom, page) {
 				var list = []
 				if (!bottom && page) {
 					uni.request({
-						url:'https://bili.tnyl.xyz/index/ding.json?page=' + this.page,
+						url:'https://www.bilibili.com/index/ding.json?page=' + this.page,
 						success: (res) => {
 							this.list_main = res.data.douga
 						}
@@ -74,7 +74,7 @@
 				} else if (bottom && page) {
 					list = Object.values(this.list_main)
 					uni.request({
-						url:'https://bili.tnyl.xyz/index/ding.json?page=' + page,
+						url:'https://www.bilibili.com/index/ding.json?page=' + page,
 						success: (res) => {
 							let more_list = Object.values(res.data.douga)
 							this.list_main = [...list, ...more_list]

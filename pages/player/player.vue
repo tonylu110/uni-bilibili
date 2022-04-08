@@ -79,3 +79,9 @@
 <style>
 	@import url("./player.css");
 </style>
+
+<style lang="scss">
+	.colcon{
+		padding-bottom: 15px;
+	}
+</style>

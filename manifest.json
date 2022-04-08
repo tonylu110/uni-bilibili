@@ -21,7 +21,10 @@
         },
         /* 模块配置 */
         "modules" : {
-            "VideoPlayer" : {}
+            "VideoPlayer" : {},
+            "Push" : {},
+            "Share" : {},
+            "UIWebview" : {}
         },
         /* 应用发布信息 */
         "distribute" : {
@@ -49,7 +52,11 @@
             "ios" : {},
             /* SDK配置 */
             "sdkConfigs" : {
-                "ad" : {}
+                "ad" : {},
+                "share" : {},
+                "push" : {
+                    "unipush" : {}
+                }
             },
             "icons" : {
                 "android" : {
