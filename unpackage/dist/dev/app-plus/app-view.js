@@ -2626,7 +2626,7 @@ var render = function() {
             },
             [
               _c("v-uni-text", { attrs: { _i: 40 } }, [
-                _vm._v("不能往下滑了哦 QAQ")
+                _vm._v("不能往下划了哦 QAQ")
               ])
             ],
             1

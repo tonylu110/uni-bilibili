@@ -59,7 +59,7 @@
 			</navigator>
 		</view>
 		<view style="color: gray; padding: 20rpx 0px 20rpx 0rpx;" v-if="bottom">
-			<text>不能往下滑了哦 QAQ</text>
+			<text>不能往下划了哦 QAQ</text>
 		</view>
 	</view>
 </template>
@@ -86,6 +86,12 @@
 					url: 'https://www.bilibili.com/video/' + option.id
 				},
 				success: (res) => {
+					if (this.title == '') {
+						this.title = res.data.title
+						uni.setNavigationBarTitle({
+							title: res.data.title
+						})
+					}
 					this.src = res.data.url
 				}
 			})
