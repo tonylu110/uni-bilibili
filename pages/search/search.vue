@@ -69,6 +69,8 @@
 				})
 			},
 			search() {
+				this.page = 1
+				this.videoInfo = []
 				this.getList()
 			},
 			clear() {

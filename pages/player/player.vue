@@ -22,13 +22,16 @@
 		</view>
 		<view class="fe_bar">
 			<view class="fe">
-				<uni-icons type="hand-up-filled" size="40" color="gray"></uni-icons>
+				<uni-icons type="hand-up-filled" size="30" color="gray"></uni-icons>
 			</view>
 			<view class="fe">
-				<uni-icons type="checkbox-filled" size="40" color="gray"></uni-icons>
+				<uni-icons type="checkbox-filled" size="30" color="gray"></uni-icons>
+			</view>
+			<view class="fe">
+				<uni-icons type="star-filled" size="30" color="gray"></uni-icons>
 			</view>
 			<view class="fe" @click="onShare()">
-				<uni-icons type="redo-filled" size="40" color="gray"></uni-icons>
+				<uni-icons type="redo-filled" size="30" color="gray"></uni-icons>
 			</view>
 		</view>
 		<view v-for="(item,index) in moreVideo" :key="index">

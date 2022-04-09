@@ -11,7 +11,7 @@
 	align-items: center;
 }
 video{
-	width: 100%;
+	width: 750rpx;
 	height: 422rpx;
 	position: fixed;
 	z-index: 10;
@@ -73,7 +73,7 @@ video{
 	justify-content: center;
 }
 .fe{
-	margin: 0px 50rpx 10rpx 50rpx;
+	margin: 7px 50rpx 12px 50rpx;
 }
 
 .keyword{
