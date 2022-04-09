@@ -22,7 +22,6 @@ video{
 	width: 750rpx;
 	display: flex;
 	flex-direction: row;
-	border-bottom: 1px solid #00000010;
 }
 .owner image{
 	margin-left: 20rpx;
@@ -112,4 +111,13 @@ video{
 	display: flex;
 	flex-direction: row;
 	color: gray;
+}
+
+.vd_info{
+	display: flex;
+	flex-direction: row;
+	color: gray;
+	width: 750rpx;
+	padding-bottom: 20rpx;
+	border-bottom: 1px solid #00000010;
 }

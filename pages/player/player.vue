@@ -20,6 +20,16 @@
 				</uni-collapse>
 			</view>
 		</view>
+		<view class="vd_info">
+			<view class="video_play" style="margin-right: 10rpx; margin-left: 20rpx;">
+				<uni-icons type="videocam-filled" size="16" color="gray"></uni-icons>
+				<text>{{ view }}</text>
+			</view>
+			<view class="video_like">
+				<uni-icons type="hand-up-filled" size="16" color="gray"></uni-icons>
+				<text>{{ like }}</text>
+			</view>
+		</view>
 		<view class="fe_bar">
 			<view class="fe">
 				<uni-icons type="hand-up-filled" size="30" color="gray"></uni-icons>
@@ -35,7 +45,7 @@
 			</view>
 		</view>
 		<view v-for="(item,index) in moreVideo" :key="index">
-			<navigator hover-stay-time="0" class="video_list" :url="'../player/player?id=' + item.bvid + '&title=' + item.title + '&img=' + item.owner.face + '&name=' + item.owner.name + '&desc=' + item.desc + '&pic=' + item.pic">
+			<navigator hover-stay-time="0" class="video_list" :url="'../player/player?id=' + item.bvid + '&title=' + item.title + '&img=' + item.owner.face + '&name=' + item.owner.name + '&desc=' + item.desc + '&pic=' + item.pic + '&view=' + item.stat.view + '&like=' + item.stat.like">
 				<image :src="item.pic" mode="" class="video_img"></image>
 				<view class="video_info">
 					<text class="video_title">{{ item.title }}</text>
@@ -76,7 +86,9 @@
 				videoUrl: '',
 				moreVideo: [],
 				bottom: false,
-				videoImg: ''
+				videoImg: '',
+				view: '',
+				like: ''
 			}
 		},
 		onLoad(option) {
@@ -104,6 +116,8 @@
 			this.vInfo = option.desc
 			this.videoImg = option.pic
 			this.videoUrl = 'https://www.bilibili.com/video/' + option.id
+			this.view = option.view
+			this.like = option.like
 			uni.request({
 				url:'http://api.bilibili.com/x/web-interface/archive/related',
 				data:{
