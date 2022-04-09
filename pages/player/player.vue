@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<video :src="src" autoplay="true" danmu-btn="true" enable-danmu="true" :title="title"></video>
+		<video :src="src" autoplay="true" danmu-btn="true" enable-danmu="true" :title="title" id="video_bl"></video>
 		<view class="danmu_main">
 			<input type="text" placeholder="发送友谊的弹幕吧" value="" />
 			<div class="send">
@@ -44,7 +44,7 @@
 				<uni-icons type="redo-filled" size="30" color="gray"></uni-icons>
 			</view>
 		</view>
-		<view v-for="(item,index) in moreVideo" :key="index">
+		<view v-for="(item,index) in moreVideo" :key="index" @click="pause()">
 			<navigator hover-stay-time="0" class="video_list" :url="'../player/player?id=' + item.bvid + '&title=' + item.title + '&img=' + item.owner.face + '&name=' + item.owner.name + '&desc=' + item.desc + '&pic=' + item.pic + '&view=' + item.stat.view + '&like=' + item.stat.like">
 				<image :src="item.pic" mode="" class="video_img"></image>
 				<view class="video_info">
@@ -129,12 +129,18 @@
 				}
 			})
 		},
+		onReady() {
+			this.videoContext = uni.createVideoContext('video_bl')
+		},
 		methods: {
 			onShare() {
 				uni.shareWithSystem({
 					summary: this.title,
 					href: this.videoUrl
 				})
+			},
+			pause() {
+				this.videoContext.pause()
 			}
 		}
 	}

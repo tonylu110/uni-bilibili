@@ -2392,6 +2392,7 @@ var render = function() {
           "danmu-btn": "true",
           "enable-danmu": "true",
           title: _vm._$g(1, "a-title"),
+          id: "video_bl",
           _i: 1
         }
       }),
@@ -2537,7 +2538,15 @@ var render = function() {
       _vm._l(_vm._$g(30, "f"), function(item, index, $20, $30) {
         return _c(
           "v-uni-view",
-          { key: item, attrs: { _i: "30-" + $30 } },
+          {
+            key: item,
+            attrs: { _i: "30-" + $30 },
+            on: {
+              click: function($event) {
+                return _vm.$handleViewEvent($event)
+              }
+            }
+          },
           [
             _c(
               "v-uni-navigator",
