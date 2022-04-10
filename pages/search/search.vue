@@ -10,7 +10,10 @@
 				cancelButton="always">
 			</uni-search-bar>
 		</view>
-		<view style="margin-top: 56px;"></view>
+		<view class="chress" v-if="chress">
+			<ren-dropdown-filter :filterData="filterData" :defaultIndex="defaultIndex" @ed="ed" top="56px"></ren-dropdown-filter>
+		</view>
+		<view style="margin-top: 105px;"></view>
 		<view v-for="(item,index) in videoInfo" :key="index">
 			<navigator class="video_list" hover-stay-time="0" :url="'../player/player?id=' + item.bvid + '&title=' + '&img=' + item.upic + '&name=' + item.author + '&desc=' + item.description + '&pic=' + item.pic + '&view=' + item.play + '&like=' + item.like">
 				<image :src="item.pic" mode="" class="video_img"></image>
@@ -42,14 +45,62 @@
 </template>
 
 <script>
+	import RenDropdownFilter from '@/components/ren-dropdown-filter/ren-dropdown-filter.vue'
 	export default {
+		components:{
+			RenDropdownFilter
+		},
 		data() {
 			return {
 				searchValue: '',
 				videoInfo: [],
 				videoTitle: '',
 				searchClick: false,
-				page: 1
+				page: 1,
+				filterData:[
+                    [
+						{
+							text: '默认排序',
+							value: '0-0' ,
+						}, 
+						{
+							text: '播放多', 
+							value: '0-1' ,
+						}, 
+						{ 
+							text: '新发布',
+							value: '0-2' ,
+						}, 
+						{
+							text: '弹幕多', 
+							value: '0-3' ,
+						},
+					],
+                    [
+                    	{
+                    		text: '全部时长',
+                    		value: '1-0' ,
+                    	}, 
+                    	{
+                    		text: '0-10 分钟', 
+                    		value: '1-1' ,
+                    	}, 
+                    	{ 
+                    		text: '10-30 分钟',
+                    		value: '1-2' ,
+                    	}, 
+                    	{
+                    		text: '30-60 分钟', 
+                    		value: '1-3' ,
+                    	},
+						{
+							text: '60 分钟 +', 
+							value: '1-4' ,
+						},
+                    ]
+                ],
+                defaultIndex:[0,0],
+				chress: false
 			}
 		},
 		onReachBottom() {
@@ -72,6 +123,7 @@
 				this.page = 1
 				this.videoInfo = []
 				this.getList()
+				this.chress = true
 			},
 			clear() {
 				this.searchValue = ''
@@ -80,6 +132,9 @@
 				uni.navigateBack({
 					
 				})
+			},
+			ed(res) {
+				console.log(res) 
 			}
 		}
 	}

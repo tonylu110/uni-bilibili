@@ -54,9 +54,7 @@
             "sdkConfigs" : {
                 "ad" : {},
                 "share" : {},
-                "push" : {
-                    "unipush" : {}
-                }
+                "push" : {}
             },
             "icons" : {
                 "android" : {

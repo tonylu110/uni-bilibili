@@ -6,7 +6,8 @@
 			</div>
 		</div>
 		<div id="list_top"></div>
-		<div class="list">
+		<view style="margin-top: 40rpx; font-size: 30rpx; font-weight: bold; color: gray;" v-if="no_net">没有网络的连接QAQ</view>
+		<div class="list" v-if="!no_net">
 			<div class="left">
 				<div class="video" v-for="(item,index) in list_main" v-if="index % 2 === 0">
 					<navigator hover-stay-time="0" :url="'../player/player?id=' + item.bvid + '&title=' + item.title + '&img=' + item.owner.face + '&name=' + item.owner.name + '&desc=' + item.desc + '&view=' + item.stat.view + '&like=' + item.stat.like">
@@ -33,7 +34,8 @@
 			return {
 				mobile: '',
 				page: 1,
-				list_main: []
+				list_main: [],
+				no_net: false
 			}
 		},
 		onLoad() {
@@ -69,6 +71,10 @@
 						url:'https://www.bilibili.com/index/ding.json?page=' + this.page,
 						success: (res) => {
 							this.list_main = res.data.douga
+							this.no_net = false
+						},
+						fail: () => {
+							this.no_net = true
 						}
 					})
 				} else if (bottom && page) {

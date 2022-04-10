@@ -21,7 +21,7 @@
 			</view>
 		</view>
 		<view class="vd_info">
-			<view class="video_play" style="margin-right: 10rpx; margin-left: 20rpx;">
+			<view class="video_play" style="margin-right: 10rpx;">
 				<uni-icons type="videocam-filled" size="16" color="gray"></uni-icons>
 				<text>{{ view }}</text>
 			</view>
@@ -131,6 +131,9 @@
 		},
 		onReady() {
 			this.videoContext = uni.createVideoContext('video_bl')
+		},
+		onShow() {
+			this.videoContext.play()
 		},
 		methods: {
 			onShare() {

@@ -120,4 +120,5 @@ video{
 	width: 750rpx;
 	padding-bottom: 20rpx;
 	border-bottom: 1px solid #00000010;
+	justify-content: center;
 }
