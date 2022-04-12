@@ -1,0 +1,38 @@
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.user_info{
+	margin-top: 20rpx;
+	display: flex;
+}
+.user_info view{
+	margin: 20rpx;
+}
+
+.user_img{
+	margin-top: 40rpx;
+	width: 200rpx;
+	height: 200rpx;
+	border-radius: 100rpx;
+}
+.user_list{
+	margin-top: 80rpx;
+}
+
+.list{
+	width: 620rpx;
+	background-color: #00000010;
+	padding: 30rpx;
+	border-radius: 20rpx;
+	margin-bottom: 20rpx;
+}
+
+button{
+	margin-top: 40rpx;
+	width: 680rpx;
+	border-radius: 20rpx;
+}
