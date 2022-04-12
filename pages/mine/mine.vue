@@ -18,7 +18,7 @@
 			<navigator hover-stay-time="0" url="" class="list">我的收藏</navigator>
 			<navigator hover-stay-time="0" url="" class="list">设置</navigator>
 		</view>
-		<button type="primary">登录</button>
+		<button type="primary" @click="loginOrOut">登录</button>
 	</view>
 </template>
 
@@ -30,7 +30,15 @@
 			}
 		},
 		methods: {
-			
+			loginOrOut() {
+				if (!this.userLogin) {
+					uni.navigateTo({
+						url:'../login/login'
+					})
+				} else {
+					
+				}
+			}
 		}
 	}
 </script>

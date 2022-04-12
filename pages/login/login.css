@@ -1,0 +1,29 @@
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+image{
+	width: 316rpx;
+	height: 316rpx;
+}
+input{
+	background-color: #00000010;
+	padding: 20rpx;
+	margin-bottom: 20rpx;
+	border-radius: 10rpx;
+}
+
+.mm_value{
+	display: flex;
+}
+.mm_btn{
+	margin-bottom: 20rpx;
+	margin-left: 20rpx;
+}
+
+.login_btn{
+	margin-top: 40rpx;
+}
