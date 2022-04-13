@@ -19,6 +19,14 @@
 				
 			}
 		},
+		onLoad() {
+			uni.request({
+				url:'https://passport.bilibili.com/x/passport-login/captcha?source=main_web',
+				success: (res) => {
+					console.log(res.data)
+				}
+			})
+		},
 		methods: {
 			
 		}

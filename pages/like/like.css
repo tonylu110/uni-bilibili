@@ -1,0 +1,19 @@
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.notLogin{
+	display: flex;
+	flex-direction: column;
+	margin-top: 80rpx;
+	align-items: center;
+}
+.notLogin text{
+	margin-bottom: 60rpx;
+}
+.notLogin button{
+	width: 690rpx;
+}
