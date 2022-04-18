@@ -17,7 +17,6 @@
 			 @change="onHeaderSelect"
 			 @select="onItemSelect"
 			 active-color="#20b0e3">
-			    <!-- 自定义模式开启时，这里可以放内容 -->
 			</wyb-drop-down>
 		</view>
 		<view style="margin-top: 115px;"></view>
@@ -65,6 +64,8 @@
 				searchClick: false,
 				page: 1,
 				chress: false,
+				order: 'default',
+				duration: '0',
 				options: [{
 					header: '按播放排序',
 					contents: ['默认排序', '播放多', '新发布', '弹幕多']
@@ -76,7 +77,7 @@
 		},
 		onReachBottom() {
 			this.page = this.page + 1
-			this.getList('default','0')
+			this.getList(this.order,this.duration)
 		},
 		methods: {
 			getList(sorder,sduration) {
@@ -96,7 +97,7 @@
 			search() {
 				this.page = 1
 				this.videoInfo = []
-				this.getList('default','0')
+				this.getList(this.order,this.duration)
 				this.chress = true
 			},
 			clear() {
@@ -111,37 +112,29 @@
 				
 			},
 			onItemSelect(res) {
-				// console.log(res.headerIndex.toString() + res.contentIndex.toString())
 				var pdi = res.headerIndex.toString() + res.contentIndex.toString()
 				if (pdi == '00') {
-					this.videoInfo = []
-					this.getList('default','0')
+					this.order = 'default'
 				} else if (pdi == '01') {
-					this.videoInfo = []
-					this.getList('click','0')
+					this.order = 'click'
 				} else if (pdi == '02') {
-					this.videoInfo = []
-					this.getList('pubdate','0')
+					this.order = 'pubdate'
 				} else if (pdi == '03') {
-					this.videoInfo = []
-					this.getList('damku','0')
+					this.order = 'damku'
 				}
 				if (pdi == '10') {
-					this.videoInfo = []
-					this.getList('default','0')
+					this.duration = '0'
 				} else if (pdi == '11') {
-					this.videoInfo = []
-					this.getList('default','1')
+					this.duration = '1'
 				} else if (pdi == '12') {
-					this.videoInfo = []
-					this.getList('default','2')
+					this.duration = '2'
 				} else if (pdi == '13') {
-					this.videoInfo = []
-					this.getList('default','3')
+					this.duration = '3'
 				} else if (pdi == '14') {
-					this.videoInfo = []
-					this.getList('default','4')
+					this.duration = '4'
 				}
+				this.videoInfo = []
+				this.getList(this.order,this.duration)
 			}
 		}
 	}
