@@ -16,7 +16,8 @@
 			 :options="options"
 			 @change="onHeaderSelect"
 			 @select="onItemSelect"
-			 active-color="#20b0e3">
+			 active-color="#20b0e3"
+			 :bgColor="{header:'#fff',content: '#ffffffef'}">
 			</wyb-drop-down>
 		</view>
 		<view style="margin-top: 115px;"></view>
@@ -67,10 +68,10 @@
 				order: 'default',
 				duration: '0',
 				options: [{
-					header: '按播放排序',
+					header: '默认排序',
 					contents: ['默认排序', '播放多', '新发布', '弹幕多']
 				}, {
-					header: '按时长排序',
+					header: '全部时长',
 					contents: ['全部时长', '0-10 分钟', '10-30 分钟', '30-60 分钟','60 分钟 +']
 				}]
 			}
@@ -114,23 +115,32 @@
 			onItemSelect(res) {
 				var pdi = res.headerIndex.toString() + res.contentIndex.toString()
 				if (pdi == '00') {
+					this.options[0].header = '默认排序'
 					this.order = 'default'
 				} else if (pdi == '01') {
+					this.options[0].header = '播放多'
 					this.order = 'click'
 				} else if (pdi == '02') {
+					this.options[0].header = '新发布'
 					this.order = 'pubdate'
 				} else if (pdi == '03') {
+					this.options[0].header = '弹幕多'
 					this.order = 'damku'
 				}
 				if (pdi == '10') {
+					this.options[1].header = '全部时长'
 					this.duration = '0'
 				} else if (pdi == '11') {
+					this.options[1].header = '0-10 分钟'
 					this.duration = '1'
 				} else if (pdi == '12') {
+					this.options[1].header = '10-30 分钟'
 					this.duration = '2'
 				} else if (pdi == '13') {
+					this.options[1].header = '30-60 分钟'
 					this.duration = '3'
 				} else if (pdi == '14') {
+					this.options[1].header = '60 分钟 +'
 					this.duration = '4'
 				}
 				this.videoInfo = []

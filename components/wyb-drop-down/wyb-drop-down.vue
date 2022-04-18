@@ -343,7 +343,7 @@
 		position: fixed;
 		top: var(--autoContentTop);
 		/* #ifndef H5 */
-		top: 190rpx;
+		top: 200rpx;
 		/* #endif */
 		left: 0;
 		right: 0;
