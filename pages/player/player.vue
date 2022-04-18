@@ -128,6 +128,17 @@
 					this.bottom = !this.bottom
 				}
 			})
+			if (option.img == '') {
+				uni.request({
+					url: 'http://api.bilibili.com/x/web-interface/view',
+					data: {
+						bvid: option.id
+					},
+					success: (res) => {
+						this.ownerImg = res.data.data.owner.face
+					}
+				})
+			}
 		},
 		onReady() {
 			this.videoContext = uni.createVideoContext('video_bl')

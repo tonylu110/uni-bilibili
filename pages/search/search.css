@@ -6,10 +6,11 @@
 }
 
 .search_main{
+	/* margin-top: 44px; */
 	width: 750rpx;
 	border-bottom: 1px solid #00000010;
 	position: fixed;
-	z-index: 10;
+	z-index: 501;
 	top: 0;
 	background-color: #ffffffef;
 }
