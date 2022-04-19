@@ -17,7 +17,7 @@
 			 @change="onHeaderSelect"
 			 @select="onItemSelect"
 			 active-color="#20b0e3"
-			 :bgColor="{header:'#fff',content: '#ffffffef'}">
+			 :bgColor="{header:'#fff',content: '#ffffffdd'}">
 			</wyb-drop-down>
 		</view>
 		<view class="hotwords" :style="{marginTop: 70 + systemBarHeight + 'px'}" v-if="!chress">

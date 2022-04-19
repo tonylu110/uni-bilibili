@@ -8,6 +8,7 @@
 		<view class="wyb-drop-down-container" @tap.stop.prevent @touchmove.stop.prevent>
 			<view 
 			 class="wyb-drop-down-header"
+			 id="wyb-drop-down-header"
 			 :style="{
 				 zIndex: zIndex,
 				 backgroundColor: bgColor.header,
@@ -58,7 +59,7 @@
 				 minHeight: minHeight + 'rpx',
 				 height: autoHeight ? 'auto' : minHeight + 'rpx',
 				 maxHeight: autoHeight && maxHeight ? maxHeight + 'rpx' : 'auto',
-				 top: 200 + rpxSystemBarHeight + 'rpx'}">
+				 top: 57 + rpxSystemBarHeight + systemBarHeight + 'px'}">
 				 <view class="wyb-drop-down-content-box" v-for="(item,index) in options" :key="contentBoxKey(index)">
 				 	<view v-if="item['custom'] && headerActiveIndex === index && dropDown" class="wyb-drop-down-content-slot">
 						<slot></slot>
@@ -208,6 +209,10 @@
 			}
 		},
 		mounted() {
+			const query = uni.createSelectorQuery().in(this);
+			query.select('#wyb-drop-down-header').boundingClientRect(data => {
+				this.rpxSystemBarHeight = data.height
+			}).exec();
 			if (this.defaultIndexList.length === 0) {
 				this.options.forEach((item, index) => {
 					if (!item.custom) {
@@ -228,7 +233,6 @@
 				})
 			}
 			this.getSysteminfo()
-			this.rpxSystemBarHeight = this.systemBarHeight/(uni.upx2px(100)/100)
 		},
 		methods: {
 			onHeaderTap(index) {
@@ -404,6 +408,7 @@
 	
 	.wyb-drop-down-content-box {
 		width: 100%;
+		backdrop-filter: blur(20px);
 	}
 	
 	.wyb-drop-down-content-slot {
