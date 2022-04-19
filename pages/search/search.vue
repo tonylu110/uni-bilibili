@@ -1,13 +1,13 @@
 <template>
 	<view class="content">
-		<view class="search_main">
+		<view class="system_bar" :style="{height: systemBarHeight + 'px'}"></view>
+		<view class="search_main" :style="{top: systemBarHeight + 'px'}">
 			<uni-search-bar 
 				@confirm="search" 
 				v-model="searchValue" 
 				@cancel="cancel" 
 				@clear="clear" 
-				placeholder="请输入你要搜索的内容" 
-				cancelButton="always">
+				placeholder="请输入你要搜索的内容" >
 			</uni-search-bar>
 		</view>
 		<view class="drop_down" v-if="chress">
@@ -20,7 +20,16 @@
 			 :bgColor="{header:'#fff',content: '#ffffffef'}">
 			</wyb-drop-down>
 		</view>
-		<view style="margin-top: 115px;"></view>
+		<view class="hotwords" :style="{marginTop: 70 + systemBarHeight + 'px'}" v-if="!chress">
+			热门搜索：
+			<view class="allHW">
+				<view class="hotword" v-for="(item,index) in hotwords" :key="index" @click="hotSearch(item.keyword)">
+					<image :src="item.icon" mode="" v-if="item.icon"></image>
+					{{ item.keyword }}
+				</view>
+			</view>
+		</view>
+		<view :style="{marginTop: 115 + systemBarHeight + 'px'}"></view>
 		<view v-for="(item,index) in videoInfo" :key="index">
 			<navigator class="video_list" hover-stay-time="0" :url="'../player/player?id=' + item.bvid + '&title=' + '&img=' + item.upic + '&name=' + item.author + '&desc=' + item.description + '&pic=' + item.pic + '&view=' + item.play + '&like=' + item.like">
 				<image :src="item.pic" mode="" class="video_img"></image>
@@ -67,18 +76,30 @@
 				chress: false,
 				order: 'default',
 				duration: '0',
+				systemBarHeight: 0,
 				options: [{
 					header: '默认排序',
 					contents: ['默认排序', '播放多', '新发布', '弹幕多']
 				}, {
 					header: '全部时长',
 					contents: ['全部时长', '0-10 分钟', '10-30 分钟', '30-60 分钟','60 分钟 +']
-				}]
+				}],
+				hotwords: []
 			}
 		},
 		onReachBottom() {
 			this.page = this.page + 1
 			this.getList(this.order,this.duration)
+		},
+		onLoad() {
+			uni.request({
+				url: 'http://s.search.bilibili.com/main/hotword',
+				success: (res) => {
+					this.hotwords = res.data.list
+				}
+			}),
+			this.getSysteminfo()
+			
 		},
 		methods: {
 			getList(sorder,sduration) {
@@ -95,7 +116,21 @@
 					}
 				})
 			},
+			getSysteminfo() {
+				uni.getSystemInfo({
+					success: res => {
+						this.systemBarHeight = res.statusBarHeight;
+					}
+				});
+			},
 			search() {
+				this.page = 1
+				this.videoInfo = []
+				this.getList(this.order,this.duration)
+				this.chress = true
+			},
+			hotSearch(keyword) {
+				this.searchValue = keyword
 				this.page = 1
 				this.videoInfo = []
 				this.getList(this.order,this.duration)
@@ -105,9 +140,10 @@
 				this.searchValue = ''
 			},
 			cancel() {
-				uni.navigateBack({
-					
-				})
+				this.searchValue = ''
+				this.page = 1
+				this.videoInfo = []
+				this.chress = false
 			},
 			onHeaderSelect(res) {
 				

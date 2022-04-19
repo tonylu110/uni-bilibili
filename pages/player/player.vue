@@ -1,13 +1,14 @@
 <template>
 	<view class="content">
-		<video :src="src" autoplay="true" danmu-btn="true" enable-danmu="true" :title="title" id="video_bl"></video>
-		<view class="danmu_main">
+		<view class="system_bar" :style="{height: systemBarHeight + 'px'}"></view>
+		<video :src="src" autoplay="true" danmu-btn="true" enable-danmu="true" :title="title" id="video_bl" :style="{top: systemBarHeight + 'px'}"></video>
+		<view class="danmu_main" :style="{marginTop: 422 + rpxSystemBarHeight + 'rpx'}">
 			<input type="text" placeholder="发送友谊的弹幕吧" value="" />
 			<div class="send">
 				<uni-icons type="paperplane-filled" size="30" color="white"></uni-icons>
 			</div>
 		</view>
-		<view class="owner">
+		<view class="owner" :style="{marginTop: 522 + rpxSystemBarHeight + 'rpx'}">
 			<image :src="ownerImg" mode=""></image>
 			<view class="owner_text">
 				<text class="ownm">{{ ownerName }}</text>
@@ -88,10 +89,14 @@
 				bottom: false,
 				videoImg: '',
 				view: '',
-				like: ''
+				like: '',
+				systemBarHeight: 0,
+				rpxSystemBarHeight: 0
 			}
 		},
 		onLoad(option) {
+			this.getSysteminfo()
+			this.rpxSystemBarHeight = this.systemBarHeight/(uni.upx2px(100)/100)
 			uni.request({
 				url:'https://tenapi.cn/bilivideo/',
 				data: {
@@ -155,7 +160,14 @@
 			},
 			pause() {
 				this.videoContext.pause()
-			}
+			},
+			getSysteminfo() {
+				uni.getSystemInfo({
+					success: res => {
+						this.systemBarHeight = res.statusBarHeight;
+					}
+				});
+			},
 		}
 	}
 </script>

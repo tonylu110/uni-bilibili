@@ -10,7 +10,8 @@
 			 class="wyb-drop-down-header"
 			 :style="{
 				 zIndex: zIndex,
-				 backgroundColor: bgColor.header}">
+				 backgroundColor: bgColor.header,
+				 top: systemBarHeight + 57 + 'px'}">
 				<view 
 				 class="wyb-drop-down-header-item"
 				 v-for="(item,index) in options"
@@ -56,7 +57,8 @@
 				 borderBottomRightRadius: radius + 'px',
 				 minHeight: minHeight + 'rpx',
 				 height: autoHeight ? 'auto' : minHeight + 'rpx',
-				 maxHeight: autoHeight && maxHeight ? maxHeight + 'rpx' : 'auto'}">
+				 maxHeight: autoHeight && maxHeight ? maxHeight + 'rpx' : 'auto',
+				 top: 200 + rpxSystemBarHeight + 'rpx'}">
 				 <view class="wyb-drop-down-content-box" v-for="(item,index) in options" :key="contentBoxKey(index)">
 				 	<view v-if="item['custom'] && headerActiveIndex === index && dropDown" class="wyb-drop-down-content-slot">
 						<slot></slot>
@@ -91,7 +93,8 @@
 		 :style="{
 			 zIndex: zIndex - 2,
 			 height: screenHeight + 'px',
-			 backgroundColor: 'rgba(0, 0, 0, ' + maskAlpha + ')'}" />
+			 backgroundColor: 'rgba(0, 0, 0, ' + maskAlpha + ')',
+			 top: 57 + systemBarHeight + 'px'}" />
 	</view>
 </template>
 
@@ -104,7 +107,9 @@
 				duration: 500,
 				contents: this.options[0].contents || [0],
 				headerActiveIndex: 0,
-				contentActiveIndexList: []
+				contentActiveIndexList: [],
+				systemBarHeight: 0,
+				rpxSystemBarHeight: 0
 			}
 		},
 		computed: {
@@ -222,6 +227,8 @@
 					}
 				})
 			}
+			this.getSysteminfo()
+			this.rpxSystemBarHeight = this.systemBarHeight/(uni.upx2px(100)/100)
 		},
 		methods: {
 			onHeaderTap(index) {
@@ -264,6 +271,13 @@
 			},
 			rpxToPx(rpx) {
 				return rpx / 750 * this.screenWidth
+			},
+			getSysteminfo() {
+				uni.getSystemInfo({
+					success: res => {
+						this.systemBarHeight = res.statusBarHeight;
+					}
+				});
 			}
 		}
 	}

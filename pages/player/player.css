@@ -18,7 +18,6 @@ video{
 }
 
 .owner{
-	margin-top: 522rpx;
 	width: 750rpx;
 	display: flex;
 	flex-direction: row;
@@ -42,7 +41,6 @@ video{
 	display: flex;
 	flex-direction: row;
 	width: 750rpx;
-	margin-top: 422rpx;
 	position: fixed;
 	z-index: 10;
 }
@@ -121,4 +119,11 @@ video{
 	padding-bottom: 20rpx;
 	border-bottom: 1px solid #00000010;
 	justify-content: center;
+}
+.system_bar{
+	width: 750px;
+	background-color: black;
+	position: fixed;
+	z-index: 520;
+	top: 0;
 }

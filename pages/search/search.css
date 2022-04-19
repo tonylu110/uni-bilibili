@@ -6,7 +6,7 @@
 }
 
 .search_main{
-	/* margin-top: 44px; */
+	border-top: 1px solid #00000010;
 	width: 750rpx;
 	border-bottom: 1px solid #00000010;
 	position: fixed;
@@ -50,4 +50,38 @@ rich-text{
 	display: flex;
 	flex-direction: row;
 	color: gray;
+}
+
+.hotwords{
+	width: 710rpx;
+}
+.allHW{
+	margin-top: 20rpx;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.hotword{
+	background-color: #00000010;
+	width: auto;
+	padding: 10rpx;
+	border-radius: 10rpx;
+	display: block;
+	margin-right: 20rpx;
+	margin-bottom: 20rpx;
+	display: flex;
+	flex-direction: row;
+}
+.hotword image{
+	max-width: 20px;
+	max-height: 20px;
+	margin-right: 10rpx;
+}
+
+.system_bar{
+	width: 750px;
+	background-color: white;
+	position: fixed;
+	z-index: 520;
+	top: 0;
 }

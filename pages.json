@@ -14,6 +14,9 @@
             {
                 "navigationBarTitleText": "搜索",
                 "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor":"#ffffff",
+				"navigationStyle":"custom",
+				"navigationBarTextStyle":"black",
 				"onReachBottomDistance": 50
             }
             
@@ -50,6 +53,8 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
+				"navigationBarBackgroundColor":"#000000",
+				"navigationStyle":"custom",
                 "enablePullDownRefresh": false
             }
             
