@@ -127,3 +127,18 @@ video{
 	z-index: 520;
 	top: 0;
 }
+.title_bar{
+	width: 750rpx;
+	height: 20px;
+	padding: 5px;
+	line-height: 40rpx;
+	text-align: center;
+	position: fixed;
+	background-color: black;
+	color: white;
+	z-index: 520;
+	overflow: hidden;
+	-webkit-line-clamp: 1;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

@@ -28,6 +28,15 @@
 					{{ item.keyword }}
 				</view>
 			</view>
+			<view class="his_word" v-if="hisWordShow" :scroll-y="true">
+				历史搜索：
+				<view :scroll-y="true" class="allHW allHisW">
+					<view class="hotword" v-for="(item,index) in keywords" :key="index" @click="hotSearch(item)">
+						{{ item }}
+					</view>
+				</view>
+				<view class="clear_btn" type="default" @click="clearHisword"><uni-icons type="trash" size="30" color="#aaa"></uni-icons>清除搜索历史</view>
+			</view>
 		</view>
 		<view :style="{marginTop: 115 + systemBarHeight + 'px'}"></view>
 		<view v-for="(item,index) in videoInfo" :key="index">
@@ -84,7 +93,9 @@
 					header: '全部时长',
 					contents: ['全部时长', '0-10 分钟', '10-30 分钟', '30-60 分钟','60 分钟 +']
 				}],
-				hotwords: []
+				hotwords: [],
+				keywords: [],
+				hisWordShow: false
 			}
 		},
 		onReachBottom() {
@@ -99,7 +110,18 @@
 				}
 			}),
 			this.getSysteminfo()
-			
+			uni.getStorage({
+				key: 'keywords',
+				success: (res) => {
+					this.keywords = res.data
+				}
+			});
+			uni.getStorage({
+				key: 'hisWordShow',
+				success: (res) => {
+					this.hisWordShow = res.data
+				}
+			})
 		},
 		methods: {
 			getList(sorder,sduration) {
@@ -128,6 +150,23 @@
 				this.videoInfo = []
 				this.getList(this.order,this.duration)
 				this.chress = true
+				var keyword = this.searchValue
+				var keywords = this.keywords
+				if (!keywords.includes(keyword)) {
+					this.keywords = [keyword, ...keywords]
+				} else {
+					keywords = keywords.filter(item => item != keyword)
+					this.keywords = [keyword, ...keywords]
+				}
+				uni.setStorage({
+					key: 'keywords',
+					data: this.keywords,
+				})
+				uni.setStorage({
+					key: 'hisWordShow',
+					data: true
+				})
+				this.hisWordShow = true
 			},
 			hotSearch(keyword) {
 				this.searchValue = keyword
@@ -135,6 +174,33 @@
 				this.videoInfo = []
 				this.getList(this.order,this.duration)
 				this.chress = true
+				var keyword = this.searchValue
+				var keywords = this.keywords
+				if (!keywords.includes(keyword)) {
+					this.keywords = [keyword, ...keywords]
+				} else {
+					keywords = keywords.filter(item => item != keyword)
+					this.keywords = [keyword, ...keywords]
+				}
+				uni.setStorage({
+					key: 'keywords',
+					data: this.keywords,
+				})
+				uni.setStorage({
+					key: 'hisWordShow',
+					data: true
+				})
+				this.hisWordShow = true
+			},
+			clearHisword() {
+				uni.removeStorage({
+					key: 'keywords',
+				})
+				this.hisWordShow = false
+				uni.setStorage({
+					key: 'hisWordShow',
+					data: false
+				})
 			},
 			clear() {
 				this.searchValue = ''

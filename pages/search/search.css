@@ -63,14 +63,17 @@ rich-text{
 }
 .hotword{
 	background-color: #00000010;
-	width: auto;
-	padding: 10rpx;
+	padding: 10rpx 15rpx 10rpx 15rpx;
 	border-radius: 10rpx;
-	display: block;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 	margin-right: 20rpx;
 	margin-bottom: 20rpx;
 	display: flex;
 	flex-direction: row;
+	height: 45rpx;
+	line-height: 45rpx;
 }
 .hotword image{
 	max-width: 20px;
@@ -84,4 +87,25 @@ rich-text{
 	position: fixed;
 	z-index: 520;
 	top: 0;
+}
+
+.allHisW{
+	max-height: 320rpx;
+	overflow: hidden;
+}
+.clear_btn{
+	width: 670rpx;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	padding: 20rpx;
+	border-radius: 10rpx;
+	color: #aaa;
+}
+.clear_btn:active{
+	background-color: #00000010;
+}
+.his_word{
+	margin-top: 30rpx;
 }

@@ -1,14 +1,15 @@
 <template>
 	<view class="content">
 		<view class="system_bar" :style="{height: systemBarHeight + 'px'}"></view>
-		<video :src="src" autoplay="true" danmu-btn="true" enable-danmu="true" :title="title" id="video_bl" :style="{top: systemBarHeight + 'px'}"></video>
-		<view class="danmu_main" :style="{marginTop: 422 + rpxSystemBarHeight + 'rpx'}">
+		<view class="title_bar" :style="{top: systemBarHeight + 'px'}">{{ title }}</view>
+		<video :src="src" autoplay="true" danmu-btn="true" enable-danmu="true" :title="title" id="video_bl" :style="{top: systemBarHeight + 30 + 'px'}"></video>
+		<view class="danmu_main" :style="{marginTop: px2rpx42 + 30 + systemBarHeight + 'px'}">
 			<input type="text" placeholder="发送友谊的弹幕吧" value="" />
 			<div class="send">
 				<uni-icons type="paperplane-filled" size="30" color="white"></uni-icons>
 			</div>
 		</view>
-		<view class="owner" :style="{marginTop: 522 + rpxSystemBarHeight + 'rpx'}">
+		<view class="owner" :style="{marginTop: px2rpx52 + 30 + systemBarHeight + 'px'}">
 			<image :src="ownerImg" mode=""></image>
 			<view class="owner_text">
 				<text class="ownm">{{ ownerName }}</text>
@@ -91,12 +92,14 @@
 				view: '',
 				like: '',
 				systemBarHeight: 0,
-				rpxSystemBarHeight: 0
+				px2rpx52: 0,
+				px2rpx42: 0
 			}
 		},
 		onLoad(option) {
+			this.px2rpx52 = this.px2rpx(522)
+			this.px2rpx42 = this.px2rpx(422)
 			this.getSysteminfo()
-			this.rpxSystemBarHeight = this.systemBarHeight/(uni.upx2px(100)/100)
 			uni.request({
 				url:'https://tenapi.cn/bilivideo/',
 				data: {
@@ -168,6 +171,9 @@
 					}
 				});
 			},
+			px2rpx(rpx) {
+				return uni.upx2px(rpx)
+			}
 		}
 	}
 </script>
