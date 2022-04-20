@@ -186,3 +186,12 @@ video{
 .imgAPa{
 	width: 610rpx;
 }
+.ctime{
+	font-size: 25rpx;
+	color: gray;
+}
+.owntime{
+	margin-top: 5rpx;
+	font-size: 23rpx;
+	color: gray;
+}

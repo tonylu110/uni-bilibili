@@ -21,6 +21,7 @@
 				<image :src="ownerImg" mode=""></image>
 				<view class="owner_text">
 					<text class="ownm">{{ ownerName }}</text>
+					<text class="owntime">{{ timestampToTime(ctime) }}</text>
 					<uni-collapse accordion :show-animation="true">
 						<uni-collapse-item :title="title" :border="false" titleBorder="none">
 							<view class="colcon">
@@ -89,6 +90,9 @@
 					<view class="paName">
 						{{ item.member.uname }}
 					</view>
+					<view class="ctime">
+						{{ timestampToTime(item.ctime) }}
+					</view>
 					{{ item.content.message }}
 				</view>
 			</view>
@@ -120,6 +124,7 @@
 				vatShow: true,
 				oid: '',
 				resq: [],
+				ctime: '',
 				pn: 1,
 				scrollTop: 0,
 				vtt: 0,
@@ -176,6 +181,7 @@
 					success: (res) => {
 						this.ownerImg = res.data.data.owner.face
 						this.oid = res.data.data.aid
+						this.ctime = res.data.data.ctime
 					}
 				})
 			}
@@ -251,8 +257,30 @@
 					},
 					success: (res) => {
 						this.resq = [...this.resq, ...res.data.data.replies]
+						
 					}
 				})
+			},
+			timestampToTime(timestamp) {
+				var nowDate = new Date()
+				var date = new Date(timestamp * 1000)
+				var Y = date.getFullYear() + '-'
+				var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-'
+				var D = date.getDate()
+				var h = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()) + ':'
+				var m = (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())
+				if (nowDate.getFullYear() + '-' == Y) {
+					Y = ''
+				} 
+				if (nowDate.getDate() == D) {
+					Y = ''
+					M = ''
+					D = '今天'
+				}
+				if (D < 10 && D != '') {
+					D = '0' + D
+				}
+				return Y + M + D + ' ' + h + m
 			}
 		}
 	}
