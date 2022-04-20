@@ -120,7 +120,10 @@
 				vatShow: true,
 				oid: '',
 				resq: [],
-				pn: 1
+				pn: 1,
+				scrollTop: 0,
+				vtt: 0,
+				ptt: 0
 			}
 		},
 		onLoad(option) {
@@ -189,6 +192,9 @@
 				this.getTa()
 			}
 		},
+		onPageScroll(res) {
+			this.scrollTop = res.scrollTop
+		},
 		methods: {
 			onShare() {
 				uni.shareWithSystem({
@@ -211,16 +217,26 @@
 			},
 			vat(vot) {
 				if (vot == 't') {
+					this.vatShow = false
 					this.selColor = 'black'
 					this.fselColor = '#20b0e3'
-					this.vatShow = false
+					this.vtt = this.scrollTop;
+					uni.pageScrollTo({
+						scrollTop: this.ptt,
+						duration: 0
+					})
 					if (!this.resq.length) {
 						this.getTa()	
 					}
 				} else {
+					this.vatShow = true
 					this.selColor = '#20b0e3'
 					this.fselColor = 'black'
-					this.vatShow = true
+					this.ptt = this.scrollTop
+					uni.pageScrollTo({
+						scrollTop: this.vtt,
+						duration: 0
+					})
 				}
 			},
 			getTa() {
