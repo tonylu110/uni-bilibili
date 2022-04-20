@@ -2632,45 +2632,36 @@ var render = function() {
         style: _vm._$s(1, "s", { height: _vm.systemBarHeight + "px" }),
         attrs: { _i: 1 }
       }),
-      _c(
-        "view",
-        {
-          staticClass: _vm._$s(2, "sc", "title_bar"),
-          style: _vm._$s(2, "s", { top: _vm.systemBarHeight + "px" }),
-          attrs: { _i: 2 }
-        },
-        [_vm._v(_vm._$s(2, "t0-0", _vm._s(_vm.title)))]
-      ),
       _c("video", {
-        style: _vm._$s(3, "s", { top: _vm.systemBarHeight + 30 + "px" }),
+        style: _vm._$s(2, "s", { top: _vm.systemBarHeight + "px" }),
         attrs: {
-          src: _vm._$s(3, "a-src", _vm.src),
-          title: _vm._$s(3, "a-title", _vm.title),
+          src: _vm._$s(2, "a-src", _vm.src),
+          title: _vm._$s(2, "a-title", _vm.title),
           id: "video_bl",
-          _i: 3
+          _i: 2
         }
       }),
       _c(
         "view",
         {
-          staticClass: _vm._$s(4, "sc", "danmu_main"),
-          style: _vm._$s(4, "s", {
-            marginTop: _vm.px2rpx42 + 30 + _vm.systemBarHeight + "px"
+          staticClass: _vm._$s(3, "sc", "danmu_main"),
+          style: _vm._$s(3, "s", {
+            marginTop: _vm.px2rpx42 + _vm.systemBarHeight + "px"
           }),
-          attrs: { _i: 4 }
+          attrs: { _i: 3 }
         },
         [
           _c("input", {}),
           _c(
             "div",
-            { staticClass: _vm._$s(6, "sc", "send"), attrs: { _i: 6 } },
+            { staticClass: _vm._$s(5, "sc", "send"), attrs: { _i: 5 } },
             [
               _c("uni-icons", {
                 attrs: {
                   type: "paperplane-filled",
                   size: "30",
                   color: "white",
-                  _i: 7
+                  _i: 6
                 }
               })
             ],
@@ -2681,309 +2672,341 @@ var render = function() {
       _c(
         "view",
         {
-          staticClass: _vm._$s(8, "sc", "owner"),
-          style: _vm._$s(8, "s", {
-            marginTop: _vm.px2rpx52 + 30 + _vm.systemBarHeight + "px"
+          staticClass: _vm._$s(7, "sc", "vat"),
+          style: _vm._$s(7, "s", {
+            top: _vm.vatpx + _vm.systemBarHeight + "px"
           }),
-          attrs: { _i: 8 }
+          attrs: { _i: 7 }
         },
         [
-          _c("image", {
-            attrs: { src: _vm._$s(9, "a-src", _vm.ownerImg), _i: 9 }
+          _c("view", {
+            staticClass: _vm._$s(8, "sc", "vt"),
+            style: _vm._$s(8, "s", { color: _vm.selColor }),
+            attrs: { _i: 8 },
+            on: {
+              click: function($event) {
+                return _vm.vat("v")
+              }
+            }
           }),
+          _c("view", {
+            staticClass: _vm._$s(9, "sc", "vt"),
+            style: _vm._$s(9, "s", { color: _vm.fselColor }),
+            attrs: { _i: 9 },
+            on: {
+              click: function($event) {
+                return _vm.vat("t")
+              }
+            }
+          })
+        ]
+      ),
+      _c(
+        "view",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm._$s(10, "v-show", _vm.vatShow),
+              expression: "_$s(10,'v-show',vatShow)"
+            }
+          ],
+          staticClass: _vm._$s(10, "sc", "va"),
+          style: _vm._$s(10, "s", {
+            marginTop: _vm.px2rpx52 + 40 + _vm.systemBarHeight + "px"
+          }),
+          attrs: { _i: 10 }
+        },
+        [
           _c(
             "view",
-            { staticClass: _vm._$s(10, "sc", "owner_text"), attrs: { _i: 10 } },
+            { staticClass: _vm._$s(11, "sc", "owner"), attrs: { _i: 11 } },
             [
+              _c("image", {
+                attrs: { src: _vm._$s(12, "a-src", _vm.ownerImg), _i: 12 }
+              }),
               _c(
-                "text",
-                { staticClass: _vm._$s(11, "sc", "ownm"), attrs: { _i: 11 } },
-                [_vm._v(_vm._$s(11, "t0-0", _vm._s(_vm.ownerName)))]
-              ),
-              _c(
-                "uni-collapse",
-                { attrs: { accordion: true, "show-animation": true, _i: 12 } },
+                "view",
+                {
+                  staticClass: _vm._$s(13, "sc", "owner_text"),
+                  attrs: { _i: 13 }
+                },
                 [
                   _c(
-                    "uni-collapse-item",
+                    "text",
                     {
-                      attrs: {
-                        title: "简介",
-                        border: false,
-                        titleBorder: "none",
-                        _i: 13
-                      }
+                      staticClass: _vm._$s(14, "sc", "ownm"),
+                      attrs: { _i: 14 }
+                    },
+                    [_vm._v(_vm._$s(14, "t0-0", _vm._s(_vm.ownerName)))]
+                  ),
+                  _c(
+                    "uni-collapse",
+                    {
+                      attrs: { accordion: true, "show-animation": true, _i: 15 }
                     },
                     [
                       _c(
-                        "view",
+                        "uni-collapse-item",
                         {
-                          staticClass: _vm._$s(14, "sc", "colcon"),
-                          attrs: { _i: 14 }
+                          attrs: {
+                            title: _vm.title,
+                            border: false,
+                            titleBorder: "none",
+                            _i: 16
+                          }
                         },
                         [
-                          _c("text", [
-                            _vm._v(_vm._$s(15, "t0-0", _vm._s(_vm.vInfo)))
-                          ])
+                          _c(
+                            "view",
+                            {
+                              staticClass: _vm._$s(17, "sc", "colcon"),
+                              attrs: { _i: 17 }
+                            },
+                            [
+                              _c("text", [
+                                _vm._v(_vm._$s(18, "t0-0", _vm._s(_vm.vInfo)))
+                              ])
+                            ]
+                          )
                         ]
                       )
-                    ]
+                    ],
+                    1
                   )
                 ],
                 1
               )
-            ],
-            1
-          )
-        ]
-      ),
-      _c(
-        "view",
-        { staticClass: _vm._$s(16, "sc", "vd_info"), attrs: { _i: 16 } },
-        [
-          _c(
-            "view",
-            { staticClass: _vm._$s(17, "sc", "video_play"), attrs: { _i: 17 } },
-            [
-              _c("uni-icons", {
-                attrs: {
-                  type: "videocam-filled",
-                  size: "16",
-                  color: "gray",
-                  _i: 18
-                }
-              }),
-              _c("text", [_vm._v(_vm._$s(19, "t0-0", _vm._s(_vm.view)))])
-            ],
-            1
+            ]
           ),
           _c(
             "view",
-            { staticClass: _vm._$s(20, "sc", "video_like"), attrs: { _i: 20 } },
+            { staticClass: _vm._$s(19, "sc", "vd_info"), attrs: { _i: 19 } },
             [
-              _c("uni-icons", {
-                attrs: {
-                  type: "hand-up-filled",
-                  size: "16",
-                  color: "gray",
-                  _i: 21
-                }
-              }),
-              _c("text", [_vm._v(_vm._$s(22, "t0-0", _vm._s(_vm.like)))])
-            ],
-            1
-          )
-        ]
-      ),
-      _c(
-        "view",
-        { staticClass: _vm._$s(23, "sc", "fe_bar"), attrs: { _i: 23 } },
-        [
-          _c(
-            "view",
-            { staticClass: _vm._$s(24, "sc", "fe"), attrs: { _i: 24 } },
-            [
-              _c("uni-icons", {
-                attrs: {
-                  type: "hand-up-filled",
-                  size: "30",
-                  color: "gray",
-                  _i: 25
-                }
-              })
-            ],
-            1
+              _c(
+                "view",
+                {
+                  staticClass: _vm._$s(20, "sc", "video_play"),
+                  attrs: { _i: 20 }
+                },
+                [
+                  _c("uni-icons", {
+                    attrs: {
+                      type: "videocam-filled",
+                      size: "16",
+                      color: "gray",
+                      _i: 21
+                    }
+                  }),
+                  _c("text", [_vm._v(_vm._$s(22, "t0-0", _vm._s(_vm.view)))])
+                ],
+                1
+              ),
+              _c(
+                "view",
+                {
+                  staticClass: _vm._$s(23, "sc", "video_like"),
+                  attrs: { _i: 23 }
+                },
+                [
+                  _c("uni-icons", {
+                    attrs: {
+                      type: "hand-up-filled",
+                      size: "16",
+                      color: "gray",
+                      _i: 24
+                    }
+                  }),
+                  _c("text", [_vm._v(_vm._$s(25, "t0-0", _vm._s(_vm.like)))])
+                ],
+                1
+              )
+            ]
           ),
           _c(
             "view",
-            { staticClass: _vm._$s(26, "sc", "fe"), attrs: { _i: 26 } },
+            { staticClass: _vm._$s(26, "sc", "fe_bar"), attrs: { _i: 26 } },
             [
-              _c("uni-icons", {
-                attrs: {
-                  type: "checkbox-filled",
-                  size: "30",
-                  color: "gray",
-                  _i: 27
-                }
-              })
-            ],
-            1
+              _c(
+                "view",
+                { staticClass: _vm._$s(27, "sc", "fe"), attrs: { _i: 27 } },
+                [
+                  _c("uni-icons", {
+                    attrs: {
+                      type: "hand-up-filled",
+                      size: "30",
+                      color: "gray",
+                      _i: 28
+                    }
+                  })
+                ],
+                1
+              ),
+              _c(
+                "view",
+                { staticClass: _vm._$s(29, "sc", "fe"), attrs: { _i: 29 } },
+                [
+                  _c("uni-icons", {
+                    attrs: {
+                      type: "checkbox-filled",
+                      size: "30",
+                      color: "gray",
+                      _i: 30
+                    }
+                  })
+                ],
+                1
+              ),
+              _c(
+                "view",
+                { staticClass: _vm._$s(31, "sc", "fe"), attrs: { _i: 31 } },
+                [
+                  _c("uni-icons", {
+                    attrs: {
+                      type: "star-filled",
+                      size: "30",
+                      color: "gray",
+                      _i: 32
+                    }
+                  })
+                ],
+                1
+              ),
+              _c(
+                "view",
+                {
+                  staticClass: _vm._$s(33, "sc", "fe"),
+                  attrs: { _i: 33 },
+                  on: {
+                    click: function($event) {
+                      return _vm.onShare()
+                    }
+                  }
+                },
+                [
+                  _c("uni-icons", {
+                    attrs: {
+                      type: "redo-filled",
+                      size: "30",
+                      color: "gray",
+                      _i: 34
+                    }
+                  })
+                ],
+                1
+              )
+            ]
           ),
-          _c(
-            "view",
-            { staticClass: _vm._$s(28, "sc", "fe"), attrs: { _i: 28 } },
-            [
-              _c("uni-icons", {
-                attrs: {
-                  type: "star-filled",
-                  size: "30",
-                  color: "gray",
-                  _i: 29
-                }
-              })
-            ],
-            1
-          ),
-          _c(
-            "view",
-            {
-              staticClass: _vm._$s(30, "sc", "fe"),
-              attrs: { _i: 30 },
-              on: {
-                click: function($event) {
-                  return _vm.onShare()
-                }
-              }
-            },
-            [
-              _c("uni-icons", {
-                attrs: {
-                  type: "redo-filled",
-                  size: "30",
-                  color: "gray",
-                  _i: 31
-                }
-              })
-            ],
-            1
-          )
-        ]
-      ),
-      _vm._l(_vm._$s(32, "f", { forItems: _vm.moreVideo }), function(
-        item,
-        index,
-        $20,
-        $30
-      ) {
-        return _c(
-          "view",
-          {
-            key: _vm._$s(32, "f", { forIndex: $20, key: index }),
-            attrs: { _i: "32-" + $30 },
-            on: {
-              click: function($event) {
-                return _vm.pause()
-              }
-            }
-          },
-          [
-            _c(
-              "navigator",
+          _vm._l(_vm._$s(35, "f", { forItems: _vm.moreVideo }), function(
+            item,
+            index,
+            $20,
+            $30
+          ) {
+            return _c(
+              "view",
               {
-                staticClass: _vm._$s("33-" + $30, "sc", "video_list"),
-                attrs: {
-                  url: _vm._$s(
-                    "33-" + $30,
-                    "a-url",
-                    "../player/player?id=" +
-                      item.bvid +
-                      "&title=" +
-                      item.title +
-                      "&img=" +
-                      item.owner.face +
-                      "&name=" +
-                      item.owner.name +
-                      "&desc=" +
-                      item.desc +
-                      "&pic=" +
-                      item.pic +
-                      "&view=" +
-                      item.stat.view +
-                      "&like=" +
-                      item.stat.like
-                  ),
-                  _i: "33-" + $30
+                key: _vm._$s(35, "f", { forIndex: $20, key: index }),
+                attrs: { _i: "35-" + $30 },
+                on: {
+                  click: function($event) {
+                    return _vm.pause()
+                  }
                 }
               },
               [
-                _c("image", {
-                  staticClass: _vm._$s("34-" + $30, "sc", "video_img"),
-                  attrs: {
-                    src: _vm._$s("34-" + $30, "a-src", item.pic),
-                    _i: "34-" + $30
-                  }
-                }),
                 _c(
-                  "view",
+                  "navigator",
                   {
-                    staticClass: _vm._$s("35-" + $30, "sc", "video_info"),
-                    attrs: { _i: "35-" + $30 }
+                    staticClass: _vm._$s("36-" + $30, "sc", "video_list"),
+                    attrs: {
+                      url: _vm._$s(
+                        "36-" + $30,
+                        "a-url",
+                        "../player/player?id=" +
+                          item.bvid +
+                          "&title=" +
+                          item.title +
+                          "&img=" +
+                          item.owner.face +
+                          "&name=" +
+                          item.owner.name +
+                          "&desc=" +
+                          item.desc +
+                          "&pic=" +
+                          item.pic +
+                          "&view=" +
+                          item.stat.view +
+                          "&like=" +
+                          item.stat.like
+                      ),
+                      _i: "36-" + $30
+                    }
                   },
                   [
-                    _c(
-                      "text",
-                      {
-                        staticClass: _vm._$s("36-" + $30, "sc", "video_title"),
-                        attrs: { _i: "36-" + $30 }
-                      },
-                      [_vm._v(_vm._$s("36-" + $30, "t0-0", _vm._s(item.title)))]
-                    ),
+                    _c("image", {
+                      staticClass: _vm._$s("37-" + $30, "sc", "video_img"),
+                      attrs: {
+                        src: _vm._$s("37-" + $30, "a-src", item.pic),
+                        _i: "37-" + $30
+                      }
+                    }),
                     _c(
                       "view",
                       {
-                        staticClass: _vm._$s("37-" + $30, "sc", "up_main"),
-                        attrs: { _i: "37-" + $30 }
+                        staticClass: _vm._$s("38-" + $30, "sc", "video_info"),
+                        attrs: { _i: "38-" + $30 }
                       },
                       [
                         _c(
-                          "view",
+                          "text",
                           {
-                            staticClass: _vm._$s("38-" + $30, "sc", "up_name"),
-                            attrs: { _i: "38-" + $30 }
+                            staticClass: _vm._$s(
+                              "39-" + $30,
+                              "sc",
+                              "video_title"
+                            ),
+                            attrs: { _i: "39-" + $30 }
                           },
                           [
-                            _c("uni-icons", {
-                              attrs: {
-                                type: "person-filled",
-                                size: "16",
-                                color: "gray",
-                                _i: "39-" + $30
-                              }
-                            }),
-                            _c("text", [
-                              _vm._v(
-                                _vm._$s(
-                                  "40-" + $30,
-                                  "t0-0",
-                                  _vm._s(item.owner.name)
-                                )
-                              )
-                            ])
-                          ],
-                          1
+                            _vm._v(
+                              _vm._$s("39-" + $30, "t0-0", _vm._s(item.title))
+                            )
+                          ]
                         ),
                         _c(
                           "view",
                           {
-                            staticClass: _vm._$s("41-" + $30, "sc", "video_in"),
-                            attrs: { _i: "41-" + $30 }
+                            staticClass: _vm._$s("40-" + $30, "sc", "up_main"),
+                            attrs: { _i: "40-" + $30 }
                           },
                           [
                             _c(
                               "view",
                               {
                                 staticClass: _vm._$s(
-                                  "42-" + $30,
+                                  "41-" + $30,
                                   "sc",
-                                  "video_play"
+                                  "up_name"
                                 ),
-                                attrs: { _i: "42-" + $30 }
+                                attrs: { _i: "41-" + $30 }
                               },
                               [
                                 _c("uni-icons", {
                                   attrs: {
-                                    type: "videocam-filled",
+                                    type: "person-filled",
                                     size: "16",
                                     color: "gray",
-                                    _i: "43-" + $30
+                                    _i: "42-" + $30
                                   }
                                 }),
                                 _c("text", [
                                   _vm._v(
                                     _vm._$s(
-                                      "44-" + $30,
+                                      "43-" + $30,
                                       "t0-0",
-                                      _vm._s(item.stat.view)
+                                      _vm._s(item.owner.name)
                                     )
                                   )
                                 ])
@@ -2994,32 +3017,76 @@ var render = function() {
                               "view",
                               {
                                 staticClass: _vm._$s(
-                                  "45-" + $30,
+                                  "44-" + $30,
                                   "sc",
-                                  "video_like"
+                                  "video_in"
                                 ),
-                                attrs: { _i: "45-" + $30 }
+                                attrs: { _i: "44-" + $30 }
                               },
                               [
-                                _c("uni-icons", {
-                                  attrs: {
-                                    type: "hand-up-filled",
-                                    size: "16",
-                                    color: "gray",
-                                    _i: "46-" + $30
-                                  }
-                                }),
-                                _c("text", [
-                                  _vm._v(
-                                    _vm._$s(
-                                      "47-" + $30,
-                                      "t0-0",
-                                      _vm._s(item.stat.like)
-                                    )
-                                  )
-                                ])
-                              ],
-                              1
+                                _c(
+                                  "view",
+                                  {
+                                    staticClass: _vm._$s(
+                                      "45-" + $30,
+                                      "sc",
+                                      "video_play"
+                                    ),
+                                    attrs: { _i: "45-" + $30 }
+                                  },
+                                  [
+                                    _c("uni-icons", {
+                                      attrs: {
+                                        type: "videocam-filled",
+                                        size: "16",
+                                        color: "gray",
+                                        _i: "46-" + $30
+                                      }
+                                    }),
+                                    _c("text", [
+                                      _vm._v(
+                                        _vm._$s(
+                                          "47-" + $30,
+                                          "t0-0",
+                                          _vm._s(item.stat.view)
+                                        )
+                                      )
+                                    ])
+                                  ],
+                                  1
+                                ),
+                                _c(
+                                  "view",
+                                  {
+                                    staticClass: _vm._$s(
+                                      "48-" + $30,
+                                      "sc",
+                                      "video_like"
+                                    ),
+                                    attrs: { _i: "48-" + $30 }
+                                  },
+                                  [
+                                    _c("uni-icons", {
+                                      attrs: {
+                                        type: "hand-up-filled",
+                                        size: "16",
+                                        color: "gray",
+                                        _i: "49-" + $30
+                                      }
+                                    }),
+                                    _c("text", [
+                                      _vm._v(
+                                        _vm._$s(
+                                          "50-" + $30,
+                                          "t0-0",
+                                          _vm._s(item.stat.like)
+                                        )
+                                      )
+                                    ])
+                                  ],
+                                  1
+                                )
+                              ]
                             )
                           ]
                         )
@@ -3029,12 +3096,79 @@ var render = function() {
                 )
               ]
             )
-          ]
-        )
-      }),
-      _vm._$s(48, "i", _vm.bottom) ? _c("view", [_c("text")]) : _vm._e()
-    ],
-    2
+          }),
+          _vm._$s(51, "i", _vm.bottom) ? _c("view", [_c("text")]) : _vm._e()
+        ],
+        2
+      ),
+      _c(
+        "view",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm._$s(53, "v-show", !_vm.vatShow),
+              expression: "_$s(53,'v-show',!vatShow)"
+            }
+          ],
+          staticClass: _vm._$s(53, "sc", "ta"),
+          style: _vm._$s(53, "s", {
+            marginTop: _vm.px2rpx52 + 40 + _vm.systemBarHeight + "px"
+          }),
+          attrs: { _i: 53 }
+        },
+        _vm._l(_vm._$s(54, "f", { forItems: _vm.resq }), function(
+          item,
+          index,
+          $21,
+          $31
+        ) {
+          return _c(
+            "view",
+            {
+              key: _vm._$s(54, "f", { forIndex: $21, key: index }),
+              staticClass: _vm._$s("54-" + $31, "sc", "taa"),
+              attrs: { _i: "54-" + $31 }
+            },
+            [
+              _c("image", {
+                staticClass: _vm._$s("55-" + $31, "sc", "aimg"),
+                attrs: {
+                  src: _vm._$s("55-" + $31, "a-src", item.member.avatar),
+                  _i: "55-" + $31
+                }
+              }),
+              _c(
+                "view",
+                {
+                  staticClass: _vm._$s("56-" + $31, "sc", "imgAPa"),
+                  attrs: { _i: "56-" + $31 }
+                },
+                [
+                  _c(
+                    "view",
+                    {
+                      staticClass: _vm._$s("57-" + $31, "sc", "paName"),
+                      attrs: { _i: "57-" + $31 }
+                    },
+                    [
+                      _vm._v(
+                        _vm._$s("57-" + $31, "t0-0", _vm._s(item.member.uname))
+                      )
+                    ]
+                  ),
+                  _vm._v(
+                    _vm._$s("56-" + $31, "t1-0", _vm._s(item.content.message))
+                  )
+                ]
+              )
+            ]
+          )
+        }),
+        0
+      )
+    ]
   )
 }
 var recyclableRender = false
@@ -3479,7 +3613,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _App
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0; //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      src: '',\n      title: '',\n      ownerImg: '',\n      ownerName: '',\n      vInfo: '',\n      videoUrl: '',\n      moreVideo: [],\n      bottom: false,\n      videoImg: '',\n      view: '',\n      like: '',\n      systemBarHeight: 0,\n      px2rpx52: 0,\n      px2rpx42: 0 };\n\n  },\n  onLoad: function onLoad(option) {var _this = this;\n    this.px2rpx52 = this.px2rpx(522);\n    this.px2rpx42 = this.px2rpx(422);\n    this.getSysteminfo();\n    uni.request({\n      url: 'https://tenapi.cn/bilivideo/',\n      data: {\n        url: 'https://www.bilibili.com/video/' + option.id },\n\n      success: function success(res) {\n        if (_this.title == '') {\n          _this.title = res.data.title;\n          uni.setNavigationBarTitle({\n            title: res.data.title });\n\n        }\n        _this.src = res.data.url;\n      } });\n\n    uni.setNavigationBarTitle({\n      title: option.title });\n\n    this.title = option.title;\n    this.ownerImg = option.img;\n    this.ownerName = option.name;\n    this.vInfo = option.desc;\n    this.videoImg = option.pic;\n    this.videoUrl = 'https://www.bilibili.com/video/' + option.id;\n    this.view = option.view;\n    this.like = option.like;\n    uni.request({\n      url: 'http://api.bilibili.com/x/web-interface/archive/related',\n      data: {\n        bvid: option.id },\n\n      success: function success(res) {\n        _this.moreVideo = res.data.data;\n        _this.bottom = !_this.bottom;\n      } });\n\n    if (option.img == '') {\n      uni.request({\n        url: 'http://api.bilibili.com/x/web-interface/view',\n        data: {\n          bvid: option.id },\n\n        success: function success(res) {\n          _this.ownerImg = res.data.data.owner.face;\n        } });\n\n    }\n  },\n  onReady: function onReady() {\n    this.videoContext = uni.createVideoContext('video_bl');\n  },\n  onShow: function onShow() {\n    this.videoContext.play();\n  },\n  methods: {\n    onShare: function onShare() {\n      uni.shareWithSystem({\n        summary: this.title,\n        href: this.videoUrl });\n\n    },\n    pause: function pause() {\n      this.videoContext.pause();\n    },\n    getSysteminfo: function getSysteminfo() {var _this2 = this;\n      uni.getSystemInfo({\n        success: function success(res) {\n          _this2.systemBarHeight = res.statusBarHeight;\n        } });\n\n    },\n    px2rpx: function px2rpx(rpx) {\n      return uni.upx2px(rpx);\n    } } };exports.default = _default;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvcGxheWVyL3BsYXllci52dWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQStFQTtBQUNBLE1BREEsa0JBQ0E7QUFDQTtBQUNBLGFBREE7QUFFQSxlQUZBO0FBR0Esa0JBSEE7QUFJQSxtQkFKQTtBQUtBLGVBTEE7QUFNQSxrQkFOQTtBQU9BLG1CQVBBO0FBUUEsbUJBUkE7QUFTQSxrQkFUQTtBQVVBLGNBVkE7QUFXQSxjQVhBO0FBWUEsd0JBWkE7QUFhQSxpQkFiQTtBQWNBLGlCQWRBOztBQWdCQSxHQWxCQTtBQW1CQSxRQW5CQSxrQkFtQkEsTUFuQkEsRUFtQkE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHlDQURBO0FBRUE7QUFDQSwwREFEQSxFQUZBOztBQUtBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsaUNBREE7O0FBR0E7QUFDQTtBQUNBLE9BYkE7O0FBZUE7QUFDQSx5QkFEQTs7QUFHQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxvRUFEQTtBQUVBO0FBQ0EsdUJBREEsRUFGQTs7QUFLQTtBQUNBO0FBQ0E7QUFDQSxPQVJBOztBQVVBO0FBQ0E7QUFDQSwyREFEQTtBQUVBO0FBQ0EseUJBREEsRUFGQTs7QUFLQTtBQUNBO0FBQ0EsU0FQQTs7QUFTQTtBQUNBLEdBdEVBO0FBdUVBLFNBdkVBLHFCQXVFQTtBQUNBO0FBQ0EsR0F6RUE7QUEwRUEsUUExRUEsb0JBMEVBO0FBQ0E7QUFDQSxHQTVFQTtBQTZFQTtBQUNBLFdBREEscUJBQ0E7QUFDQTtBQUNBLDJCQURBO0FBRUEsMkJBRkE7O0FBSUEsS0FOQTtBQU9BLFNBUEEsbUJBT0E7QUFDQTtBQUNBLEtBVEE7QUFVQSxpQkFWQSwyQkFVQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFNBSEE7O0FBS0EsS0FoQkE7QUFpQkEsVUFqQkEsa0JBaUJBLEdBakJBLEVBaUJBO0FBQ0E7QUFDQSxLQW5CQSxFQTdFQSxFIiwiZmlsZSI6IjY2LmpzIiwic291cmNlc0NvbnRlbnQiOlsiPHRlbXBsYXRlPlxuXHQ8dmlldyBjbGFzcz1cImNvbnRlbnRcIj5cclxuXHRcdDx2aWV3IGNsYXNzPVwic3lzdGVtX2JhclwiIDpzdHlsZT1cIntoZWlnaHQ6IHN5c3RlbUJhckhlaWdodCArICdweCd9XCI+PC92aWV3PlxyXG5cdFx0PHZpZXcgY2xhc3M9XCJ0aXRsZV9iYXJcIiA6c3R5bGU9XCJ7dG9wOiBzeXN0ZW1CYXJIZWlnaHQgKyAncHgnfVwiPnt7IHRpdGxlIH19PC92aWV3PlxyXG5cdFx0PHZpZGVvIDpzcmM9XCJzcmNcIiBhdXRvcGxheT1cInRydWVcIiBkYW5tdS1idG49XCJ0cnVlXCIgZW5hYmxlLWRhbm11PVwidHJ1ZVwiIDp0aXRsZT1cInRpdGxlXCIgaWQ9XCJ2aWRlb19ibFwiIDpzdHlsZT1cInt0b3A6IHN5c3RlbUJhckhlaWdodCArIDMwICsgJ3B4J31cIj48L3ZpZGVvPlxyXG5cdFx0PHZpZXcgY2xhc3M9XCJkYW5tdV9tYWluXCIgOnN0eWxlPVwie21hcmdpblRvcDogcHgycnB4NDIgKyAzMCArIHN5c3RlbUJhckhlaWdodCArICdweCd9XCI+XHJcblx0XHRcdDxpbnB1dCB0eXBlPVwidGV4dFwiIHBsYWNlaG9sZGVyPVwi5Y+R6YCB5Y+L6LCK55qE5by55bmV5ZCnXCIgdmFsdWU9XCJcIiAvPlxyXG5cdFx0XHQ8ZGl2IGNsYXNzPVwic2VuZFwiPlxyXG5cdFx0XHRcdDx1bmktaWNvbnMgdHlwZT1cInBhcGVycGxhbmUtZmlsbGVkXCIgc2l6ZT1cIjMwXCIgY29sb3I9XCJ3aGl0ZVwiPjwvdW5pLWljb25zPlxyXG5cdFx0XHQ8L2Rpdj5cclxuXHRcdDwvdmlldz5cclxuXHRcdDx2aWV3IGNsYXNzPVwib3duZXJcIiA6c3R5bGU9XCJ7bWFyZ2luVG9wOiBweDJycHg1MiArIDMwICsgc3lzdGVtQmFySGVpZ2h0ICsgJ3B4J31cIj5cclxuXHRcdFx0PGltYWdlIDpzcmM9XCJvd25lckltZ1wiIG1vZGU9XCJcIj48L2ltYWdlPlxyXG5cdFx0XHQ8dmlldyBjbGFzcz1cIm93bmVyX3RleHRcIj5cclxuXHRcdFx0XHQ8dGV4dCBjbGFzcz1cIm93bm1cIj57eyBvd25lck5hbWUgfX08L3RleHQ+XHJcblx0XHRcdFx0PHVuaS1jb2xsYXBzZSBhY2NvcmRpb24gOnNob3ctYW5pbWF0aW9uPVwidHJ1ZVwiPlxyXG5cdFx0XHRcdFx0PHVuaS1jb2xsYXBzZS1pdGVtIHRpdGxlPVwi566A5LuLXCIgOmJvcmRlcj1cImZhbHNlXCIgdGl0bGVCb3JkZXI9XCJub25lXCI+XHJcblx0XHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiY29sY29uXCI+XHJcblx0XHRcdFx0XHRcdFx0PHRleHQ+e3sgdkluZm8gfX08L3RleHQ+XHJcblx0XHRcdFx0XHRcdDwvdmlldz5cclxuXHRcdFx0XHRcdDwvdW5pLWNvbGxhcHNlLWl0ZW0+XHJcblx0XHRcdFx0PC91bmktY29sbGFwc2U+XHJcblx0XHRcdDwvdmlldz5cclxuXHRcdDwvdmlldz5cclxuXHRcdDx2aWV3IGNsYXNzPVwidmRfaW5mb1wiPlxyXG5cdFx0XHQ8dmlldyBjbGFzcz1cInZpZGVvX3BsYXlcIiBzdHlsZT1cIm1hcmdpbi1yaWdodDogMTBycHg7XCI+XHJcblx0XHRcdFx0PHVuaS1pY29ucyB0eXBlPVwidmlkZW9jYW0tZmlsbGVkXCIgc2l6ZT1cIjE2XCIgY29sb3I9XCJncmF5XCI+PC91bmktaWNvbnM+XHJcblx0XHRcdFx0PHRleHQ+e3sgdmlldyB9fTwvdGV4dD5cclxuXHRcdFx0PC92aWV3PlxyXG5cdFx0XHQ8dmlldyBjbGFzcz1cInZpZGVvX2xpa2VcIj5cclxuXHRcdFx0XHQ8dW5pLWljb25zIHR5cGU9XCJoYW5kLXVwLWZpbGxlZFwiIHNpemU9XCIxNlwiIGNvbG9yPVwiZ3JheVwiPjwvdW5pLWljb25zPlxyXG5cdFx0XHRcdDx0ZXh0Pnt7IGxpa2UgfX08L3RleHQ+XHJcblx0XHRcdDwvdmlldz5cclxuXHRcdDwvdmlldz5cclxuXHRcdDx2aWV3IGNsYXNzPVwiZmVfYmFyXCI+XHJcblx0XHRcdDx2aWV3IGNsYXNzPVwiZmVcIj5cclxuXHRcdFx0XHQ8dW5pLWljb25zIHR5cGU9XCJoYW5kLXVwLWZpbGxlZFwiIHNpemU9XCIzMFwiIGNvbG9yPVwiZ3JheVwiPjwvdW5pLWljb25zPlxyXG5cdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdDx2aWV3IGNsYXNzPVwiZmVcIj5cclxuXHRcdFx0XHQ8dW5pLWljb25zIHR5cGU9XCJjaGVja2JveC1maWxsZWRcIiBzaXplPVwiMzBcIiBjb2xvcj1cImdyYXlcIj48L3VuaS1pY29ucz5cclxuXHRcdFx0PC92aWV3PlxyXG5cdFx0XHQ8dmlldyBjbGFzcz1cImZlXCI+XHJcblx0XHRcdFx0PHVuaS1pY29ucyB0eXBlPVwic3Rhci1maWxsZWRcIiBzaXplPVwiMzBcIiBjb2xvcj1cImdyYXlcIj48L3VuaS1pY29ucz5cclxuXHRcdFx0PC92aWV3PlxyXG5cdFx0XHQ8dmlldyBjbGFzcz1cImZlXCIgQGNsaWNrPVwib25TaGFyZSgpXCI+XHJcblx0XHRcdFx0PHVuaS1pY29ucyB0eXBlPVwicmVkby1maWxsZWRcIiBzaXplPVwiMzBcIiBjb2xvcj1cImdyYXlcIj48L3VuaS1pY29ucz5cclxuXHRcdFx0PC92aWV3PlxyXG5cdFx0PC92aWV3PlxyXG5cdFx0PHZpZXcgdi1mb3I9XCIoaXRlbSxpbmRleCkgaW4gbW9yZVZpZGVvXCIgOmtleT1cImluZGV4XCIgQGNsaWNrPVwicGF1c2UoKVwiPlxyXG5cdFx0XHQ8bmF2aWdhdG9yIGhvdmVyLXN0YXktdGltZT1cIjBcIiBjbGFzcz1cInZpZGVvX2xpc3RcIiA6dXJsPVwiJy4uL3BsYXllci9wbGF5ZXI/aWQ9JyArIGl0ZW0uYnZpZCArICcmdGl0bGU9JyArIGl0ZW0udGl0bGUgKyAnJmltZz0nICsgaXRlbS5vd25lci5mYWNlICsgJyZuYW1lPScgKyBpdGVtLm93bmVyLm5hbWUgKyAnJmRlc2M9JyArIGl0ZW0uZGVzYyArICcmcGljPScgKyBpdGVtLnBpYyArICcmdmlldz0nICsgaXRlbS5zdGF0LnZpZXcgKyAnJmxpa2U9JyArIGl0ZW0uc3RhdC5saWtlXCI+XHJcblx0XHRcdFx0PGltYWdlIDpzcmM9XCJpdGVtLnBpY1wiIG1vZGU9XCJcIiBjbGFzcz1cInZpZGVvX2ltZ1wiPjwvaW1hZ2U+XHJcblx0XHRcdFx0PHZpZXcgY2xhc3M9XCJ2aWRlb19pbmZvXCI+XHJcblx0XHRcdFx0XHQ8dGV4dCBjbGFzcz1cInZpZGVvX3RpdGxlXCI+e3sgaXRlbS50aXRsZSB9fTwvdGV4dD5cclxuXHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwidXBfbWFpblwiPlxyXG5cdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cInVwX25hbWVcIj5cclxuXHRcdFx0XHRcdFx0XHQ8dW5pLWljb25zIHR5cGU9XCJwZXJzb24tZmlsbGVkXCIgc2l6ZT1cIjE2XCIgY29sb3I9XCJncmF5XCI+PC91bmktaWNvbnM+XHJcblx0XHRcdFx0XHRcdFx0PHRleHQ+e3sgaXRlbS5vd25lci5uYW1lIH19PC90ZXh0PlxyXG5cdFx0XHRcdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwidmlkZW9faW5cIj5cclxuXHRcdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cInZpZGVvX3BsYXlcIiBzdHlsZT1cIm1hcmdpbi1yaWdodDogMTBycHg7XCI+XHJcblx0XHRcdFx0XHRcdFx0XHQ8dW5pLWljb25zIHR5cGU9XCJ2aWRlb2NhbS1maWxsZWRcIiBzaXplPVwiMTZcIiBjb2xvcj1cImdyYXlcIj48L3VuaS1pY29ucz5cclxuXHRcdFx0XHRcdFx0XHRcdDx0ZXh0Pnt7IGl0ZW0uc3RhdC52aWV3IH19PC90ZXh0PlxyXG5cdFx0XHRcdFx0XHRcdDwvdmlldz5cclxuXHRcdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cInZpZGVvX2xpa2VcIj5cclxuXHRcdFx0XHRcdFx0XHRcdDx1bmktaWNvbnMgdHlwZT1cImhhbmQtdXAtZmlsbGVkXCIgc2l6ZT1cIjE2XCIgY29sb3I9XCJncmF5XCI+PC91bmktaWNvbnM+XHJcblx0XHRcdFx0XHRcdFx0XHQ8dGV4dD57eyBpdGVtLnN0YXQubGlrZSB9fTwvdGV4dD5cclxuXHRcdFx0XHRcdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdFx0XHRcdDwvdmlldz5cclxuXHRcdFx0XHRcdDwvdmlldz5cclxuXHRcdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdDwvbmF2aWdhdG9yPlxyXG5cdFx0PC92aWV3PlxyXG5cdFx0PHZpZXcgc3R5bGU9XCJjb2xvcjogZ3JheTsgcGFkZGluZzogMjBycHggMHB4IDIwcnB4IDBycHg7XCIgdi1pZj1cImJvdHRvbVwiPlxyXG5cdFx0XHQ8dGV4dD7kuI3og73lvoDkuIvliJLkuoblk6YgUUFRPC90ZXh0PlxyXG5cdFx0PC92aWV3PlxuXHQ8L3ZpZXc+XG48L3RlbXBsYXRlPlxuXG48c2NyaXB0PlxuXHRleHBvcnQgZGVmYXVsdCB7XG5cdFx0ZGF0YSgpIHtcblx0XHRcdHJldHVybiB7XG5cdFx0XHRcdHNyYzogJycsXHJcblx0XHRcdFx0dGl0bGU6ICcnLFxyXG5cdFx0XHRcdG93bmVySW1nOiAnJyxcclxuXHRcdFx0XHRvd25lck5hbWU6ICcnLFxyXG5cdFx0XHRcdHZJbmZvOiAnJyxcclxuXHRcdFx0XHR2aWRlb1VybDogJycsXHJcblx0XHRcdFx0bW9yZVZpZGVvOiBbXSxcclxuXHRcdFx0XHRib3R0b206IGZhbHNlLFxyXG5cdFx0XHRcdHZpZGVvSW1nOiAnJyxcclxuXHRcdFx0XHR2aWV3OiAnJyxcclxuXHRcdFx0XHRsaWtlOiAnJyxcclxuXHRcdFx0XHRzeXN0ZW1CYXJIZWlnaHQ6IDAsXHJcblx0XHRcdFx0cHgycnB4NTI6IDAsXHJcblx0XHRcdFx0cHgycnB4NDI6IDBcblx0XHRcdH1cblx0XHR9LFxyXG5cdFx0b25Mb2FkKG9wdGlvbikge1xyXG5cdFx0XHR0aGlzLnB4MnJweDUyID0gdGhpcy5weDJycHgoNTIyKVxyXG5cdFx0XHR0aGlzLnB4MnJweDQyID0gdGhpcy5weDJycHgoNDIyKVxyXG5cdFx0XHR0aGlzLmdldFN5c3RlbWluZm8oKVxyXG5cdFx0XHR1bmkucmVxdWVzdCh7XHJcblx0XHRcdFx0dXJsOidodHRwczovL3RlbmFwaS5jbi9iaWxpdmlkZW8vJyxcclxuXHRcdFx0XHRkYXRhOiB7XHJcblx0XHRcdFx0XHR1cmw6ICdodHRwczovL3d3dy5iaWxpYmlsaS5jb20vdmlkZW8vJyArIG9wdGlvbi5pZFxyXG5cdFx0XHRcdH0sXHJcblx0XHRcdFx0c3VjY2VzczogKHJlcykgPT4ge1xyXG5cdFx0XHRcdFx0aWYgKHRoaXMudGl0bGUgPT0gJycpIHtcclxuXHRcdFx0XHRcdFx0dGhpcy50aXRsZSA9IHJlcy5kYXRhLnRpdGxlXHJcblx0XHRcdFx0XHRcdHVuaS5zZXROYXZpZ2F0aW9uQmFyVGl0bGUoe1xyXG5cdFx0XHRcdFx0XHRcdHRpdGxlOiByZXMuZGF0YS50aXRsZVxyXG5cdFx0XHRcdFx0XHR9KVxyXG5cdFx0XHRcdFx0fVxyXG5cdFx0XHRcdFx0dGhpcy5zcmMgPSByZXMuZGF0YS51cmxcclxuXHRcdFx0XHR9XHJcblx0XHRcdH0pXHJcblx0XHRcdHVuaS5zZXROYXZpZ2F0aW9uQmFyVGl0bGUoe1xyXG5cdFx0XHRcdHRpdGxlOm9wdGlvbi50aXRsZVxyXG5cdFx0XHR9KVxyXG5cdFx0XHR0aGlzLnRpdGxlID0gb3B0aW9uLnRpdGxlXHJcblx0XHRcdHRoaXMub3duZXJJbWcgPSBvcHRpb24uaW1nXHJcblx0XHRcdHRoaXMub3duZXJOYW1lID0gb3B0aW9uLm5hbWVcclxuXHRcdFx0dGhpcy52SW5mbyA9IG9wdGlvbi5kZXNjXHJcblx0XHRcdHRoaXMudmlkZW9JbWcgPSBvcHRpb24ucGljXHJcblx0XHRcdHRoaXMudmlkZW9VcmwgPSAnaHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvLycgKyBvcHRpb24uaWRcclxuXHRcdFx0dGhpcy52aWV3ID0gb3B0aW9uLnZpZXdcclxuXHRcdFx0dGhpcy5saWtlID0gb3B0aW9uLmxpa2VcclxuXHRcdFx0dW5pLnJlcXVlc3Qoe1xyXG5cdFx0XHRcdHVybDonaHR0cDovL2FwaS5iaWxpYmlsaS5jb20veC93ZWItaW50ZXJmYWNlL2FyY2hpdmUvcmVsYXRlZCcsXHJcblx0XHRcdFx0ZGF0YTp7XHJcblx0XHRcdFx0XHRidmlkOiBvcHRpb24uaWRcclxuXHRcdFx0XHR9LFxyXG5cdFx0XHRcdHN1Y2Nlc3M6IChyZXMpID0+IHtcclxuXHRcdFx0XHRcdHRoaXMubW9yZVZpZGVvID0gcmVzLmRhdGEuZGF0YVxyXG5cdFx0XHRcdFx0dGhpcy5ib3R0b20gPSAhdGhpcy5ib3R0b21cclxuXHRcdFx0XHR9XHJcblx0XHRcdH0pXHJcblx0XHRcdGlmIChvcHRpb24uaW1nID09ICcnKSB7XHJcblx0XHRcdFx0dW5pLnJlcXVlc3Qoe1xyXG5cdFx0XHRcdFx0dXJsOiAnaHR0cDovL2FwaS5iaWxpYmlsaS5jb20veC93ZWItaW50ZXJmYWNlL3ZpZXcnLFxyXG5cdFx0XHRcdFx0ZGF0YToge1xyXG5cdFx0XHRcdFx0XHRidmlkOiBvcHRpb24uaWRcclxuXHRcdFx0XHRcdH0sXHJcblx0XHRcdFx0XHRzdWNjZXNzOiAocmVzKSA9PiB7XHJcblx0XHRcdFx0XHRcdHRoaXMub3duZXJJbWcgPSByZXMuZGF0YS5kYXRhLm93bmVyLmZhY2VcclxuXHRcdFx0XHRcdH1cclxuXHRcdFx0XHR9KVxyXG5cdFx0XHR9XHJcblx0XHR9LFxyXG5cdFx0b25SZWFkeSgpIHtcclxuXHRcdFx0dGhpcy52aWRlb0NvbnRleHQgPSB1bmkuY3JlYXRlVmlkZW9Db250ZXh0KCd2aWRlb19ibCcpXHJcblx0XHR9LFxyXG5cdFx0b25TaG93KCkge1xyXG5cdFx0XHR0aGlzLnZpZGVvQ29udGV4dC5wbGF5KClcclxuXHRcdH0sXG5cdFx0bWV0aG9kczoge1xyXG5cdFx0XHRvblNoYXJlKCkge1xyXG5cdFx0XHRcdHVuaS5zaGFyZVdpdGhTeXN0ZW0oe1xyXG5cdFx0XHRcdFx0c3VtbWFyeTogdGhpcy50aXRsZSxcclxuXHRcdFx0XHRcdGhyZWY6IHRoaXMudmlkZW9VcmxcclxuXHRcdFx0XHR9KVxyXG5cdFx0XHR9LFxyXG5cdFx0XHRwYXVzZSgpIHtcclxuXHRcdFx0XHR0aGlzLnZpZGVvQ29udGV4dC5wYXVzZSgpXHJcblx0XHRcdH0sXHJcblx0XHRcdGdldFN5c3RlbWluZm8oKSB7XHJcblx0XHRcdFx0dW5pLmdldFN5c3RlbUluZm8oe1xyXG5cdFx0XHRcdFx0c3VjY2VzczogcmVzID0+IHtcclxuXHRcdFx0XHRcdFx0dGhpcy5zeXN0ZW1CYXJIZWlnaHQgPSByZXMuc3RhdHVzQmFySGVpZ2h0O1xyXG5cdFx0XHRcdFx0fVxyXG5cdFx0XHRcdH0pO1xyXG5cdFx0XHR9LFxyXG5cdFx0XHRweDJycHgocnB4KSB7XHJcblx0XHRcdFx0cmV0dXJuIHVuaS51cHgycHgocnB4KVxyXG5cdFx0XHR9XG5cdFx0fVxuXHR9XG48L3NjcmlwdD5cblxuPHN0eWxlPlxuXHRAaW1wb3J0IHVybChcIi4vcGxheWVyLmNzc1wiKTtcbjwvc3R5bGU+XHJcblxyXG48c3R5bGUgbGFuZz1cInNjc3NcIj5cclxuXHQuY29sY29ue1xyXG5cdFx0cGFkZGluZy1ib3R0b206IDE1cHg7XHJcblx0fVxyXG48L3N0eWxlPiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///66\n");
+eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === \"string\") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === \"Object\" && o.constructor) n = o.constructor.name;if (n === \"Map\" || n === \"Set\") return Array.from(o);if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== \"undefined\" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;} //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      src: '',\n      title: '',\n      ownerImg: '',\n      ownerName: '',\n      vInfo: '',\n      videoUrl: '',\n      moreVideo: [],\n      bottom: false,\n      videoImg: '',\n      view: '',\n      like: '',\n      systemBarHeight: 0,\n      px2rpx52: 0,\n      px2rpx42: 0,\n      vatpx: 0,\n      selColor: '#20b0e3',\n      fselColor: 'black',\n      vatShow: true,\n      oid: '',\n      resq: [],\n      pn: 1 };\n\n  },\n  onLoad: function onLoad(option) {var _this = this;\n    this.px2rpx52 = this.px2rpx(522);\n    this.px2rpx42 = this.px2rpx(422);\n    this.vatpx = this.px2rpx(500);\n    this.getSysteminfo();\n    uni.request({\n      url: 'https://tenapi.cn/bilivideo/',\n      data: {\n        url: 'https://www.bilibili.com/video/' + option.id },\n\n      success: function success(res) {\n        if (_this.title == '') {\n          _this.title = res.data.title;\n          uni.setNavigationBarTitle({\n            title: res.data.title });\n\n        }\n        _this.src = res.data.url;\n      } });\n\n    uni.setNavigationBarTitle({\n      title: option.title });\n\n    this.title = option.title;\n    this.ownerImg = option.img;\n    this.ownerName = option.name;\n    this.vInfo = option.desc;\n    this.videoImg = option.pic;\n    this.videoUrl = 'https://www.bilibili.com/video/' + option.id;\n    this.view = option.view;\n    this.like = option.like;\n    uni.request({\n      url: 'http://api.bilibili.com/x/web-interface/archive/related',\n      data: {\n        bvid: option.id },\n\n      success: function success(res) {\n        _this.moreVideo = res.data.data;\n        _this.bottom = !_this.bottom;\n      } });\n\n    if (option.img == '' || this.oid == '') {\n      uni.request({\n        url: 'http://api.bilibili.com/x/web-interface/view',\n        data: {\n          bvid: option.id },\n\n        success: function success(res) {\n          _this.ownerImg = res.data.data.owner.face;\n          _this.oid = res.data.data.aid;\n        } });\n\n    }\n  },\n  onReady: function onReady() {\n    this.videoContext = uni.createVideoContext('video_bl');\n  },\n  onShow: function onShow() {\n    this.videoContext.play();\n  },\n  onReachBottom: function onReachBottom() {\n    if (!this.vatShow) {\n      this.pn = this.pn + 1;\n      this.getTa();\n    }\n  },\n  methods: {\n    onShare: function onShare() {\n      uni.shareWithSystem({\n        summary: this.title,\n        href: this.videoUrl });\n\n    },\n    pause: function pause() {\n      this.videoContext.pause();\n    },\n    getSysteminfo: function getSysteminfo() {var _this2 = this;\n      uni.getSystemInfo({\n        success: function success(res) {\n          _this2.systemBarHeight = res.statusBarHeight;\n        } });\n\n    },\n    px2rpx: function px2rpx(rpx) {\n      return uni.upx2px(rpx);\n    },\n    vat: function vat(vot) {\n      if (vot == 't') {\n        this.selColor = 'black';\n        this.fselColor = '#20b0e3';\n        this.vatShow = false;\n        if (!this.resq.length) {\n          this.getTa();\n        }\n      } else {\n        this.selColor = '#20b0e3';\n        this.fselColor = 'black';\n        this.vatShow = true;\n      }\n    },\n    getTa: function getTa() {var _this3 = this;\n      uni.request({\n        url: 'https://api.bilibili.com/x/v2/reply',\n        data: {\n          jsonp: 'jsonp',\n          pn: this.pn,\n          type: '1',\n          sort: '2',\n          oid: this.oid },\n\n        success: function success(res) {\n          _this3.resq = [].concat(_toConsumableArray(_this3.resq), _toConsumableArray(res.data.data.replies));\n        } });\n\n    } } };exports.default = _default;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvcGxheWVyL3BsYXllci52dWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBbUdBO0FBQ0EsTUFEQSxrQkFDQTtBQUNBO0FBQ0EsYUFEQTtBQUVBLGVBRkE7QUFHQSxrQkFIQTtBQUlBLG1CQUpBO0FBS0EsZUFMQTtBQU1BLGtCQU5BO0FBT0EsbUJBUEE7QUFRQSxtQkFSQTtBQVNBLGtCQVRBO0FBVUEsY0FWQTtBQVdBLGNBWEE7QUFZQSx3QkFaQTtBQWFBLGlCQWJBO0FBY0EsaUJBZEE7QUFlQSxjQWZBO0FBZ0JBLHlCQWhCQTtBQWlCQSx3QkFqQkE7QUFrQkEsbUJBbEJBO0FBbUJBLGFBbkJBO0FBb0JBLGNBcEJBO0FBcUJBLFdBckJBOztBQXVCQSxHQXpCQTtBQTBCQSxRQTFCQSxrQkEwQkEsTUExQkEsRUEwQkE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EseUNBREE7QUFFQTtBQUNBLDBEQURBLEVBRkE7O0FBS0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxpQ0FEQTs7QUFHQTtBQUNBO0FBQ0EsT0FiQTs7QUFlQTtBQUNBLHlCQURBOztBQUdBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLG9FQURBO0FBRUE7QUFDQSx1QkFEQSxFQUZBOztBQUtBO0FBQ0E7QUFDQTtBQUNBLE9BUkE7O0FBVUE7QUFDQTtBQUNBLDJEQURBO0FBRUE7QUFDQSx5QkFEQSxFQUZBOztBQUtBO0FBQ0E7QUFDQTtBQUNBLFNBUkE7O0FBVUE7QUFDQSxHQS9FQTtBQWdGQSxTQWhGQSxxQkFnRkE7QUFDQTtBQUNBLEdBbEZBO0FBbUZBLFFBbkZBLG9CQW1GQTtBQUNBO0FBQ0EsR0FyRkE7QUFzRkEsZUF0RkEsMkJBc0ZBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxHQTNGQTtBQTRGQTtBQUNBLFdBREEscUJBQ0E7QUFDQTtBQUNBLDJCQURBO0FBRUEsMkJBRkE7O0FBSUEsS0FOQTtBQU9BLFNBUEEsbUJBT0E7QUFDQTtBQUNBLEtBVEE7QUFVQSxpQkFWQSwyQkFVQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFNBSEE7O0FBS0EsS0FoQkE7QUFpQkEsVUFqQkEsa0JBaUJBLEdBakJBLEVBaUJBO0FBQ0E7QUFDQSxLQW5CQTtBQW9CQSxPQXBCQSxlQW9CQSxHQXBCQSxFQW9CQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsT0FQQSxNQU9BO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQWpDQTtBQWtDQSxTQWxDQSxtQkFrQ0E7QUFDQTtBQUNBLGtEQURBO0FBRUE7QUFDQSx3QkFEQTtBQUVBLHFCQUZBO0FBR0EsbUJBSEE7QUFJQSxtQkFKQTtBQUtBLHVCQUxBLEVBRkE7O0FBU0E7QUFDQTtBQUNBLFNBWEE7O0FBYUEsS0FoREEsRUE1RkEsRSIsImZpbGUiOiI2Ni5qcyIsInNvdXJjZXNDb250ZW50IjpbIjx0ZW1wbGF0ZT5cblx0PHZpZXcgY2xhc3M9XCJjb250ZW50XCI+XHJcblx0XHQ8dmlldyBjbGFzcz1cInN5c3RlbV9iYXJcIiA6c3R5bGU9XCJ7aGVpZ2h0OiBzeXN0ZW1CYXJIZWlnaHQgKyAncHgnfVwiPjwvdmlldz5cclxuXHRcdDx2aWRlbyA6c3JjPVwic3JjXCIgYXV0b3BsYXk9XCJ0cnVlXCIgZGFubXUtYnRuPVwidHJ1ZVwiIGVuYWJsZS1kYW5tdT1cInRydWVcIiA6dGl0bGU9XCJ0aXRsZVwiIGlkPVwidmlkZW9fYmxcIiA6c3R5bGU9XCJ7dG9wOiBzeXN0ZW1CYXJIZWlnaHQgKyAncHgnfVwiPjwvdmlkZW8+XHJcblx0XHQ8dmlldyBjbGFzcz1cImRhbm11X21haW5cIiA6c3R5bGU9XCJ7bWFyZ2luVG9wOiBweDJycHg0MiArIHN5c3RlbUJhckhlaWdodCArICdweCd9XCI+XHJcblx0XHRcdDxpbnB1dCB0eXBlPVwidGV4dFwiIHBsYWNlaG9sZGVyPVwi5Y+R6YCB5Y+L6LCK55qE5by55bmV5ZCnXCIgdmFsdWU9XCJcIiAvPlxyXG5cdFx0XHQ8ZGl2IGNsYXNzPVwic2VuZFwiPlxyXG5cdFx0XHRcdDx1bmktaWNvbnMgdHlwZT1cInBhcGVycGxhbmUtZmlsbGVkXCIgc2l6ZT1cIjMwXCIgY29sb3I9XCJ3aGl0ZVwiPjwvdW5pLWljb25zPlxyXG5cdFx0XHQ8L2Rpdj5cclxuXHRcdDwvdmlldz5cclxuXHRcdDx2aWV3IGNsYXNzPVwidmF0XCIgOnN0eWxlPVwie3RvcDogdmF0cHggKyBzeXN0ZW1CYXJIZWlnaHQgKyAncHgnfVwiPlxyXG5cdFx0XHQ8dmlldyBjbGFzcz1cInZ0XCIgOnN0eWxlPVwie2NvbG9yOiBzZWxDb2xvcn1cIiBAY2xpY2s9XCJ2YXQoJ3YnKVwiPlxyXG5cdFx0XHRcdOeugOS7i1xyXG5cdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdDx2aWV3IGNsYXNzPVwidnRcIiA6c3R5bGU9XCJ7Y29sb3I6IGZzZWxDb2xvcn1cIiBAY2xpY2s9XCJ2YXQoJ3QnKVwiPlxyXG5cdFx0XHRcdOivhOiuulxyXG5cdFx0XHQ8L3ZpZXc+XHJcblx0XHQ8L3ZpZXc+XHJcblx0XHQ8dmlldyBjbGFzcz1cInZhXCIgdi1zaG93PVwidmF0U2hvd1wiIDpzdHlsZT1cInttYXJnaW5Ub3A6IHB4MnJweDUyICsgNDAgKyBzeXN0ZW1CYXJIZWlnaHQgKyAncHgnfVwiPlxyXG5cdFx0XHQ8dmlldyBjbGFzcz1cIm93bmVyXCI+XHJcblx0XHRcdFx0PGltYWdlIDpzcmM9XCJvd25lckltZ1wiIG1vZGU9XCJcIj48L2ltYWdlPlxyXG5cdFx0XHRcdDx2aWV3IGNsYXNzPVwib3duZXJfdGV4dFwiPlxyXG5cdFx0XHRcdFx0PHRleHQgY2xhc3M9XCJvd25tXCI+e3sgb3duZXJOYW1lIH19PC90ZXh0PlxyXG5cdFx0XHRcdFx0PHVuaS1jb2xsYXBzZSBhY2NvcmRpb24gOnNob3ctYW5pbWF0aW9uPVwidHJ1ZVwiPlxyXG5cdFx0XHRcdFx0XHQ8dW5pLWNvbGxhcHNlLWl0ZW0gOnRpdGxlPVwidGl0bGVcIiA6Ym9yZGVyPVwiZmFsc2VcIiB0aXRsZUJvcmRlcj1cIm5vbmVcIj5cclxuXHRcdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cImNvbGNvblwiPlxyXG5cdFx0XHRcdFx0XHRcdFx0PHRleHQ+e3sgdkluZm8gfX08L3RleHQ+XHJcblx0XHRcdFx0XHRcdFx0PC92aWV3PlxyXG5cdFx0XHRcdFx0XHQ8L3VuaS1jb2xsYXBzZS1pdGVtPlxyXG5cdFx0XHRcdFx0PC91bmktY29sbGFwc2U+XHJcblx0XHRcdFx0PC92aWV3PlxyXG5cdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdDx2aWV3IGNsYXNzPVwidmRfaW5mb1wiPlxyXG5cdFx0XHRcdDx2aWV3IGNsYXNzPVwidmlkZW9fcGxheVwiIHN0eWxlPVwibWFyZ2luLXJpZ2h0OiAxMHJweDtcIj5cclxuXHRcdFx0XHRcdDx1bmktaWNvbnMgdHlwZT1cInZpZGVvY2FtLWZpbGxlZFwiIHNpemU9XCIxNlwiIGNvbG9yPVwiZ3JheVwiPjwvdW5pLWljb25zPlxyXG5cdFx0XHRcdFx0PHRleHQ+e3sgdmlldyB9fTwvdGV4dD5cclxuXHRcdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdFx0PHZpZXcgY2xhc3M9XCJ2aWRlb19saWtlXCI+XHJcblx0XHRcdFx0XHQ8dW5pLWljb25zIHR5cGU9XCJoYW5kLXVwLWZpbGxlZFwiIHNpemU9XCIxNlwiIGNvbG9yPVwiZ3JheVwiPjwvdW5pLWljb25zPlxyXG5cdFx0XHRcdFx0PHRleHQ+e3sgbGlrZSB9fTwvdGV4dD5cclxuXHRcdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdDwvdmlldz5cclxuXHRcdFx0PHZpZXcgY2xhc3M9XCJmZV9iYXJcIj5cclxuXHRcdFx0XHQ8dmlldyBjbGFzcz1cImZlXCI+XHJcblx0XHRcdFx0XHQ8dW5pLWljb25zIHR5cGU9XCJoYW5kLXVwLWZpbGxlZFwiIHNpemU9XCIzMFwiIGNvbG9yPVwiZ3JheVwiPjwvdW5pLWljb25zPlxyXG5cdFx0XHRcdDwvdmlldz5cclxuXHRcdFx0XHQ8dmlldyBjbGFzcz1cImZlXCI+XHJcblx0XHRcdFx0XHQ8dW5pLWljb25zIHR5cGU9XCJjaGVja2JveC1maWxsZWRcIiBzaXplPVwiMzBcIiBjb2xvcj1cImdyYXlcIj48L3VuaS1pY29ucz5cclxuXHRcdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdFx0PHZpZXcgY2xhc3M9XCJmZVwiPlxyXG5cdFx0XHRcdFx0PHVuaS1pY29ucyB0eXBlPVwic3Rhci1maWxsZWRcIiBzaXplPVwiMzBcIiBjb2xvcj1cImdyYXlcIj48L3VuaS1pY29ucz5cclxuXHRcdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdFx0PHZpZXcgY2xhc3M9XCJmZVwiIEBjbGljaz1cIm9uU2hhcmUoKVwiPlxyXG5cdFx0XHRcdFx0PHVuaS1pY29ucyB0eXBlPVwicmVkby1maWxsZWRcIiBzaXplPVwiMzBcIiBjb2xvcj1cImdyYXlcIj48L3VuaS1pY29ucz5cclxuXHRcdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdDwvdmlldz5cclxuXHRcdFx0PHZpZXcgdi1mb3I9XCIoaXRlbSxpbmRleCkgaW4gbW9yZVZpZGVvXCIgOmtleT1cImluZGV4XCIgQGNsaWNrPVwicGF1c2UoKVwiPlxyXG5cdFx0XHRcdDxuYXZpZ2F0b3IgaG92ZXItc3RheS10aW1lPVwiMFwiIGNsYXNzPVwidmlkZW9fbGlzdFwiIDp1cmw9XCInLi4vcGxheWVyL3BsYXllcj9pZD0nICsgaXRlbS5idmlkICsgJyZ0aXRsZT0nICsgaXRlbS50aXRsZSArICcmaW1nPScgKyBpdGVtLm93bmVyLmZhY2UgKyAnJm5hbWU9JyArIGl0ZW0ub3duZXIubmFtZSArICcmZGVzYz0nICsgaXRlbS5kZXNjICsgJyZwaWM9JyArIGl0ZW0ucGljICsgJyZ2aWV3PScgKyBpdGVtLnN0YXQudmlldyArICcmbGlrZT0nICsgaXRlbS5zdGF0Lmxpa2VcIj5cclxuXHRcdFx0XHRcdDxpbWFnZSA6c3JjPVwiaXRlbS5waWNcIiBtb2RlPVwiXCIgY2xhc3M9XCJ2aWRlb19pbWdcIj48L2ltYWdlPlxyXG5cdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJ2aWRlb19pbmZvXCI+XHJcblx0XHRcdFx0XHRcdDx0ZXh0IGNsYXNzPVwidmlkZW9fdGl0bGVcIj57eyBpdGVtLnRpdGxlIH19PC90ZXh0PlxyXG5cdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cInVwX21haW5cIj5cclxuXHRcdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cInVwX25hbWVcIj5cclxuXHRcdFx0XHRcdFx0XHRcdDx1bmktaWNvbnMgdHlwZT1cInBlcnNvbi1maWxsZWRcIiBzaXplPVwiMTZcIiBjb2xvcj1cImdyYXlcIj48L3VuaS1pY29ucz5cclxuXHRcdFx0XHRcdFx0XHRcdDx0ZXh0Pnt7IGl0ZW0ub3duZXIubmFtZSB9fTwvdGV4dD5cclxuXHRcdFx0XHRcdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJ2aWRlb19pblwiPlxyXG5cdFx0XHRcdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJ2aWRlb19wbGF5XCIgc3R5bGU9XCJtYXJnaW4tcmlnaHQ6IDEwcnB4O1wiPlxyXG5cdFx0XHRcdFx0XHRcdFx0XHQ8dW5pLWljb25zIHR5cGU9XCJ2aWRlb2NhbS1maWxsZWRcIiBzaXplPVwiMTZcIiBjb2xvcj1cImdyYXlcIj48L3VuaS1pY29ucz5cclxuXHRcdFx0XHRcdFx0XHRcdFx0PHRleHQ+e3sgaXRlbS5zdGF0LnZpZXcgfX08L3RleHQ+XHJcblx0XHRcdFx0XHRcdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cInZpZGVvX2xpa2VcIj5cclxuXHRcdFx0XHRcdFx0XHRcdFx0PHVuaS1pY29ucyB0eXBlPVwiaGFuZC11cC1maWxsZWRcIiBzaXplPVwiMTZcIiBjb2xvcj1cImdyYXlcIj48L3VuaS1pY29ucz5cclxuXHRcdFx0XHRcdFx0XHRcdFx0PHRleHQ+e3sgaXRlbS5zdGF0Lmxpa2UgfX08L3RleHQ+XHJcblx0XHRcdFx0XHRcdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdFx0XHRcdFx0PC92aWV3PlxyXG5cdFx0XHRcdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdFx0PC9uYXZpZ2F0b3I+XHJcblx0XHRcdDwvdmlldz5cclxuXHRcdFx0PHZpZXcgc3R5bGU9XCJjb2xvcjogZ3JheTsgcGFkZGluZzogMjBycHggMHB4IDIwcnB4IDBycHg7XCIgdi1pZj1cImJvdHRvbVwiPlxyXG5cdFx0XHRcdDx0ZXh0PuS4jeiDveW+gOS4i+WIkuS6huWTpiBRQVE8L3RleHQ+XHJcblx0XHRcdDwvdmlldz5cclxuXHRcdDwvdmlldz5cclxuXHRcdDx2aWV3IGNsYXNzPVwidGFcIiB2LXNob3c9XCIhdmF0U2hvd1wiIDpzdHlsZT1cInttYXJnaW5Ub3A6IHB4MnJweDUyICsgNDAgKyBzeXN0ZW1CYXJIZWlnaHQgKyAncHgnfVwiPlxyXG5cdFx0XHQ8dmlldyBjbGFzcz1cInRhYVwiIHYtZm9yPVwiKGl0ZW0saW5kZXgpIGluIHJlc3FcIiA6a2V5PSdpbmRleCc+XHJcblx0XHRcdFx0PGltYWdlIDpzcmM9XCJpdGVtLm1lbWJlci5hdmF0YXJcIiBtb2RlPVwiXCIgY2xhc3M9XCJhaW1nXCI+PC9pbWFnZT5cclxuXHRcdFx0XHQ8dmlldyBjbGFzcz1cImltZ0FQYVwiPlxyXG5cdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJwYU5hbWVcIj5cclxuXHRcdFx0XHRcdFx0e3sgaXRlbS5tZW1iZXIudW5hbWUgfX1cclxuXHRcdFx0XHRcdDwvdmlldz5cclxuXHRcdFx0XHRcdHt7IGl0ZW0uY29udGVudC5tZXNzYWdlIH19XHJcblx0XHRcdFx0PC92aWV3PlxyXG5cdFx0XHQ8L3ZpZXc+XHJcblx0XHQ8L3ZpZXc+XG5cdDwvdmlldz5cbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQ+XG5cdGV4cG9ydCBkZWZhdWx0IHtcblx0XHRkYXRhKCkge1xuXHRcdFx0cmV0dXJuIHtcblx0XHRcdFx0c3JjOiAnJyxcclxuXHRcdFx0XHR0aXRsZTogJycsXHJcblx0XHRcdFx0b3duZXJJbWc6ICcnLFxyXG5cdFx0XHRcdG93bmVyTmFtZTogJycsXHJcblx0XHRcdFx0dkluZm86ICcnLFxyXG5cdFx0XHRcdHZpZGVvVXJsOiAnJyxcclxuXHRcdFx0XHRtb3JlVmlkZW86IFtdLFxyXG5cdFx0XHRcdGJvdHRvbTogZmFsc2UsXHJcblx0XHRcdFx0dmlkZW9JbWc6ICcnLFxyXG5cdFx0XHRcdHZpZXc6ICcnLFxyXG5cdFx0XHRcdGxpa2U6ICcnLFxyXG5cdFx0XHRcdHN5c3RlbUJhckhlaWdodDogMCxcclxuXHRcdFx0XHRweDJycHg1MjogMCxcclxuXHRcdFx0XHRweDJycHg0MjogMCxcclxuXHRcdFx0XHR2YXRweDogMCxcclxuXHRcdFx0XHRzZWxDb2xvcjogJyMyMGIwZTMnLFxyXG5cdFx0XHRcdGZzZWxDb2xvcjogJ2JsYWNrJyxcclxuXHRcdFx0XHR2YXRTaG93OiB0cnVlLFxyXG5cdFx0XHRcdG9pZDogJycsXHJcblx0XHRcdFx0cmVzcTogW10sXHJcblx0XHRcdFx0cG46IDFcblx0XHRcdH1cblx0XHR9LFxyXG5cdFx0b25Mb2FkKG9wdGlvbikge1xyXG5cdFx0XHR0aGlzLnB4MnJweDUyID0gdGhpcy5weDJycHgoNTIyKVxyXG5cdFx0XHR0aGlzLnB4MnJweDQyID0gdGhpcy5weDJycHgoNDIyKVxyXG5cdFx0XHR0aGlzLnZhdHB4ID0gdGhpcy5weDJycHgoNTAwKVxyXG5cdFx0XHR0aGlzLmdldFN5c3RlbWluZm8oKVxyXG5cdFx0XHR1bmkucmVxdWVzdCh7XHJcblx0XHRcdFx0dXJsOidodHRwczovL3RlbmFwaS5jbi9iaWxpdmlkZW8vJyxcclxuXHRcdFx0XHRkYXRhOiB7XHJcblx0XHRcdFx0XHR1cmw6ICdodHRwczovL3d3dy5iaWxpYmlsaS5jb20vdmlkZW8vJyArIG9wdGlvbi5pZFxyXG5cdFx0XHRcdH0sXHJcblx0XHRcdFx0c3VjY2VzczogKHJlcykgPT4ge1xyXG5cdFx0XHRcdFx0aWYgKHRoaXMudGl0bGUgPT0gJycpIHtcclxuXHRcdFx0XHRcdFx0dGhpcy50aXRsZSA9IHJlcy5kYXRhLnRpdGxlXHJcblx0XHRcdFx0XHRcdHVuaS5zZXROYXZpZ2F0aW9uQmFyVGl0bGUoe1xyXG5cdFx0XHRcdFx0XHRcdHRpdGxlOiByZXMuZGF0YS50aXRsZVxyXG5cdFx0XHRcdFx0XHR9KVxyXG5cdFx0XHRcdFx0fVxyXG5cdFx0XHRcdFx0dGhpcy5zcmMgPSByZXMuZGF0YS51cmxcclxuXHRcdFx0XHR9XHJcblx0XHRcdH0pXHJcblx0XHRcdHVuaS5zZXROYXZpZ2F0aW9uQmFyVGl0bGUoe1xyXG5cdFx0XHRcdHRpdGxlOm9wdGlvbi50aXRsZVxyXG5cdFx0XHR9KVxyXG5cdFx0XHR0aGlzLnRpdGxlID0gb3B0aW9uLnRpdGxlXHJcblx0XHRcdHRoaXMub3duZXJJbWcgPSBvcHRpb24uaW1nXHJcblx0XHRcdHRoaXMub3duZXJOYW1lID0gb3B0aW9uLm5hbWVcclxuXHRcdFx0dGhpcy52SW5mbyA9IG9wdGlvbi5kZXNjXHJcblx0XHRcdHRoaXMudmlkZW9JbWcgPSBvcHRpb24ucGljXHJcblx0XHRcdHRoaXMudmlkZW9VcmwgPSAnaHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvLycgKyBvcHRpb24uaWRcclxuXHRcdFx0dGhpcy52aWV3ID0gb3B0aW9uLnZpZXdcclxuXHRcdFx0dGhpcy5saWtlID0gb3B0aW9uLmxpa2VcclxuXHRcdFx0dW5pLnJlcXVlc3Qoe1xyXG5cdFx0XHRcdHVybDonaHR0cDovL2FwaS5iaWxpYmlsaS5jb20veC93ZWItaW50ZXJmYWNlL2FyY2hpdmUvcmVsYXRlZCcsXHJcblx0XHRcdFx0ZGF0YTp7XHJcblx0XHRcdFx0XHRidmlkOiBvcHRpb24uaWRcclxuXHRcdFx0XHR9LFxyXG5cdFx0XHRcdHN1Y2Nlc3M6IChyZXMpID0+IHtcclxuXHRcdFx0XHRcdHRoaXMubW9yZVZpZGVvID0gcmVzLmRhdGEuZGF0YVxyXG5cdFx0XHRcdFx0dGhpcy5ib3R0b20gPSAhdGhpcy5ib3R0b21cclxuXHRcdFx0XHR9XHJcblx0XHRcdH0pXHJcblx0XHRcdGlmIChvcHRpb24uaW1nID09ICcnIHx8IHRoaXMub2lkID09ICcnKSB7XHJcblx0XHRcdFx0dW5pLnJlcXVlc3Qoe1xyXG5cdFx0XHRcdFx0dXJsOiAnaHR0cDovL2FwaS5iaWxpYmlsaS5jb20veC93ZWItaW50ZXJmYWNlL3ZpZXcnLFxyXG5cdFx0XHRcdFx0ZGF0YToge1xyXG5cdFx0XHRcdFx0XHRidmlkOiBvcHRpb24uaWRcclxuXHRcdFx0XHRcdH0sXHJcblx0XHRcdFx0XHRzdWNjZXNzOiAocmVzKSA9PiB7XHJcblx0XHRcdFx0XHRcdHRoaXMub3duZXJJbWcgPSByZXMuZGF0YS5kYXRhLm93bmVyLmZhY2VcclxuXHRcdFx0XHRcdFx0dGhpcy5vaWQgPSByZXMuZGF0YS5kYXRhLmFpZFxyXG5cdFx0XHRcdFx0fVxyXG5cdFx0XHRcdH0pXHJcblx0XHRcdH1cclxuXHRcdH0sXHJcblx0XHRvblJlYWR5KCkge1xyXG5cdFx0XHR0aGlzLnZpZGVvQ29udGV4dCA9IHVuaS5jcmVhdGVWaWRlb0NvbnRleHQoJ3ZpZGVvX2JsJylcclxuXHRcdH0sXHJcblx0XHRvblNob3coKSB7XHJcblx0XHRcdHRoaXMudmlkZW9Db250ZXh0LnBsYXkoKVxyXG5cdFx0fSxcclxuXHRcdG9uUmVhY2hCb3R0b20oKSB7XHJcblx0XHRcdGlmICghdGhpcy52YXRTaG93KSB7XHJcblx0XHRcdFx0dGhpcy5wbiA9IHRoaXMucG4gKyAxXHJcblx0XHRcdFx0dGhpcy5nZXRUYSgpXHJcblx0XHRcdH1cclxuXHRcdH0sXG5cdFx0bWV0aG9kczoge1xyXG5cdFx0XHRvblNoYXJlKCkge1xyXG5cdFx0XHRcdHVuaS5zaGFyZVdpdGhTeXN0ZW0oe1xyXG5cdFx0XHRcdFx0c3VtbWFyeTogdGhpcy50aXRsZSxcclxuXHRcdFx0XHRcdGhyZWY6IHRoaXMudmlkZW9VcmxcclxuXHRcdFx0XHR9KVxyXG5cdFx0XHR9LFxyXG5cdFx0XHRwYXVzZSgpIHtcclxuXHRcdFx0XHR0aGlzLnZpZGVvQ29udGV4dC5wYXVzZSgpXHJcblx0XHRcdH0sXHJcblx0XHRcdGdldFN5c3RlbWluZm8oKSB7XHJcblx0XHRcdFx0dW5pLmdldFN5c3RlbUluZm8oe1xyXG5cdFx0XHRcdFx0c3VjY2VzczogcmVzID0+IHtcclxuXHRcdFx0XHRcdFx0dGhpcy5zeXN0ZW1CYXJIZWlnaHQgPSByZXMuc3RhdHVzQmFySGVpZ2h0O1xyXG5cdFx0XHRcdFx0fVxyXG5cdFx0XHRcdH0pO1xyXG5cdFx0XHR9LFxyXG5cdFx0XHRweDJycHgocnB4KSB7XHJcblx0XHRcdFx0cmV0dXJuIHVuaS51cHgycHgocnB4KVxyXG5cdFx0XHR9LFxyXG5cdFx0XHR2YXQodm90KSB7XHJcblx0XHRcdFx0aWYgKHZvdCA9PSAndCcpIHtcclxuXHRcdFx0XHRcdHRoaXMuc2VsQ29sb3IgPSAnYmxhY2snXHJcblx0XHRcdFx0XHR0aGlzLmZzZWxDb2xvciA9ICcjMjBiMGUzJ1xyXG5cdFx0XHRcdFx0dGhpcy52YXRTaG93ID0gZmFsc2VcclxuXHRcdFx0XHRcdGlmICghdGhpcy5yZXNxLmxlbmd0aCkge1xyXG5cdFx0XHRcdFx0XHR0aGlzLmdldFRhKClcdFxyXG5cdFx0XHRcdFx0fVxyXG5cdFx0XHRcdH0gZWxzZSB7XHJcblx0XHRcdFx0XHR0aGlzLnNlbENvbG9yID0gJyMyMGIwZTMnXHJcblx0XHRcdFx0XHR0aGlzLmZzZWxDb2xvciA9ICdibGFjaydcclxuXHRcdFx0XHRcdHRoaXMudmF0U2hvdyA9IHRydWVcclxuXHRcdFx0XHR9XHJcblx0XHRcdH0sXHJcblx0XHRcdGdldFRhKCkge1xyXG5cdFx0XHRcdHVuaS5yZXF1ZXN0KHtcclxuXHRcdFx0XHRcdHVybDonaHR0cHM6Ly9hcGkuYmlsaWJpbGkuY29tL3gvdjIvcmVwbHknLFxyXG5cdFx0XHRcdFx0ZGF0YTp7XHJcblx0XHRcdFx0XHRcdGpzb25wOiAnanNvbnAnLFxyXG5cdFx0XHRcdFx0XHRwbjogdGhpcy5wbixcclxuXHRcdFx0XHRcdFx0dHlwZTogJzEnLFxyXG5cdFx0XHRcdFx0XHRzb3J0OiAnMicsXHJcblx0XHRcdFx0XHRcdG9pZDogdGhpcy5vaWRcclxuXHRcdFx0XHRcdH0sXHJcblx0XHRcdFx0XHRzdWNjZXNzOiAocmVzKSA9PiB7XHJcblx0XHRcdFx0XHRcdHRoaXMucmVzcSA9IFsuLi50aGlzLnJlc3EsIC4uLnJlcy5kYXRhLmRhdGEucmVwbGllc11cclxuXHRcdFx0XHRcdH1cclxuXHRcdFx0XHR9KVxyXG5cdFx0XHR9XG5cdFx0fVxuXHR9XG48L3NjcmlwdD5cblxuPHN0eWxlPlxuXHRAaW1wb3J0IHVybChcIi4vcGxheWVyLmNzc1wiKTtcbjwvc3R5bGU+XHJcblxyXG48c3R5bGUgbGFuZz1cInNjc3NcIj5cclxuXHQuY29sY29ue1xyXG5cdFx0cGFkZGluZy1ib3R0b206IDE1cHg7XHJcblx0fVxyXG48L3N0eWxlPiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///66\n");
 
 /***/ }),
 /* 67 */

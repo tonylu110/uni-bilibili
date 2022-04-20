@@ -30,7 +30,7 @@ video{
 }
 .owner_text{
 	margin-left: 20rpx;
-	width: 610rpx;
+	width: 570rpx;
 	display: flex;
 	flex-direction: column;
 }
@@ -141,4 +141,48 @@ video{
 	-webkit-line-clamp: 1;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+}
+
+.vat{
+	position: fixed;
+	z-index: 520;
+	height: 40px;
+	border-bottom: 1px solid #00000010;
+	border-top: 1px solid #00000010;
+	width: 750rpx;
+	display: flex;
+	line-height: 40px;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+}
+.vt{
+	margin: 0px 40px 0px 40px;
+	font-weight: bold;
+}
+
+.va{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.taa{
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px solid #00000010;
+	padding-bottom: 20rpx;
+	margin-bottom: 20rpx;
+}
+.paName{
+	font-weight: bold;
+}
+.aimg{
+	margin-left: 20rpx;
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 40rpx;
+	margin-right: 20rpx;
+}
+.imgAPa{
+	width: 610rpx;
 }
