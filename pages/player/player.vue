@@ -267,15 +267,16 @@
 				var Y = date.getFullYear() + '-'
 				var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-'
 				var D = date.getDate()
-				var h = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()) + ':'
-				var m = (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())
+				var h = ''
+				var m = ''
 				if (nowDate.getFullYear() + '-' == Y) {
 					Y = ''
 				} 
 				if (nowDate.getDate() == D) {
-					Y = ''
 					M = ''
 					D = '今天'
+					h = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()) + ':'
+					m = (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())
 				}
 				if (D < 10 && D != '') {
 					D = '0' + D
