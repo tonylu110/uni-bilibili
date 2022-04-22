@@ -195,3 +195,10 @@ video{
 	font-size: 23rpx;
 	color: gray;
 }
+
+.like_icon{
+	margin-right: 10rpx;
+}
+.likes{
+	color: gray;
+}

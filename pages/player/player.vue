@@ -94,6 +94,10 @@
 						{{ timestampToTime(item.ctime) }}
 					</view>
 					{{ item.content.message }}
+					<view class="likes">
+						<uni-icons type="hand-up-filled" size="30" :size="17" color="gray" class="like_icon"></uni-icons>
+						{{ item.like }}
+					</view>
 				</view>
 			</view>
 		</view>
@@ -257,7 +261,6 @@
 					},
 					success: (res) => {
 						this.resq = [...this.resq, ...res.data.data.replies]
-						
 					}
 				})
 			},
