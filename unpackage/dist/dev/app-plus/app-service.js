@@ -197,15 +197,82 @@ var render = function() {
                                   _i: "10-" + $30
                                 }
                               }),
-                              _c("text", [
-                                _vm._v(
-                                  _vm._$s(
+                              _c(
+                                "view",
+                                {
+                                  staticClass: _vm._$s(
                                     "11-" + $30,
-                                    "t0-0",
-                                    _vm._s(item.title)
+                                    "sc",
+                                    "own_i_p"
+                                  ),
+                                  attrs: { _i: "11-" + $30 }
+                                },
+                                [
+                                  _c("image", {
+                                    attrs: {
+                                      src: _vm._$s(
+                                        "12-" + $30,
+                                        "a-src",
+                                        item.owner.face
+                                      ),
+                                      _i: "12-" + $30
+                                    }
+                                  }),
+                                  _c(
+                                    "view",
+                                    {
+                                      staticClass: _vm._$s(
+                                        "13-" + $30,
+                                        "sc",
+                                        "own_txt"
+                                      ),
+                                      attrs: { _i: "13-" + $30 }
+                                    },
+                                    [
+                                      _c(
+                                        "text",
+                                        {
+                                          staticClass: _vm._$s(
+                                            "14-" + $30,
+                                            "sc",
+                                            "title"
+                                          ),
+                                          attrs: { _i: "14-" + $30 }
+                                        },
+                                        [
+                                          _vm._v(
+                                            _vm._$s(
+                                              "14-" + $30,
+                                              "t0-0",
+                                              _vm._s(item.title)
+                                            )
+                                          ),
+                                          _c(
+                                            "text",
+                                            {
+                                              staticClass: _vm._$s(
+                                                "15-" + $30,
+                                                "sc",
+                                                "owner_name"
+                                              ),
+                                              attrs: { _i: "15-" + $30 }
+                                            },
+                                            [
+                                              _vm._v(
+                                                _vm._$s(
+                                                  "15-" + $30,
+                                                  "t0-0",
+                                                  _vm._s(item.owner.name)
+                                                )
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ]
                                   )
-                                )
-                              ])
+                                ]
+                              )
                             ]
                           )
                         ]
@@ -216,23 +283,23 @@ var render = function() {
               ),
               _c(
                 "div",
-                { staticClass: _vm._$s(12, "sc", "right"), attrs: { _i: 12 } },
-                _vm._l(_vm._$s(13, "f", { forItems: _vm.list_main }), function(
+                { staticClass: _vm._$s(16, "sc", "right"), attrs: { _i: 16 } },
+                _vm._l(_vm._$s(17, "f", { forItems: _vm.list_main }), function(
                   item,
                   index,
                   $21,
                   $31
                 ) {
-                  return _vm._$s("13-" + $31, "i", index % 2 !== 0)
+                  return _vm._$s("17-" + $31, "i", index % 2 !== 0)
                     ? _c(
                         "div",
                         {
-                          key: _vm._$s(13, "f", {
+                          key: _vm._$s(17, "f", {
                             forIndex: $21,
-                            key: 13 + "-" + $31
+                            key: 17 + "-" + $31
                           }),
-                          staticClass: _vm._$s("13-" + $31, "sc", "video"),
-                          attrs: { _i: "13-" + $31 }
+                          staticClass: _vm._$s("17-" + $31, "sc", "video"),
+                          attrs: { _i: "17-" + $31 }
                         },
                         [
                           _c(
@@ -240,7 +307,7 @@ var render = function() {
                             {
                               attrs: {
                                 url: _vm._$s(
-                                  "14-" + $31,
+                                  "18-" + $31,
                                   "a-url",
                                   "../player/player?id=" +
                                     item.bvid +
@@ -257,25 +324,92 @@ var render = function() {
                                     "&like=" +
                                     item.stat.like
                                 ),
-                                _i: "14-" + $31
+                                _i: "18-" + $31
                               }
                             },
                             [
                               _c("image", {
                                 attrs: {
-                                  src: _vm._$s("15-" + $31, "a-src", item.pic),
-                                  _i: "15-" + $31
+                                  src: _vm._$s("19-" + $31, "a-src", item.pic),
+                                  _i: "19-" + $31
                                 }
                               }),
-                              _c("text", [
-                                _vm._v(
-                                  _vm._$s(
-                                    "16-" + $31,
-                                    "t0-0",
-                                    _vm._s(item.title)
+                              _c(
+                                "view",
+                                {
+                                  staticClass: _vm._$s(
+                                    "20-" + $31,
+                                    "sc",
+                                    "own_i_p"
+                                  ),
+                                  attrs: { _i: "20-" + $31 }
+                                },
+                                [
+                                  _c("image", {
+                                    attrs: {
+                                      src: _vm._$s(
+                                        "21-" + $31,
+                                        "a-src",
+                                        item.owner.face
+                                      ),
+                                      _i: "21-" + $31
+                                    }
+                                  }),
+                                  _c(
+                                    "view",
+                                    {
+                                      staticClass: _vm._$s(
+                                        "22-" + $31,
+                                        "sc",
+                                        "own_txt"
+                                      ),
+                                      attrs: { _i: "22-" + $31 }
+                                    },
+                                    [
+                                      _c(
+                                        "text",
+                                        {
+                                          staticClass: _vm._$s(
+                                            "23-" + $31,
+                                            "sc",
+                                            "title"
+                                          ),
+                                          attrs: { _i: "23-" + $31 }
+                                        },
+                                        [
+                                          _vm._v(
+                                            _vm._$s(
+                                              "23-" + $31,
+                                              "t0-0",
+                                              _vm._s(item.title)
+                                            )
+                                          ),
+                                          _c(
+                                            "text",
+                                            {
+                                              staticClass: _vm._$s(
+                                                "24-" + $31,
+                                                "sc",
+                                                "owner_name"
+                                              ),
+                                              attrs: { _i: "24-" + $31 }
+                                            },
+                                            [
+                                              _vm._v(
+                                                _vm._$s(
+                                                  "24-" + $31,
+                                                  "t0-0",
+                                                  _vm._s(item.owner.name)
+                                                )
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ]
                                   )
-                                )
-                              ])
+                                ]
+                              )
                             ]
                           )
                         ]
@@ -546,7 +680,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _App
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === \"string\") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === \"Object\" && o.constructor) n = o.constructor.name;if (n === \"Map\" || n === \"Set\") return Array.from(o);if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== \"undefined\" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;} //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      mobile: '',\n      page: 1,\n      list_main: [],\n      no_net: false };\n\n  },\n  onLoad: function onLoad() {\n    if (uni.getSystemInfoSync().platform === 'android') {\n      this.mobile = 'android';\n    } else {\n      this.mobile = 'other';\n    }\n    this.getList(false, 1);\n    this.getList(false, false);\n  },\n  onPullDownRefresh: function onPullDownRefresh() {var _this = this;\n    setTimeout(function () {\n      uni.stopPullDownRefresh();\n      _this.getList(false, 1);\n    }, 1000);\n  },\n  onReachBottom: function onReachBottom() {var _this2 = this;\n    var page = this.page = this.page + 1;\n    uni.showToast({\n      icon: 'loading',\n      duration: 1100 });\n\n    setTimeout(function () {\n      _this2.getList(true, page);\n    }, 1000);\n  },\n  methods: {\n    getList: function getList(bottom, page) {var _this3 = this;\n      var list = [];\n      if (!bottom && page) {\n        uni.request({\n          url: 'https://www.bilibili.com/index/ding.json?page=' + this.page,\n          success: function success(res) {\n            _this3.list_main = res.data.douga;\n            _this3.no_net = false;\n          },\n          fail: function fail() {\n            _this3.no_net = true;\n          } });\n\n      } else if (bottom && page) {\n        list = Object.values(this.list_main);\n        uni.request({\n          url: 'https://www.bilibili.com/index/ding.json?page=' + page,\n          success: function success(res) {\n            var more_list = Object.values(res.data.douga);\n            _this3.list_main = [].concat(_toConsumableArray(list), _toConsumableArray(more_list));\n          } });\n\n      }\n    },\n    search: function search() {\n      uni.navigateTo({\n        url: '../search/search' });\n\n    } } };exports.default = _default;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvaW5kZXgvaW5kZXgudnVlIl0sIm5hbWVzIjpbImRhdGEiLCJtb2JpbGUiLCJwYWdlIiwibGlzdF9tYWluIiwibm9fbmV0Iiwib25Mb2FkIiwidW5pIiwiZ2V0U3lzdGVtSW5mb1N5bmMiLCJwbGF0Zm9ybSIsImdldExpc3QiLCJvblB1bGxEb3duUmVmcmVzaCIsInNldFRpbWVvdXQiLCJzdG9wUHVsbERvd25SZWZyZXNoIiwib25SZWFjaEJvdHRvbSIsInNob3dUb2FzdCIsImljb24iLCJkdXJhdGlvbiIsIm1ldGhvZHMiLCJib3R0b20iLCJsaXN0IiwicmVxdWVzdCIsInVybCIsInN1Y2Nlc3MiLCJyZXMiLCJkb3VnYSIsImZhaWwiLCJPYmplY3QiLCJ2YWx1ZXMiLCJtb3JlX2xpc3QiLCJzZWFyY2giLCJuYXZpZ2F0ZVRvIl0sIm1hcHBpbmdzIjoiOHNDQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFZTtBQUNkQSxNQURjLGtCQUNQO0FBQ04sV0FBTztBQUNOQyxZQUFNLEVBQUUsRUFERjtBQUVOQyxVQUFJLEVBQUUsQ0FGQTtBQUdOQyxlQUFTLEVBQUUsRUFITDtBQUlOQyxZQUFNLEVBQUUsS0FKRixFQUFQOztBQU1BLEdBUmE7QUFTZEMsUUFUYyxvQkFTTDtBQUNSLFFBQUlDLEdBQUcsQ0FBQ0MsaUJBQUosR0FBd0JDLFFBQXhCLEtBQXFDLFNBQXpDLEVBQW1EO0FBQ2xELFdBQUtQLE1BQUwsR0FBYyxTQUFkO0FBQ0EsS0FGRCxNQUVPO0FBQ04sV0FBS0EsTUFBTCxHQUFjLE9BQWQ7QUFDQTtBQUNELFNBQUtRLE9BQUwsQ0FBYSxLQUFiLEVBQW9CLENBQXBCO0FBQ0EsU0FBS0EsT0FBTCxDQUFhLEtBQWIsRUFBb0IsS0FBcEI7QUFDQSxHQWpCYTtBQWtCZEMsbUJBbEJjLCtCQWtCTTtBQUNuQkMsY0FBVSxDQUFDLFlBQU07QUFDaEJMLFNBQUcsQ0FBQ00sbUJBQUo7QUFDQSxXQUFJLENBQUNILE9BQUwsQ0FBYSxLQUFiLEVBQW9CLENBQXBCO0FBQ0EsS0FIUyxFQUdQLElBSE8sQ0FBVjtBQUlBLEdBdkJhO0FBd0JkSSxlQXhCYywyQkF3Qkc7QUFDaEIsUUFBSVgsSUFBSSxHQUFHLEtBQUtBLElBQUwsR0FBWSxLQUFLQSxJQUFMLEdBQVksQ0FBbkM7QUFDQUksT0FBRyxDQUFDUSxTQUFKLENBQWM7QUFDYkMsVUFBSSxFQUFFLFNBRE87QUFFYkMsY0FBUSxFQUFFLElBRkcsRUFBZDs7QUFJQUwsY0FBVSxDQUFDLFlBQU07QUFDaEIsWUFBSSxDQUFDRixPQUFMLENBQWEsSUFBYixFQUFtQlAsSUFBbkI7QUFDQSxLQUZTLEVBRVAsSUFGTyxDQUFWO0FBR0EsR0FqQ2E7QUFrQ2RlLFNBQU8sRUFBRTtBQUNSUixXQURRLG1CQUNBUyxNQURBLEVBQ1FoQixJQURSLEVBQ2M7QUFDckIsVUFBSWlCLElBQUksR0FBRyxFQUFYO0FBQ0EsVUFBSSxDQUFDRCxNQUFELElBQVdoQixJQUFmLEVBQXFCO0FBQ3BCSSxXQUFHLENBQUNjLE9BQUosQ0FBWTtBQUNYQyxhQUFHLEVBQUMsbURBQW1ELEtBQUtuQixJQURqRDtBQUVYb0IsaUJBQU8sRUFBRSxpQkFBQ0MsR0FBRCxFQUFTO0FBQ2pCLGtCQUFJLENBQUNwQixTQUFMLEdBQWlCb0IsR0FBRyxDQUFDdkIsSUFBSixDQUFTd0IsS0FBMUI7QUFDQSxrQkFBSSxDQUFDcEIsTUFBTCxHQUFjLEtBQWQ7QUFDQSxXQUxVO0FBTVhxQixjQUFJLEVBQUUsZ0JBQU07QUFDWCxrQkFBSSxDQUFDckIsTUFBTCxHQUFjLElBQWQ7QUFDQSxXQVJVLEVBQVo7O0FBVUEsT0FYRCxNQVdPLElBQUljLE1BQU0sSUFBSWhCLElBQWQsRUFBb0I7QUFDMUJpQixZQUFJLEdBQUdPLE1BQU0sQ0FBQ0MsTUFBUCxDQUFjLEtBQUt4QixTQUFuQixDQUFQO0FBQ0FHLFdBQUcsQ0FBQ2MsT0FBSixDQUFZO0FBQ1hDLGFBQUcsRUFBQyxtREFBbURuQixJQUQ1QztBQUVYb0IsaUJBQU8sRUFBRSxpQkFBQ0MsR0FBRCxFQUFTO0FBQ2pCLGdCQUFJSyxTQUFTLEdBQUdGLE1BQU0sQ0FBQ0MsTUFBUCxDQUFjSixHQUFHLENBQUN2QixJQUFKLENBQVN3QixLQUF2QixDQUFoQjtBQUNBLGtCQUFJLENBQUNyQixTQUFMLGdDQUFxQmdCLElBQXJCLHNCQUE4QlMsU0FBOUI7QUFDQSxXQUxVLEVBQVo7O0FBT0E7QUFDRCxLQXhCTztBQXlCUkMsVUF6QlEsb0JBeUJDO0FBQ1J2QixTQUFHLENBQUN3QixVQUFKLENBQWU7QUFDZFQsV0FBRyxFQUFDLGtCQURVLEVBQWY7O0FBR0EsS0E3Qk8sRUFsQ0ssRSIsImZpbGUiOiIxMy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cblxuZXhwb3J0IGRlZmF1bHQge1xuXHRkYXRhKCkge1xuXHRcdHJldHVybiB7XG5cdFx0XHRtb2JpbGU6ICcnLFxuXHRcdFx0cGFnZTogMSxcblx0XHRcdGxpc3RfbWFpbjogW10sXG5cdFx0XHRub19uZXQ6IGZhbHNlXG5cdFx0fVxuXHR9LFxuXHRvbkxvYWQoKSB7XG5cdFx0aWYgKHVuaS5nZXRTeXN0ZW1JbmZvU3luYygpLnBsYXRmb3JtID09PSAnYW5kcm9pZCcpe1xuXHRcdFx0dGhpcy5tb2JpbGUgPSAnYW5kcm9pZCdcblx0XHR9IGVsc2Uge1xuXHRcdFx0dGhpcy5tb2JpbGUgPSAnb3RoZXInXG5cdFx0fVxuXHRcdHRoaXMuZ2V0TGlzdChmYWxzZSwgMSlcblx0XHR0aGlzLmdldExpc3QoZmFsc2UsIGZhbHNlKVxuXHR9LFxuXHRvblB1bGxEb3duUmVmcmVzaCgpIHtcblx0XHRzZXRUaW1lb3V0KCgpID0+IHtcblx0XHRcdHVuaS5zdG9wUHVsbERvd25SZWZyZXNoKCk7XG5cdFx0XHR0aGlzLmdldExpc3QoZmFsc2UsIDEpXG5cdFx0fSwgMTAwMCk7XG5cdH0sXG5cdG9uUmVhY2hCb3R0b20gKCkge1xuXHRcdHZhciBwYWdlID0gdGhpcy5wYWdlID0gdGhpcy5wYWdlICsgMSBcblx0XHR1bmkuc2hvd1RvYXN0KHtcblx0XHRcdGljb246ICdsb2FkaW5nJyxcblx0XHRcdGR1cmF0aW9uOiAxMTAwXG5cdFx0fSlcblx0XHRzZXRUaW1lb3V0KCgpID0+IHtcblx0XHRcdHRoaXMuZ2V0TGlzdCh0cnVlLCBwYWdlKVxuXHRcdH0sIDEwMDApXG5cdH0sXG5cdG1ldGhvZHM6IHtcblx0XHRnZXRMaXN0KGJvdHRvbSwgcGFnZSkge1xuXHRcdFx0dmFyIGxpc3QgPSBbXVxuXHRcdFx0aWYgKCFib3R0b20gJiYgcGFnZSkge1xuXHRcdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdFx0dXJsOidodHRwczovL3d3dy5iaWxpYmlsaS5jb20vaW5kZXgvZGluZy5qc29uP3BhZ2U9JyArIHRoaXMucGFnZSxcblx0XHRcdFx0XHRzdWNjZXNzOiAocmVzKSA9PiB7XG5cdFx0XHRcdFx0XHR0aGlzLmxpc3RfbWFpbiA9IHJlcy5kYXRhLmRvdWdhXG5cdFx0XHRcdFx0XHR0aGlzLm5vX25ldCA9IGZhbHNlXG5cdFx0XHRcdFx0fSxcblx0XHRcdFx0XHRmYWlsOiAoKSA9PiB7XG5cdFx0XHRcdFx0XHR0aGlzLm5vX25ldCA9IHRydWVcblx0XHRcdFx0XHR9XG5cdFx0XHRcdH0pXG5cdFx0XHR9IGVsc2UgaWYgKGJvdHRvbSAmJiBwYWdlKSB7XG5cdFx0XHRcdGxpc3QgPSBPYmplY3QudmFsdWVzKHRoaXMubGlzdF9tYWluKVxuXHRcdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdFx0dXJsOidodHRwczovL3d3dy5iaWxpYmlsaS5jb20vaW5kZXgvZGluZy5qc29uP3BhZ2U9JyArIHBhZ2UsXG5cdFx0XHRcdFx0c3VjY2VzczogKHJlcykgPT4ge1xuXHRcdFx0XHRcdFx0bGV0IG1vcmVfbGlzdCA9IE9iamVjdC52YWx1ZXMocmVzLmRhdGEuZG91Z2EpXG5cdFx0XHRcdFx0XHR0aGlzLmxpc3RfbWFpbiA9IFsuLi5saXN0LCAuLi5tb3JlX2xpc3RdXG5cdFx0XHRcdFx0fVxuXHRcdFx0XHR9KVxuXHRcdFx0fVxuXHRcdH0sXG5cdFx0c2VhcmNoKCkge1xuXHRcdFx0dW5pLm5hdmlnYXRlVG8oe1xuXHRcdFx0XHR1cmw6Jy4uL3NlYXJjaC9zZWFyY2gnXG5cdFx0XHR9KVxuXHRcdH1cblx0fVxufVxuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///13\n");
+eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === \"string\") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === \"Object\" && o.constructor) n = o.constructor.name;if (n === \"Map\" || n === \"Set\") return Array.from(o);if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== \"undefined\" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;} //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      mobile: '',\n      page: 1,\n      list_main: [],\n      no_net: false };\n\n  },\n  onLoad: function onLoad() {\n    if (uni.getSystemInfoSync().platform === 'android') {\n      this.mobile = 'android';\n    } else {\n      this.mobile = 'other';\n    }\n    this.getList(false, 1);\n    this.getList(false, false);\n  },\n  onPullDownRefresh: function onPullDownRefresh() {var _this = this;\n    setTimeout(function () {\n      uni.stopPullDownRefresh();\n      _this.getList(false, 1);\n    }, 1000);\n  },\n  onReachBottom: function onReachBottom() {var _this2 = this;\n    var page = this.page = this.page + 1;\n    uni.showToast({\n      icon: 'loading',\n      duration: 1100 });\n\n    setTimeout(function () {\n      _this2.getList(true, page);\n    }, 1000);\n  },\n  methods: {\n    getList: function getList(bottom, page) {var _this3 = this;\n      var list = [];\n      if (!bottom && page) {\n        uni.request({\n          url: 'https://www.bilibili.com/index/ding.json?page=' + this.page,\n          success: function success(res) {\n            _this3.list_main = res.data.douga;\n            _this3.no_net = false;\n          },\n          fail: function fail() {\n            _this3.no_net = true;\n          } });\n\n      } else if (bottom && page) {\n        list = Object.values(this.list_main);\n        uni.request({\n          url: 'https://www.bilibili.com/index/ding.json?page=' + page,\n          success: function success(res) {\n            var more_list = Object.values(res.data.douga);\n            _this3.list_main = [].concat(_toConsumableArray(list), _toConsumableArray(more_list));\n          } });\n\n      }\n    },\n    search: function search() {\n      uni.navigateTo({\n        url: '../search/search' });\n\n    } } };exports.default = _default;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvaW5kZXgvaW5kZXgudnVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBeUNBO0FBQ0EsTUFEQSxrQkFDQTtBQUNBO0FBQ0EsZ0JBREE7QUFFQSxhQUZBO0FBR0EsbUJBSEE7QUFJQSxtQkFKQTs7QUFNQSxHQVJBO0FBU0EsUUFUQSxvQkFTQTtBQUNBO0FBQ0E7QUFDQSxLQUZBLE1BRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEdBakJBO0FBa0JBLG1CQWxCQSwrQkFrQkE7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUhBLEVBR0EsSUFIQTtBQUlBLEdBdkJBO0FBd0JBLGVBeEJBLDJCQXdCQTtBQUNBO0FBQ0E7QUFDQSxxQkFEQTtBQUVBLG9CQUZBOztBQUlBO0FBQ0E7QUFDQSxLQUZBLEVBRUEsSUFGQTtBQUdBLEdBakNBO0FBa0NBO0FBQ0EsV0FEQSxtQkFDQSxNQURBLEVBQ0EsSUFEQSxFQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsMkVBREE7QUFFQTtBQUNBO0FBQ0E7QUFDQSxXQUxBO0FBTUE7QUFDQTtBQUNBLFdBUkE7O0FBVUEsT0FYQSxNQVdBO0FBQ0E7QUFDQTtBQUNBLHNFQURBO0FBRUE7QUFDQTtBQUNBO0FBQ0EsV0FMQTs7QUFPQTtBQUNBLEtBeEJBO0FBeUJBLFVBekJBLG9CQXlCQTtBQUNBO0FBQ0EsK0JBREE7O0FBR0EsS0E3QkEsRUFsQ0EsRSIsImZpbGUiOiIxMy5qcyIsInNvdXJjZXNDb250ZW50IjpbIjx0ZW1wbGF0ZT5cclxuXHQ8dmlldyBjbGFzcz1cImNvbnRlbnRcIj5cclxuXHRcdDxkaXYgaWQ9XCJ0b3BfYXJlYVwiIDpjbGFzcz1cIm1vYmlsZVwiPlxyXG5cdFx0XHQ8ZGl2IGNsYXNzPVwic2VhcmNoX2FyZWFcIiBAY2xpY2s9XCJzZWFyY2hcIj5cclxuXHRcdFx0XHQ8dW5pLWljb25zIHR5cGU9XCJzZWFyY2hcIiBzaXplPVwiMjVcIj48L3VuaS1pY29ucz5cclxuXHRcdFx0PC9kaXY+XHJcblx0XHQ8L2Rpdj5cclxuXHRcdDxkaXYgaWQ9XCJsaXN0X3RvcFwiPjwvZGl2PlxyXG5cdFx0PHZpZXcgc3R5bGU9XCJtYXJnaW4tdG9wOiA0MHJweDsgZm9udC1zaXplOiAzMHJweDsgZm9udC13ZWlnaHQ6IGJvbGQ7IGNvbG9yOiBncmF5O1wiIHYtaWY9XCJub19uZXRcIj7msqHmnInnvZHnu5znmoTov57mjqVRQVE8L3ZpZXc+XHJcblx0XHQ8ZGl2IGNsYXNzPVwibGlzdFwiIHYtaWY9XCIhbm9fbmV0XCI+XHJcblx0XHRcdDxkaXYgY2xhc3M9XCJsZWZ0XCI+XHJcblx0XHRcdFx0PGRpdiBjbGFzcz1cInZpZGVvXCIgdi1mb3I9XCIoaXRlbSxpbmRleCkgaW4gbGlzdF9tYWluXCIgdi1pZj1cImluZGV4ICUgMiA9PT0gMFwiPlxyXG5cdFx0XHRcdFx0PG5hdmlnYXRvciBob3Zlci1zdGF5LXRpbWU9XCIwXCIgOnVybD1cIicuLi9wbGF5ZXIvcGxheWVyP2lkPScgKyBpdGVtLmJ2aWQgKyAnJnRpdGxlPScgKyBpdGVtLnRpdGxlICsgJyZpbWc9JyArIGl0ZW0ub3duZXIuZmFjZSArICcmbmFtZT0nICsgaXRlbS5vd25lci5uYW1lICsgJyZkZXNjPScgKyBpdGVtLmRlc2MgKyAnJnZpZXc9JyArIGl0ZW0uc3RhdC52aWV3ICsgJyZsaWtlPScgKyBpdGVtLnN0YXQubGlrZVwiPlxyXG5cdFx0XHRcdFx0XHQ8aW1hZ2UgOnNyYz1cIml0ZW0ucGljXCIgbW9kZT1cIlwiPjwvaW1hZ2U+XHJcblx0XHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwib3duX2lfcFwiPlxyXG5cdFx0XHRcdFx0XHRcdDxpbWFnZSA6c3JjPVwiaXRlbS5vd25lci5mYWNlXCIgbW9kZT1cIlwiPjwvaW1hZ2U+XHJcblx0XHRcdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJvd25fdHh0XCI+XHJcblx0XHRcdFx0XHRcdFx0XHQ8dGV4dCBjbGFzcz1cInRpdGxlXCI+e3sgaXRlbS50aXRsZSB9fVxcbjx0ZXh0IGNsYXNzPVwib3duZXJfbmFtZVwiPnt7IGl0ZW0ub3duZXIubmFtZSB9fTwvdGV4dD48L3RleHQ+XHJcblx0XHRcdFx0XHRcdFx0PC92aWV3PlxyXG5cdFx0XHRcdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdFx0XHQ8L25hdmlnYXRvcj5cclxuXHRcdFx0XHQ8L2Rpdj5cclxuXHRcdFx0PC9kaXY+XHJcblx0XHRcdDxkaXYgY2xhc3M9XCJyaWdodFwiPlxyXG5cdFx0XHRcdDxkaXYgY2xhc3M9XCJ2aWRlb1wiIHYtZm9yPVwiKGl0ZW0saW5kZXgpIGluIGxpc3RfbWFpblwiIHYtaWY9XCJpbmRleCAlIDIgIT09IDBcIj5cclxuXHRcdFx0XHRcdDxuYXZpZ2F0b3IgaG92ZXItc3RheS10aW1lPVwiMFwiIDp1cmw9XCInLi4vcGxheWVyL3BsYXllcj9pZD0nICsgaXRlbS5idmlkICsgJyZ0aXRsZT0nICsgaXRlbS50aXRsZSArICcmaW1nPScgKyBpdGVtLm93bmVyLmZhY2UgKyAnJm5hbWU9JyArIGl0ZW0ub3duZXIubmFtZSArICcmZGVzYz0nICsgaXRlbS5kZXNjICsgJyZ2aWV3PScgKyBpdGVtLnN0YXQudmlldyArICcmbGlrZT0nICsgaXRlbS5zdGF0Lmxpa2VcIj5cclxuXHRcdFx0XHRcdFx0PGltYWdlIDpzcmM9XCJpdGVtLnBpY1wiIG1vZGU9XCJcIj48L2ltYWdlPlxyXG5cdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cIm93bl9pX3BcIj5cclxuXHRcdFx0XHRcdFx0XHQ8aW1hZ2UgOnNyYz1cIml0ZW0ub3duZXIuZmFjZVwiIG1vZGU9XCJcIj48L2ltYWdlPlxyXG5cdFx0XHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwib3duX3R4dFwiPlxyXG5cdFx0XHRcdFx0XHRcdFx0PHRleHQgY2xhc3M9XCJ0aXRsZVwiPnt7IGl0ZW0udGl0bGUgfX1cXG48dGV4dCBjbGFzcz1cIm93bmVyX25hbWVcIj57eyBpdGVtLm93bmVyLm5hbWUgfX08L3RleHQ+PC90ZXh0PlxyXG5cdFx0XHRcdFx0XHRcdDwvdmlldz5cclxuXHRcdFx0XHRcdFx0PC92aWV3PlxyXG5cdFx0XHRcdFx0PC9uYXZpZ2F0b3I+XHJcblx0XHRcdFx0PC9kaXY+XHJcblx0XHRcdDwvZGl2PlxyXG5cdFx0PC9kaXY+XHJcblx0PC92aWV3PlxyXG48L3RlbXBsYXRlPlxyXG5cclxuPHNjcmlwdD5cclxuXHRleHBvcnQgZGVmYXVsdCB7XHJcblx0XHRkYXRhKCkge1xyXG5cdFx0XHRyZXR1cm4ge1xyXG5cdFx0XHRcdG1vYmlsZTogJycsXHJcblx0XHRcdFx0cGFnZTogMSxcclxuXHRcdFx0XHRsaXN0X21haW46IFtdLFxyXG5cdFx0XHRcdG5vX25ldDogZmFsc2VcclxuXHRcdFx0fVxyXG5cdFx0fSxcclxuXHRcdG9uTG9hZCgpIHtcclxuXHRcdFx0aWYgKHVuaS5nZXRTeXN0ZW1JbmZvU3luYygpLnBsYXRmb3JtID09PSAnYW5kcm9pZCcpe1xyXG5cdFx0XHRcdHRoaXMubW9iaWxlID0gJ2FuZHJvaWQnXHJcblx0XHRcdH0gZWxzZSB7XHJcblx0XHRcdFx0dGhpcy5tb2JpbGUgPSAnb3RoZXInXHJcblx0XHRcdH1cclxuXHRcdFx0dGhpcy5nZXRMaXN0KGZhbHNlLCAxKVxyXG5cdFx0XHR0aGlzLmdldExpc3QoZmFsc2UsIGZhbHNlKVxyXG5cdFx0fSxcclxuXHRcdG9uUHVsbERvd25SZWZyZXNoKCkge1xyXG5cdFx0XHRzZXRUaW1lb3V0KCgpID0+IHtcclxuXHRcdFx0XHR1bmkuc3RvcFB1bGxEb3duUmVmcmVzaCgpO1xyXG5cdFx0XHRcdHRoaXMuZ2V0TGlzdChmYWxzZSwgMSlcclxuXHRcdFx0fSwgMTAwMCk7XHJcblx0XHR9LFxyXG5cdFx0b25SZWFjaEJvdHRvbSAoKSB7XHJcblx0XHRcdHZhciBwYWdlID0gdGhpcy5wYWdlID0gdGhpcy5wYWdlICsgMSBcclxuXHRcdFx0dW5pLnNob3dUb2FzdCh7XHJcblx0XHRcdFx0aWNvbjogJ2xvYWRpbmcnLFxyXG5cdFx0XHRcdGR1cmF0aW9uOiAxMTAwXHJcblx0XHRcdH0pXHJcblx0XHRcdHNldFRpbWVvdXQoKCkgPT4ge1xyXG5cdFx0XHRcdHRoaXMuZ2V0TGlzdCh0cnVlLCBwYWdlKVxyXG5cdFx0XHR9LCAxMDAwKVxuXHRcdH0sXHJcblx0XHRtZXRob2RzOiB7XHJcblx0XHRcdGdldExpc3QoYm90dG9tLCBwYWdlKSB7XHJcblx0XHRcdFx0dmFyIGxpc3QgPSBbXVxyXG5cdFx0XHRcdGlmICghYm90dG9tICYmIHBhZ2UpIHtcclxuXHRcdFx0XHRcdHVuaS5yZXF1ZXN0KHtcclxuXHRcdFx0XHRcdFx0dXJsOidodHRwczovL3d3dy5iaWxpYmlsaS5jb20vaW5kZXgvZGluZy5qc29uP3BhZ2U9JyArIHRoaXMucGFnZSxcclxuXHRcdFx0XHRcdFx0c3VjY2VzczogKHJlcykgPT4ge1xyXG5cdFx0XHRcdFx0XHRcdHRoaXMubGlzdF9tYWluID0gcmVzLmRhdGEuZG91Z2FcclxuXHRcdFx0XHRcdFx0XHR0aGlzLm5vX25ldCA9IGZhbHNlXHJcblx0XHRcdFx0XHRcdH0sXHJcblx0XHRcdFx0XHRcdGZhaWw6ICgpID0+IHtcclxuXHRcdFx0XHRcdFx0XHR0aGlzLm5vX25ldCA9IHRydWVcclxuXHRcdFx0XHRcdFx0fVxyXG5cdFx0XHRcdFx0fSlcclxuXHRcdFx0XHR9IGVsc2UgaWYgKGJvdHRvbSAmJiBwYWdlKSB7XHJcblx0XHRcdFx0XHRsaXN0ID0gT2JqZWN0LnZhbHVlcyh0aGlzLmxpc3RfbWFpbilcclxuXHRcdFx0XHRcdHVuaS5yZXF1ZXN0KHtcclxuXHRcdFx0XHRcdFx0dXJsOidodHRwczovL3d3dy5iaWxpYmlsaS5jb20vaW5kZXgvZGluZy5qc29uP3BhZ2U9JyArIHBhZ2UsXHJcblx0XHRcdFx0XHRcdHN1Y2Nlc3M6IChyZXMpID0+IHtcclxuXHRcdFx0XHRcdFx0XHRsZXQgbW9yZV9saXN0ID0gT2JqZWN0LnZhbHVlcyhyZXMuZGF0YS5kb3VnYSlcclxuXHRcdFx0XHRcdFx0XHR0aGlzLmxpc3RfbWFpbiA9IFsuLi5saXN0LCAuLi5tb3JlX2xpc3RdXHJcblx0XHRcdFx0XHRcdH1cclxuXHRcdFx0XHRcdH0pXHJcblx0XHRcdFx0fVxyXG5cdFx0XHR9LFxyXG5cdFx0XHRzZWFyY2goKSB7XHJcblx0XHRcdFx0dW5pLm5hdmlnYXRlVG8oe1xyXG5cdFx0XHRcdFx0dXJsOicuLi9zZWFyY2gvc2VhcmNoJ1xyXG5cdFx0XHRcdH0pXHJcblx0XHRcdH1cclxuXHRcdH1cclxuXHR9XHJcbjwvc2NyaXB0PlxyXG5cclxuPHN0eWxlPlxyXG5cdEBpbXBvcnQgdXJsKFwiLi9pbmRleC5jc3NcIik7XHJcbjwvc3R5bGU+XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///13\n");
 
 /***/ }),
 /* 14 */

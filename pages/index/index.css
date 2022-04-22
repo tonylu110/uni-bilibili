@@ -43,24 +43,40 @@ navigator{
 	display: flex;
 	flex-direction: column;
 	margin: 0px 10rpx 20rpx 10rpx;
-	border: 1px solid #00000010;
+	box-shadow: 0px 0px 10px #00000030;
 	justify-content: center;
-	align-items: center;
 	border-radius: 20rpx;
 }
 .video image{
 	width: 350rpx;
-	height: 250rpx;
+	height: 230rpx;
 	border-radius: 20rpx;
-}
-.video text{
-	margin: 10rpx 0px 10rpx 0px;
-	max-width: 300rpx;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap
 }
 .list{
 	display: flex;
 	flex-direction: row;
+}
+
+.own_i_p{
+	display: flex;
+	flex-direction: row;
+	margin: 15rpx;
+	align-items: center;
+}
+.own_i_p image{
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 40rpx;
+	box-shadow: 0px 0px 2px #00000040;
+}
+.own_txt{
+	margin-left: 10rpx;
+	width: 220rpx;
+	font-size: 25rpx;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.owner_name{
+	font-weight: bold;
 }

@@ -12,7 +12,12 @@
 				<div class="video" v-for="(item,index) in list_main" v-if="index % 2 === 0">
 					<navigator hover-stay-time="0" :url="'../player/player?id=' + item.bvid + '&title=' + item.title + '&img=' + item.owner.face + '&name=' + item.owner.name + '&desc=' + item.desc + '&view=' + item.stat.view + '&like=' + item.stat.like">
 						<image :src="item.pic" mode=""></image>
-						<text>{{ item.title }}</text>
+						<view class="own_i_p">
+							<image :src="item.owner.face" mode=""></image>
+							<view class="own_txt">
+								<text class="title">{{ item.title }}\n<text class="owner_name">{{ item.owner.name }}</text></text>
+							</view>
+						</view>
 					</navigator>
 				</div>
 			</div>
@@ -20,7 +25,12 @@
 				<div class="video" v-for="(item,index) in list_main" v-if="index % 2 !== 0">
 					<navigator hover-stay-time="0" :url="'../player/player?id=' + item.bvid + '&title=' + item.title + '&img=' + item.owner.face + '&name=' + item.owner.name + '&desc=' + item.desc + '&view=' + item.stat.view + '&like=' + item.stat.like">
 						<image :src="item.pic" mode=""></image>
-						<text>{{ item.title }}</text>
+						<view class="own_i_p">
+							<image :src="item.owner.face" mode=""></image>
+							<view class="own_txt">
+								<text class="title">{{ item.title }}\n<text class="owner_name">{{ item.owner.name }}</text></text>
+							</view>
+						</view>
 					</navigator>
 				</div>
 			</div>
