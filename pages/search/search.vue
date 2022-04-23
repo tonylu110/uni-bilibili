@@ -38,7 +38,7 @@
 				<view class="clear_btn" type="default" @click="clearHisword"><uni-icons type="trash" size="30" color="#aaa"></uni-icons>清除搜索历史</view>
 			</view>
 		</view>
-		<view :style="{marginTop: 115 + systemBarHeight + 'px'}"></view>
+		<view :style="{marginTop: 67 + dropHeight + systemBarHeight + 'px'}"></view>
 		<view v-for="(item,index) in videoInfo" :key="index">
 			<navigator class="video_list" hover-stay-time="0" :url="'../player/player?id=' + item.bvid + '&title=' + '&img=' + item.upic + '&name=' + item.author + '&desc=' + item.description + '&pic=' + item.pic + '&view=' + item.play + '&like=' + item.like">
 				<image :src="item.pic" mode="" class="video_img"></image>
@@ -95,7 +95,8 @@
 				}],
 				hotwords: [],
 				keywords: [],
-				hisWordShow: false
+				hisWordShow: false,
+				dropHeight: 0
 			}
 		},
 		onReachBottom() {
@@ -121,6 +122,9 @@
 				success: (res) => {
 					this.hisWordShow = res.data
 				}
+			})
+			uni.$on('ddHeight',(data)=>{
+				this.dropHeight = data
 			})
 		},
 		methods: {

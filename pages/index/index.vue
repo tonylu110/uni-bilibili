@@ -60,6 +60,7 @@
 		onPullDownRefresh() {
 			setTimeout(() => {
 				uni.stopPullDownRefresh();
+				this.list_main = []
 				this.getList(false, 1)
 			}, 1000);
 		},

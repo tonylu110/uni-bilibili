@@ -12,7 +12,7 @@
 			 :style="{
 				 zIndex: zIndex,
 				 backgroundColor: bgColor.header,
-				 top: systemBarHeight + 57 + 'px'}">
+				 top: systemBarHeight + 56 + 'px'}">
 				<view 
 				 class="wyb-drop-down-header-item"
 				 v-for="(item,index) in options"
@@ -59,7 +59,7 @@
 				 minHeight: minHeight + 'rpx',
 				 height: autoHeight ? 'auto' : minHeight + 'rpx',
 				 maxHeight: autoHeight && maxHeight ? maxHeight + 'rpx' : 'auto',
-				 top: 57 + rpxSystemBarHeight + systemBarHeight + 'px'}">
+				 top: 56 + rpxSystemBarHeight + systemBarHeight + 'px'}">
 				 <view class="wyb-drop-down-content-box" v-for="(item,index) in options" :key="contentBoxKey(index)">
 				 	<view v-if="item['custom'] && headerActiveIndex === index && dropDown" class="wyb-drop-down-content-slot">
 						<slot></slot>
@@ -95,7 +95,7 @@
 			 zIndex: zIndex - 2,
 			 height: screenHeight + 'px',
 			 backgroundColor: 'rgba(0, 0, 0, ' + maskAlpha + ')',
-			 top: 57 + systemBarHeight + 'px'}" />
+			 top: 56 + systemBarHeight + 'px'}" />
 	</view>
 </template>
 
@@ -212,6 +212,7 @@
 			const query = uni.createSelectorQuery().in(this);
 			query.select('#wyb-drop-down-header').boundingClientRect(data => {
 				this.rpxSystemBarHeight = data.height
+				uni.$emit('ddHeight',data.height)
 			}).exec();
 			if (this.defaultIndexList.length === 0) {
 				this.options.forEach((item, index) => {
@@ -320,13 +321,13 @@
 		flex-direction: row;
 		background-color: #fff;
 		z-index: 500;
+		box-shadow: 0px 0px 20px #00000020;
 	}
 	
 	.wyb-drop-down-header-item {
 		flex: 1;
 		height: 100rpx;
 		font-size: 30rpx;
-		border-bottom: 1px solid #eee;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
