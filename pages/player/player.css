@@ -18,9 +18,15 @@ video{
 }
 
 .owner{
-	width: 750rpx;
+	width: 690rpx;
 	display: flex;
 	flex-direction: row;
+}
+.vd_main{
+	box-shadow: 0px 0px 15px #00000015;
+	border-radius: 20rpx;
+	padding-top: 20rpx;
+	padding-right: 20rpx;
 }
 .owner image{
 	margin-left: 20rpx;
@@ -30,7 +36,7 @@ video{
 }
 .owner_text{
 	margin-left: 20rpx;
-	width: 570rpx;
+	width: 550rpx;
 	display: flex;
 	flex-direction: column;
 }
@@ -42,7 +48,7 @@ video{
 	flex-direction: row;
 	width: 750rpx;
 	position: fixed;
-	z-index: 10;
+	z-index: 522;
 }
 .danmu_main input{
 	background-color: #f5f5f5;
@@ -62,15 +68,17 @@ video{
 }
 
 .fe_bar{
-	width: 750rpx;
+	width: 710rpx;
 	display: flex;
 	flex-direction: row;
-	margin-top: 10rpx;
-	border-bottom: 1px solid #00000010;
+	margin-top: 20rpx;
+	margin-bottom: 20rpx;
+	box-shadow: 0px 0px 15px #00000015;
 	justify-content: center;
+	border-radius: 20rpx;
 }
 .fe{
-	margin: 7px 50rpx 12px 50rpx;
+	margin: 10px 50rpx 10px 50rpx;
 }
 
 .keyword{
@@ -78,14 +86,16 @@ video{
 }
 
 .video_list{
-	width: 730rpx;
+	width: 670rpx;
 	display: flex;
 	flex-direction: row;
-	padding: 10rpx;
-	border-bottom: 1px solid #00000010;
+	padding: 20rpx;
+	box-shadow: 0px 0px 15px #00000015;
+	margin-bottom: 20rpx;
+	border-radius: 20rpx;
 }
 .video_list image{
-	border-radius: 20rpx;
+	border-radius: 16rpx;
 	width: 300rpx;
 	height: 180rpx;
 	margin-right: 20rpx;
@@ -115,9 +125,8 @@ video{
 	display: flex;
 	flex-direction: row;
 	color: gray;
-	width: 750rpx;
+	width: 690rpx;
 	padding-bottom: 20rpx;
-	border-bottom: 1px solid #00000010;
 	justify-content: center;
 }
 .system_bar{
@@ -147,8 +156,7 @@ video{
 	position: fixed;
 	z-index: 520;
 	height: 40px;
-	border-bottom: 1px solid #00000010;
-	border-top: 1px solid #00000010;
+	box-shadow: 0px 0px 10px #00000020;
 	width: 750rpx;
 	display: flex;
 	line-height: 40px;
@@ -169,8 +177,11 @@ video{
 .taa{
 	display: flex;
 	flex-direction: row;
-	border-bottom: 1px solid #00000010;
+	box-shadow: 0px 0px 15px #00000015;
+	padding-top: 20rpx;
+	border-radius: 20rpx;
 	padding-bottom: 20rpx;
+	padding-right: 20rpx;
 	margin-bottom: 20rpx;
 }
 .paName{
@@ -184,7 +195,7 @@ video{
 	margin-right: 20rpx;
 }
 .imgAPa{
-	width: 610rpx;
+	width: 570rpx;
 }
 .ctime{
 	font-size: 25rpx;

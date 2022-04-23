@@ -2855,139 +2855,158 @@ var render = function() {
         [
           _c(
             "view",
-            { staticClass: _vm._$s(11, "sc", "owner"), attrs: { _i: 11 } },
+            { staticClass: _vm._$s(11, "sc", "vd_main"), attrs: { _i: 11 } },
             [
-              _c("image", {
-                attrs: { src: _vm._$s(12, "a-src", _vm.ownerImg), _i: 12 }
-              }),
               _c(
                 "view",
-                {
-                  staticClass: _vm._$s(13, "sc", "owner_text"),
-                  attrs: { _i: 13 }
-                },
+                { staticClass: _vm._$s(12, "sc", "owner"), attrs: { _i: 12 } },
                 [
+                  _c("image", {
+                    attrs: { src: _vm._$s(13, "a-src", _vm.ownerImg), _i: 13 }
+                  }),
                   _c(
-                    "text",
+                    "view",
                     {
-                      staticClass: _vm._$s(14, "sc", "ownm"),
+                      staticClass: _vm._$s(14, "sc", "owner_text"),
                       attrs: { _i: 14 }
-                    },
-                    [_vm._v(_vm._$s(14, "t0-0", _vm._s(_vm.ownerName)))]
-                  ),
-                  _c(
-                    "text",
-                    {
-                      staticClass: _vm._$s(15, "sc", "owntime"),
-                      attrs: { _i: 15 }
-                    },
-                    [
-                      _vm._v(
-                        _vm._$s(
-                          15,
-                          "t0-0",
-                          _vm._s(_vm.timestampToTime(_vm.ctime))
-                        )
-                      )
-                    ]
-                  ),
-                  _c(
-                    "uni-collapse",
-                    {
-                      attrs: { accordion: true, "show-animation": true, _i: 16 }
                     },
                     [
                       _c(
-                        "uni-collapse-item",
+                        "text",
+                        {
+                          staticClass: _vm._$s(15, "sc", "ownm"),
+                          attrs: { _i: 15 }
+                        },
+                        [_vm._v(_vm._$s(15, "t0-0", _vm._s(_vm.ownerName)))]
+                      ),
+                      _c(
+                        "text",
+                        {
+                          staticClass: _vm._$s(16, "sc", "owntime"),
+                          attrs: { _i: 16 }
+                        },
+                        [
+                          _vm._v(
+                            _vm._$s(
+                              16,
+                              "t0-0",
+                              _vm._s(_vm.timestampToTime(_vm.ctime))
+                            )
+                          )
+                        ]
+                      ),
+                      _c(
+                        "uni-collapse",
                         {
                           attrs: {
-                            title: _vm.title,
-                            border: false,
-                            titleBorder: "none",
+                            accordion: true,
+                            "show-animation": true,
                             _i: 17
                           }
                         },
                         [
                           _c(
-                            "view",
+                            "uni-collapse-item",
                             {
-                              staticClass: _vm._$s(18, "sc", "colcon"),
-                              attrs: { _i: 18 }
+                              attrs: {
+                                title: _vm.title,
+                                border: false,
+                                titleBorder: "none",
+                                _i: 18
+                              }
                             },
                             [
-                              _c("text", [
-                                _vm._v(_vm._$s(19, "t0-0", _vm._s(_vm.vInfo)))
-                              ])
+                              _c(
+                                "view",
+                                {
+                                  staticClass: _vm._$s(19, "sc", "colcon"),
+                                  attrs: { _i: 19 }
+                                },
+                                [
+                                  _c("text", [
+                                    _vm._v(
+                                      _vm._$s(20, "t0-0", _vm._s(_vm.vInfo))
+                                    )
+                                  ])
+                                ]
+                              )
                             ]
                           )
-                        ]
+                        ],
+                        1
                       )
                     ],
                     1
                   )
-                ],
-                1
-              )
-            ]
-          ),
-          _c(
-            "view",
-            { staticClass: _vm._$s(20, "sc", "vd_info"), attrs: { _i: 20 } },
-            [
-              _c(
-                "view",
-                {
-                  staticClass: _vm._$s(21, "sc", "video_play"),
-                  attrs: { _i: 21 }
-                },
-                [
-                  _c("uni-icons", {
-                    attrs: {
-                      type: "videocam-filled",
-                      size: "16",
-                      color: "gray",
-                      _i: 22
-                    }
-                  }),
-                  _c("text", [_vm._v(_vm._$s(23, "t0-0", _vm._s(_vm.view)))])
-                ],
-                1
+                ]
               ),
               _c(
                 "view",
                 {
-                  staticClass: _vm._$s(24, "sc", "video_like"),
-                  attrs: { _i: 24 }
+                  staticClass: _vm._$s(21, "sc", "vd_info"),
+                  attrs: { _i: 21 }
                 },
                 [
-                  _c("uni-icons", {
-                    attrs: {
-                      type: "hand-up-filled",
-                      size: "16",
-                      color: "gray",
-                      _i: 25
-                    }
-                  }),
-                  _c("text", [_vm._v(_vm._$s(26, "t0-0", _vm._s(_vm.like)))])
-                ],
-                1
+                  _c(
+                    "view",
+                    {
+                      staticClass: _vm._$s(22, "sc", "video_play"),
+                      attrs: { _i: 22 }
+                    },
+                    [
+                      _c("uni-icons", {
+                        attrs: {
+                          type: "videocam-filled",
+                          size: "16",
+                          color: "gray",
+                          _i: 23
+                        }
+                      }),
+                      _c("text", [
+                        _vm._v(_vm._$s(24, "t0-0", _vm._s(_vm.view)))
+                      ])
+                    ],
+                    1
+                  ),
+                  _c(
+                    "view",
+                    {
+                      staticClass: _vm._$s(25, "sc", "video_like"),
+                      attrs: { _i: 25 }
+                    },
+                    [
+                      _c("uni-icons", {
+                        attrs: {
+                          type: "hand-up-filled",
+                          size: "16",
+                          color: "gray",
+                          _i: 26
+                        }
+                      }),
+                      _c("text", [
+                        _vm._v(_vm._$s(27, "t0-0", _vm._s(_vm.like)))
+                      ])
+                    ],
+                    1
+                  )
+                ]
               )
             ]
           ),
           _c(
             "view",
-            { staticClass: _vm._$s(27, "sc", "fe_bar"), attrs: { _i: 27 } },
+            { staticClass: _vm._$s(28, "sc", "fe_bar"), attrs: { _i: 28 } },
             [
               _c(
                 "view",
-                { staticClass: _vm._$s(28, "sc", "fe"), attrs: { _i: 28 } },
+                { staticClass: _vm._$s(29, "sc", "fe"), attrs: { _i: 29 } },
                 [
                   _c("uni-icons", {
                     attrs: {
                       type: "hand-up-filled",
                       size: "30",
                       color: "gray",
-                      _i: 29
+                      _i: 30
                     }
                   })
                 ],
@@ -2995,14 +3014,14 @@ var render = function() {
               ),
               _c(
                 "view",
-                { staticClass: _vm._$s(30, "sc", "fe"), attrs: { _i: 30 } },
+                { staticClass: _vm._$s(31, "sc", "fe"), attrs: { _i: 31 } },
                 [
                   _c("uni-icons", {
                     attrs: {
                       type: "checkbox-filled",
                       size: "30",
                       color: "gray",
-                      _i: 31
+                      _i: 32
                     }
                   })
                 ],
@@ -3010,14 +3029,14 @@ var render = function() {
               ),
               _c(
                 "view",
-                { staticClass: _vm._$s(32, "sc", "fe"), attrs: { _i: 32 } },
+                { staticClass: _vm._$s(33, "sc", "fe"), attrs: { _i: 33 } },
                 [
                   _c("uni-icons", {
                     attrs: {
                       type: "star-filled",
                       size: "30",
                       color: "gray",
-                      _i: 33
+                      _i: 34
                     }
                   })
                 ],
@@ -3026,8 +3045,8 @@ var render = function() {
               _c(
                 "view",
                 {
-                  staticClass: _vm._$s(34, "sc", "fe"),
-                  attrs: { _i: 34 },
+                  staticClass: _vm._$s(35, "sc", "fe"),
+                  attrs: { _i: 35 },
                   on: {
                     click: function($event) {
                       return _vm.onShare()
@@ -3040,7 +3059,7 @@ var render = function() {
                       type: "redo-filled",
                       size: "30",
                       color: "gray",
-                      _i: 35
+                      _i: 36
                     }
                   })
                 ],
@@ -3048,7 +3067,7 @@ var render = function() {
               )
             ]
           ),
-          _vm._l(_vm._$s(36, "f", { forItems: _vm.moreVideo }), function(
+          _vm._l(_vm._$s(37, "f", { forItems: _vm.moreVideo }), function(
             item,
             index,
             $20,
@@ -3057,8 +3076,8 @@ var render = function() {
             return _c(
               "view",
               {
-                key: _vm._$s(36, "f", { forIndex: $20, key: index }),
-                attrs: { _i: "36-" + $30 },
+                key: _vm._$s(37, "f", { forIndex: $20, key: index }),
+                attrs: { _i: "37-" + $30 },
                 on: {
                   click: function($event) {
                     return _vm.pause()
@@ -3069,10 +3088,10 @@ var render = function() {
                 _c(
                   "navigator",
                   {
-                    staticClass: _vm._$s("37-" + $30, "sc", "video_list"),
+                    staticClass: _vm._$s("38-" + $30, "sc", "video_list"),
                     attrs: {
                       url: _vm._$s(
-                        "37-" + $30,
+                        "38-" + $30,
                         "a-url",
                         "../player/player?id=" +
                           item.bvid +
@@ -3091,56 +3110,56 @@ var render = function() {
                           "&like=" +
                           item.stat.like
                       ),
-                      _i: "37-" + $30
+                      _i: "38-" + $30
                     }
                   },
                   [
                     _c("image", {
-                      staticClass: _vm._$s("38-" + $30, "sc", "video_img"),
+                      staticClass: _vm._$s("39-" + $30, "sc", "video_img"),
                       attrs: {
-                        src: _vm._$s("38-" + $30, "a-src", item.pic),
-                        _i: "38-" + $30
+                        src: _vm._$s("39-" + $30, "a-src", item.pic),
+                        _i: "39-" + $30
                       }
                     }),
                     _c(
                       "view",
                       {
-                        staticClass: _vm._$s("39-" + $30, "sc", "video_info"),
-                        attrs: { _i: "39-" + $30 }
+                        staticClass: _vm._$s("40-" + $30, "sc", "video_info"),
+                        attrs: { _i: "40-" + $30 }
                       },
                       [
                         _c(
                           "text",
                           {
                             staticClass: _vm._$s(
-                              "40-" + $30,
+                              "41-" + $30,
                               "sc",
                               "video_title"
                             ),
-                            attrs: { _i: "40-" + $30 }
+                            attrs: { _i: "41-" + $30 }
                           },
                           [
                             _vm._v(
-                              _vm._$s("40-" + $30, "t0-0", _vm._s(item.title))
+                              _vm._$s("41-" + $30, "t0-0", _vm._s(item.title))
                             )
                           ]
                         ),
                         _c(
                           "view",
                           {
-                            staticClass: _vm._$s("41-" + $30, "sc", "up_main"),
-                            attrs: { _i: "41-" + $30 }
+                            staticClass: _vm._$s("42-" + $30, "sc", "up_main"),
+                            attrs: { _i: "42-" + $30 }
                           },
                           [
                             _c(
                               "view",
                               {
                                 staticClass: _vm._$s(
-                                  "42-" + $30,
+                                  "43-" + $30,
                                   "sc",
                                   "up_name"
                                 ),
-                                attrs: { _i: "42-" + $30 }
+                                attrs: { _i: "43-" + $30 }
                               },
                               [
                                 _c("uni-icons", {
@@ -3148,13 +3167,13 @@ var render = function() {
                                     type: "person-filled",
                                     size: "16",
                                     color: "gray",
-                                    _i: "43-" + $30
+                                    _i: "44-" + $30
                                   }
                                 }),
                                 _c("text", [
                                   _vm._v(
                                     _vm._$s(
-                                      "44-" + $30,
+                                      "45-" + $30,
                                       "t0-0",
                                       _vm._s(item.owner.name)
                                     )
@@ -3167,22 +3186,22 @@ var render = function() {
                               "view",
                               {
                                 staticClass: _vm._$s(
-                                  "45-" + $30,
+                                  "46-" + $30,
                                   "sc",
                                   "video_in"
                                 ),
-                                attrs: { _i: "45-" + $30 }
+                                attrs: { _i: "46-" + $30 }
                               },
                               [
                                 _c(
                                   "view",
                                   {
                                     staticClass: _vm._$s(
-                                      "46-" + $30,
+                                      "47-" + $30,
                                       "sc",
                                       "video_play"
                                     ),
-                                    attrs: { _i: "46-" + $30 }
+                                    attrs: { _i: "47-" + $30 }
                                   },
                                   [
                                     _c("uni-icons", {
@@ -3190,13 +3209,13 @@ var render = function() {
                                         type: "videocam-filled",
                                         size: "16",
                                         color: "gray",
-                                        _i: "47-" + $30
+                                        _i: "48-" + $30
                                       }
                                     }),
                                     _c("text", [
                                       _vm._v(
                                         _vm._$s(
-                                          "48-" + $30,
+                                          "49-" + $30,
                                           "t0-0",
                                           _vm._s(item.stat.view)
                                         )
@@ -3209,11 +3228,11 @@ var render = function() {
                                   "view",
                                   {
                                     staticClass: _vm._$s(
-                                      "49-" + $30,
+                                      "50-" + $30,
                                       "sc",
                                       "video_like"
                                     ),
-                                    attrs: { _i: "49-" + $30 }
+                                    attrs: { _i: "50-" + $30 }
                                   },
                                   [
                                     _c("uni-icons", {
@@ -3221,13 +3240,13 @@ var render = function() {
                                         type: "hand-up-filled",
                                         size: "16",
                                         color: "gray",
-                                        _i: "50-" + $30
+                                        _i: "51-" + $30
                                       }
                                     }),
                                     _c("text", [
                                       _vm._v(
                                         _vm._$s(
-                                          "51-" + $30,
+                                          "52-" + $30,
                                           "t0-0",
                                           _vm._s(item.stat.like)
                                         )
@@ -3247,7 +3266,7 @@ var render = function() {
               ]
             )
           }),
-          _vm._$s(52, "i", _vm.bottom) ? _c("view", [_c("text")]) : _vm._e()
+          _vm._$s(53, "i", _vm.bottom) ? _c("view", [_c("text")]) : _vm._e()
         ],
         2
       ),
@@ -3258,17 +3277,17 @@ var render = function() {
             {
               name: "show",
               rawName: "v-show",
-              value: _vm._$s(54, "v-show", !_vm.vatShow),
-              expression: "_$s(54,'v-show',!vatShow)"
+              value: _vm._$s(55, "v-show", !_vm.vatShow),
+              expression: "_$s(55,'v-show',!vatShow)"
             }
           ],
-          staticClass: _vm._$s(54, "sc", "ta"),
-          style: _vm._$s(54, "s", {
+          staticClass: _vm._$s(55, "sc", "ta"),
+          style: _vm._$s(55, "s", {
             marginTop: _vm.px2rpx52 + 40 + _vm.systemBarHeight + "px"
           }),
-          attrs: { _i: 54 }
+          attrs: { _i: 55 }
         },
-        _vm._l(_vm._$s(55, "f", { forItems: _vm.resq }), function(
+        _vm._l(_vm._$s(56, "f", { forItems: _vm.resq }), function(
           item,
           index,
           $21,
@@ -3277,47 +3296,47 @@ var render = function() {
           return _c(
             "view",
             {
-              key: _vm._$s(55, "f", { forIndex: $21, key: index }),
-              staticClass: _vm._$s("55-" + $31, "sc", "taa"),
-              attrs: { _i: "55-" + $31 }
+              key: _vm._$s(56, "f", { forIndex: $21, key: index }),
+              staticClass: _vm._$s("56-" + $31, "sc", "taa"),
+              attrs: { _i: "56-" + $31 }
             },
             [
               _c("image", {
-                staticClass: _vm._$s("56-" + $31, "sc", "aimg"),
+                staticClass: _vm._$s("57-" + $31, "sc", "aimg"),
                 attrs: {
-                  src: _vm._$s("56-" + $31, "a-src", item.member.avatar),
-                  _i: "56-" + $31
+                  src: _vm._$s("57-" + $31, "a-src", item.member.avatar),
+                  _i: "57-" + $31
                 }
               }),
               _c(
                 "view",
                 {
-                  staticClass: _vm._$s("57-" + $31, "sc", "imgAPa"),
-                  attrs: { _i: "57-" + $31 }
+                  staticClass: _vm._$s("58-" + $31, "sc", "imgAPa"),
+                  attrs: { _i: "58-" + $31 }
                 },
                 [
                   _c(
                     "view",
                     {
-                      staticClass: _vm._$s("58-" + $31, "sc", "paName"),
-                      attrs: { _i: "58-" + $31 }
+                      staticClass: _vm._$s("59-" + $31, "sc", "paName"),
+                      attrs: { _i: "59-" + $31 }
                     },
                     [
                       _vm._v(
-                        _vm._$s("58-" + $31, "t0-0", _vm._s(item.member.uname))
+                        _vm._$s("59-" + $31, "t0-0", _vm._s(item.member.uname))
                       )
                     ]
                   ),
                   _c(
                     "view",
                     {
-                      staticClass: _vm._$s("59-" + $31, "sc", "ctime"),
-                      attrs: { _i: "59-" + $31 }
+                      staticClass: _vm._$s("60-" + $31, "sc", "ctime"),
+                      attrs: { _i: "60-" + $31 }
                     },
                     [
                       _vm._v(
                         _vm._$s(
-                          "59-" + $31,
+                          "60-" + $31,
                           "t0-0",
                           _vm._s(_vm.timestampToTime(item.ctime))
                         )
@@ -3325,26 +3344,26 @@ var render = function() {
                     ]
                   ),
                   _vm._v(
-                    _vm._$s("57-" + $31, "t2-0", _vm._s(item.content.message))
+                    _vm._$s("58-" + $31, "t2-0", _vm._s(item.content.message))
                   ),
                   _c(
                     "view",
                     {
-                      staticClass: _vm._$s("60-" + $31, "sc", "likes"),
-                      attrs: { _i: "60-" + $31 }
+                      staticClass: _vm._$s("61-" + $31, "sc", "likes"),
+                      attrs: { _i: "61-" + $31 }
                     },
                     [
                       _c("uni-icons", {
-                        staticClass: _vm._$s("61-" + $31, "sc", "like_icon"),
+                        staticClass: _vm._$s("62-" + $31, "sc", "like_icon"),
                         attrs: {
                           type: "hand-up-filled",
                           size: "30",
                           size: 17,
                           color: "gray",
-                          _i: "61-" + $31
+                          _i: "62-" + $31
                         }
                       }),
-                      _vm._v(_vm._$s("60-" + $31, "t1-0", _vm._s(item.like)))
+                      _vm._v(_vm._$s("61-" + $31, "t1-0", _vm._s(item.like)))
                     ],
                     1
                   )
@@ -3800,7 +3819,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _App
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === \"string\") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === \"Object\" && o.constructor) n = o.constructor.name;if (n === \"Map\" || n === \"Set\") return Array.from(o);if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== \"undefined\" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;} //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      src: '',\n      title: '',\n      ownerImg: '',\n      ownerName: '',\n      vInfo: '',\n      videoUrl: '',\n      moreVideo: [],\n      bottom: false,\n      videoImg: '',\n      view: '',\n      like: '',\n      systemBarHeight: 0,\n      px2rpx52: 0,\n      px2rpx42: 0,\n      vatpx: 0,\n      selColor: '#20b0e3',\n      fselColor: 'black',\n      vatShow: true,\n      oid: '',\n      resq: [],\n      ctime: '',\n      pn: 1,\n      scrollTop: 0,\n      vtt: 0,\n      ptt: 0 };\n\n  },\n  onLoad: function onLoad(option) {var _this = this;\n    this.px2rpx52 = this.px2rpx(522);\n    this.px2rpx42 = this.px2rpx(422);\n    this.vatpx = this.px2rpx(500);\n    this.getSysteminfo();\n    uni.request({\n      url: 'https://tenapi.cn/bilivideo/',\n      data: {\n        url: 'https://www.bilibili.com/video/' + option.id },\n\n      success: function success(res) {\n        if (_this.title == '') {\n          _this.title = res.data.title;\n          uni.setNavigationBarTitle({\n            title: res.data.title });\n\n        }\n        _this.src = res.data.url;\n      } });\n\n    uni.setNavigationBarTitle({\n      title: option.title });\n\n    this.title = option.title;\n    this.ownerImg = option.img;\n    this.ownerName = option.name;\n    this.vInfo = option.desc;\n    this.videoImg = option.pic;\n    this.videoUrl = 'https://www.bilibili.com/video/' + option.id;\n    this.view = option.view;\n    this.like = option.like;\n    uni.request({\n      url: 'http://api.bilibili.com/x/web-interface/archive/related',\n      data: {\n        bvid: option.id },\n\n      success: function success(res) {\n        _this.moreVideo = res.data.data;\n        _this.bottom = !_this.bottom;\n      } });\n\n    if (option.img == '' || this.oid == '') {\n      uni.request({\n        url: 'http://api.bilibili.com/x/web-interface/view',\n        data: {\n          bvid: option.id },\n\n        success: function success(res) {\n          _this.ownerImg = res.data.data.owner.face;\n          _this.oid = res.data.data.aid;\n          _this.ctime = res.data.data.ctime;\n        } });\n\n    }\n  },\n  onReady: function onReady() {\n    this.videoContext = uni.createVideoContext('video_bl');\n  },\n  onShow: function onShow() {\n    this.videoContext.play();\n  },\n  onReachBottom: function onReachBottom() {\n    if (!this.vatShow) {\n      this.pn = this.pn + 1;\n      this.getTa();\n    }\n  },\n  onPageScroll: function onPageScroll(res) {\n    this.scrollTop = res.scrollTop;\n  },\n  methods: {\n    onShare: function onShare() {\n      uni.shareWithSystem({\n        summary: this.title,\n        href: this.videoUrl });\n\n    },\n    pause: function pause() {\n      this.videoContext.pause();\n    },\n    getSysteminfo: function getSysteminfo() {var _this2 = this;\n      uni.getSystemInfo({\n        success: function success(res) {\n          _this2.systemBarHeight = res.statusBarHeight;\n        } });\n\n    },\n    px2rpx: function px2rpx(rpx) {\n      return uni.upx2px(rpx);\n    },\n    vat: function vat(vot) {\n      if (vot == 't') {\n        this.vatShow = false;\n        this.selColor = 'black';\n        this.fselColor = '#20b0e3';\n        this.vtt = this.scrollTop;\n        uni.pageScrollTo({\n          scrollTop: this.ptt,\n          duration: 0 });\n\n        if (!this.resq.length) {\n          this.getTa();\n        }\n      } else {\n        this.vatShow = true;\n        this.selColor = '#20b0e3';\n        this.fselColor = 'black';\n        this.ptt = this.scrollTop;\n        uni.pageScrollTo({\n          scrollTop: this.vtt,\n          duration: 0 });\n\n      }\n    },\n    getTa: function getTa() {var _this3 = this;\n      uni.request({\n        url: 'https://api.bilibili.com/x/v2/reply',\n        data: {\n          jsonp: 'jsonp',\n          pn: this.pn,\n          type: '1',\n          sort: '2',\n          oid: this.oid },\n\n        success: function success(res) {\n          _this3.resq = [].concat(_toConsumableArray(_this3.resq), _toConsumableArray(res.data.data.replies));\n        } });\n\n    },\n    timestampToTime: function timestampToTime(timestamp) {\n      var nowDate = new Date();\n      var date = new Date(timestamp * 1000);\n      var Y = date.getFullYear() + '-';\n      var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';\n      var D = date.getDate();\n      var h = '';\n      var m = '';\n      if (nowDate.getFullYear() + '-' == Y) {\n        Y = '';\n      }\n      if (nowDate.getDate() == D) {\n        M = '';\n        D = '今天';\n        h = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()) + ':';\n        m = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();\n      }\n      if (D < 10 && D != '') {\n        D = '0' + D;\n      }\n      return Y + M + D + ' ' + h + m;\n    } } };exports.default = _default;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvcGxheWVyL3BsYXllci52dWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUEyR0E7QUFDQSxNQURBLGtCQUNBO0FBQ0E7QUFDQSxhQURBO0FBRUEsZUFGQTtBQUdBLGtCQUhBO0FBSUEsbUJBSkE7QUFLQSxlQUxBO0FBTUEsa0JBTkE7QUFPQSxtQkFQQTtBQVFBLG1CQVJBO0FBU0Esa0JBVEE7QUFVQSxjQVZBO0FBV0EsY0FYQTtBQVlBLHdCQVpBO0FBYUEsaUJBYkE7QUFjQSxpQkFkQTtBQWVBLGNBZkE7QUFnQkEseUJBaEJBO0FBaUJBLHdCQWpCQTtBQWtCQSxtQkFsQkE7QUFtQkEsYUFuQkE7QUFvQkEsY0FwQkE7QUFxQkEsZUFyQkE7QUFzQkEsV0F0QkE7QUF1QkEsa0JBdkJBO0FBd0JBLFlBeEJBO0FBeUJBLFlBekJBOztBQTJCQSxHQTdCQTtBQThCQSxRQTlCQSxrQkE4QkEsTUE5QkEsRUE4QkE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EseUNBREE7QUFFQTtBQUNBLDBEQURBLEVBRkE7O0FBS0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxpQ0FEQTs7QUFHQTtBQUNBO0FBQ0EsT0FiQTs7QUFlQTtBQUNBLHlCQURBOztBQUdBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLG9FQURBO0FBRUE7QUFDQSx1QkFEQSxFQUZBOztBQUtBO0FBQ0E7QUFDQTtBQUNBLE9BUkE7O0FBVUE7QUFDQTtBQUNBLDJEQURBO0FBRUE7QUFDQSx5QkFEQSxFQUZBOztBQUtBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsU0FUQTs7QUFXQTtBQUNBLEdBcEZBO0FBcUZBLFNBckZBLHFCQXFGQTtBQUNBO0FBQ0EsR0F2RkE7QUF3RkEsUUF4RkEsb0JBd0ZBO0FBQ0E7QUFDQSxHQTFGQTtBQTJGQSxlQTNGQSwyQkEyRkE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEdBaEdBO0FBaUdBLGNBakdBLHdCQWlHQSxHQWpHQSxFQWlHQTtBQUNBO0FBQ0EsR0FuR0E7QUFvR0E7QUFDQSxXQURBLHFCQUNBO0FBQ0E7QUFDQSwyQkFEQTtBQUVBLDJCQUZBOztBQUlBLEtBTkE7QUFPQSxTQVBBLG1CQU9BO0FBQ0E7QUFDQSxLQVRBO0FBVUEsaUJBVkEsMkJBVUE7QUFDQTtBQUNBO0FBQ0E7QUFDQSxTQUhBOztBQUtBLEtBaEJBO0FBaUJBLFVBakJBLGtCQWlCQSxHQWpCQSxFQWlCQTtBQUNBO0FBQ0EsS0FuQkE7QUFvQkEsT0FwQkEsZUFvQkEsR0FwQkEsRUFvQkE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSw2QkFEQTtBQUVBLHFCQUZBOztBQUlBO0FBQ0E7QUFDQTtBQUNBLE9BWkEsTUFZQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSw2QkFEQTtBQUVBLHFCQUZBOztBQUlBO0FBQ0EsS0EzQ0E7QUE0Q0EsU0E1Q0EsbUJBNENBO0FBQ0E7QUFDQSxrREFEQTtBQUVBO0FBQ0Esd0JBREE7QUFFQSxxQkFGQTtBQUdBLG1CQUhBO0FBSUEsbUJBSkE7QUFLQSx1QkFMQSxFQUZBOztBQVNBO0FBQ0E7QUFDQSxTQVhBOztBQWFBLEtBMURBO0FBMkRBLG1CQTNEQSwyQkEyREEsU0EzREEsRUEyREE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FoRkEsRUFwR0EsRSIsImZpbGUiOiI2Ni5qcyIsInNvdXJjZXNDb250ZW50IjpbIjx0ZW1wbGF0ZT5cblx0PHZpZXcgY2xhc3M9XCJjb250ZW50XCI+XHJcblx0XHQ8dmlldyBjbGFzcz1cInN5c3RlbV9iYXJcIiA6c3R5bGU9XCJ7aGVpZ2h0OiBzeXN0ZW1CYXJIZWlnaHQgKyAncHgnfVwiPjwvdmlldz5cclxuXHRcdDx2aWRlbyA6c3JjPVwic3JjXCIgYXV0b3BsYXk9XCJ0cnVlXCIgZGFubXUtYnRuPVwidHJ1ZVwiIGVuYWJsZS1kYW5tdT1cInRydWVcIiA6dGl0bGU9XCJ0aXRsZVwiIGlkPVwidmlkZW9fYmxcIiA6c3R5bGU9XCJ7dG9wOiBzeXN0ZW1CYXJIZWlnaHQgKyAncHgnfVwiPjwvdmlkZW8+XHJcblx0XHQ8dmlldyBjbGFzcz1cImRhbm11X21haW5cIiA6c3R5bGU9XCJ7bWFyZ2luVG9wOiBweDJycHg0MiArIHN5c3RlbUJhckhlaWdodCArICdweCd9XCI+XHJcblx0XHRcdDxpbnB1dCB0eXBlPVwidGV4dFwiIHBsYWNlaG9sZGVyPVwi5Y+R6YCB5Y+L6LCK55qE5by55bmV5ZCnXCIgdmFsdWU9XCJcIiAvPlxyXG5cdFx0XHQ8ZGl2IGNsYXNzPVwic2VuZFwiPlxyXG5cdFx0XHRcdDx1bmktaWNvbnMgdHlwZT1cInBhcGVycGxhbmUtZmlsbGVkXCIgc2l6ZT1cIjMwXCIgY29sb3I9XCJ3aGl0ZVwiPjwvdW5pLWljb25zPlxyXG5cdFx0XHQ8L2Rpdj5cclxuXHRcdDwvdmlldz5cclxuXHRcdDx2aWV3IGNsYXNzPVwidmF0XCIgOnN0eWxlPVwie3RvcDogdmF0cHggKyBzeXN0ZW1CYXJIZWlnaHQgKyAncHgnfVwiPlxyXG5cdFx0XHQ8dmlldyBjbGFzcz1cInZ0XCIgOnN0eWxlPVwie2NvbG9yOiBzZWxDb2xvcn1cIiBAY2xpY2s9XCJ2YXQoJ3YnKVwiPlxyXG5cdFx0XHRcdOeugOS7i1xyXG5cdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdDx2aWV3IGNsYXNzPVwidnRcIiA6c3R5bGU9XCJ7Y29sb3I6IGZzZWxDb2xvcn1cIiBAY2xpY2s9XCJ2YXQoJ3QnKVwiPlxyXG5cdFx0XHRcdOivhOiuulxyXG5cdFx0XHQ8L3ZpZXc+XHJcblx0XHQ8L3ZpZXc+XHJcblx0XHQ8dmlldyBjbGFzcz1cInZhXCIgdi1zaG93PVwidmF0U2hvd1wiIDpzdHlsZT1cInttYXJnaW5Ub3A6IHB4MnJweDUyICsgNDAgKyBzeXN0ZW1CYXJIZWlnaHQgKyAncHgnfVwiPlxyXG5cdFx0XHQ8dmlldyBjbGFzcz1cIm93bmVyXCI+XHJcblx0XHRcdFx0PGltYWdlIDpzcmM9XCJvd25lckltZ1wiIG1vZGU9XCJcIj48L2ltYWdlPlxyXG5cdFx0XHRcdDx2aWV3IGNsYXNzPVwib3duZXJfdGV4dFwiPlxyXG5cdFx0XHRcdFx0PHRleHQgY2xhc3M9XCJvd25tXCI+e3sgb3duZXJOYW1lIH19PC90ZXh0PlxyXG5cdFx0XHRcdFx0PHRleHQgY2xhc3M9XCJvd250aW1lXCI+e3sgdGltZXN0YW1wVG9UaW1lKGN0aW1lKSB9fTwvdGV4dD5cclxuXHRcdFx0XHRcdDx1bmktY29sbGFwc2UgYWNjb3JkaW9uIDpzaG93LWFuaW1hdGlvbj1cInRydWVcIj5cclxuXHRcdFx0XHRcdFx0PHVuaS1jb2xsYXBzZS1pdGVtIDp0aXRsZT1cInRpdGxlXCIgOmJvcmRlcj1cImZhbHNlXCIgdGl0bGVCb3JkZXI9XCJub25lXCI+XHJcblx0XHRcdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJjb2xjb25cIj5cclxuXHRcdFx0XHRcdFx0XHRcdDx0ZXh0Pnt7IHZJbmZvIH19PC90ZXh0PlxyXG5cdFx0XHRcdFx0XHRcdDwvdmlldz5cclxuXHRcdFx0XHRcdFx0PC91bmktY29sbGFwc2UtaXRlbT5cclxuXHRcdFx0XHRcdDwvdW5pLWNvbGxhcHNlPlxyXG5cdFx0XHRcdDwvdmlldz5cclxuXHRcdFx0PC92aWV3PlxyXG5cdFx0XHQ8dmlldyBjbGFzcz1cInZkX2luZm9cIj5cclxuXHRcdFx0XHQ8dmlldyBjbGFzcz1cInZpZGVvX3BsYXlcIiBzdHlsZT1cIm1hcmdpbi1yaWdodDogMTBycHg7XCI+XHJcblx0XHRcdFx0XHQ8dW5pLWljb25zIHR5cGU9XCJ2aWRlb2NhbS1maWxsZWRcIiBzaXplPVwiMTZcIiBjb2xvcj1cImdyYXlcIj48L3VuaS1pY29ucz5cclxuXHRcdFx0XHRcdDx0ZXh0Pnt7IHZpZXcgfX08L3RleHQ+XHJcblx0XHRcdFx0PC92aWV3PlxyXG5cdFx0XHRcdDx2aWV3IGNsYXNzPVwidmlkZW9fbGlrZVwiPlxyXG5cdFx0XHRcdFx0PHVuaS1pY29ucyB0eXBlPVwiaGFuZC11cC1maWxsZWRcIiBzaXplPVwiMTZcIiBjb2xvcj1cImdyYXlcIj48L3VuaS1pY29ucz5cclxuXHRcdFx0XHRcdDx0ZXh0Pnt7IGxpa2UgfX08L3RleHQ+XHJcblx0XHRcdFx0PC92aWV3PlxyXG5cdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdDx2aWV3IGNsYXNzPVwiZmVfYmFyXCI+XHJcblx0XHRcdFx0PHZpZXcgY2xhc3M9XCJmZVwiPlxyXG5cdFx0XHRcdFx0PHVuaS1pY29ucyB0eXBlPVwiaGFuZC11cC1maWxsZWRcIiBzaXplPVwiMzBcIiBjb2xvcj1cImdyYXlcIj48L3VuaS1pY29ucz5cclxuXHRcdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdFx0PHZpZXcgY2xhc3M9XCJmZVwiPlxyXG5cdFx0XHRcdFx0PHVuaS1pY29ucyB0eXBlPVwiY2hlY2tib3gtZmlsbGVkXCIgc2l6ZT1cIjMwXCIgY29sb3I9XCJncmF5XCI+PC91bmktaWNvbnM+XHJcblx0XHRcdFx0PC92aWV3PlxyXG5cdFx0XHRcdDx2aWV3IGNsYXNzPVwiZmVcIj5cclxuXHRcdFx0XHRcdDx1bmktaWNvbnMgdHlwZT1cInN0YXItZmlsbGVkXCIgc2l6ZT1cIjMwXCIgY29sb3I9XCJncmF5XCI+PC91bmktaWNvbnM+XHJcblx0XHRcdFx0PC92aWV3PlxyXG5cdFx0XHRcdDx2aWV3IGNsYXNzPVwiZmVcIiBAY2xpY2s9XCJvblNoYXJlKClcIj5cclxuXHRcdFx0XHRcdDx1bmktaWNvbnMgdHlwZT1cInJlZG8tZmlsbGVkXCIgc2l6ZT1cIjMwXCIgY29sb3I9XCJncmF5XCI+PC91bmktaWNvbnM+XHJcblx0XHRcdFx0PC92aWV3PlxyXG5cdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdDx2aWV3IHYtZm9yPVwiKGl0ZW0saW5kZXgpIGluIG1vcmVWaWRlb1wiIDprZXk9XCJpbmRleFwiIEBjbGljaz1cInBhdXNlKClcIj5cclxuXHRcdFx0XHQ8bmF2aWdhdG9yIGhvdmVyLXN0YXktdGltZT1cIjBcIiBjbGFzcz1cInZpZGVvX2xpc3RcIiA6dXJsPVwiJy4uL3BsYXllci9wbGF5ZXI/aWQ9JyArIGl0ZW0uYnZpZCArICcmdGl0bGU9JyArIGl0ZW0udGl0bGUgKyAnJmltZz0nICsgaXRlbS5vd25lci5mYWNlICsgJyZuYW1lPScgKyBpdGVtLm93bmVyLm5hbWUgKyAnJmRlc2M9JyArIGl0ZW0uZGVzYyArICcmcGljPScgKyBpdGVtLnBpYyArICcmdmlldz0nICsgaXRlbS5zdGF0LnZpZXcgKyAnJmxpa2U9JyArIGl0ZW0uc3RhdC5saWtlXCI+XHJcblx0XHRcdFx0XHQ8aW1hZ2UgOnNyYz1cIml0ZW0ucGljXCIgbW9kZT1cIlwiIGNsYXNzPVwidmlkZW9faW1nXCI+PC9pbWFnZT5cclxuXHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwidmlkZW9faW5mb1wiPlxyXG5cdFx0XHRcdFx0XHQ8dGV4dCBjbGFzcz1cInZpZGVvX3RpdGxlXCI+e3sgaXRlbS50aXRsZSB9fTwvdGV4dD5cclxuXHRcdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJ1cF9tYWluXCI+XHJcblx0XHRcdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJ1cF9uYW1lXCI+XHJcblx0XHRcdFx0XHRcdFx0XHQ8dW5pLWljb25zIHR5cGU9XCJwZXJzb24tZmlsbGVkXCIgc2l6ZT1cIjE2XCIgY29sb3I9XCJncmF5XCI+PC91bmktaWNvbnM+XHJcblx0XHRcdFx0XHRcdFx0XHQ8dGV4dD57eyBpdGVtLm93bmVyLm5hbWUgfX08L3RleHQ+XHJcblx0XHRcdFx0XHRcdFx0PC92aWV3PlxyXG5cdFx0XHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwidmlkZW9faW5cIj5cclxuXHRcdFx0XHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwidmlkZW9fcGxheVwiIHN0eWxlPVwibWFyZ2luLXJpZ2h0OiAxMHJweDtcIj5cclxuXHRcdFx0XHRcdFx0XHRcdFx0PHVuaS1pY29ucyB0eXBlPVwidmlkZW9jYW0tZmlsbGVkXCIgc2l6ZT1cIjE2XCIgY29sb3I9XCJncmF5XCI+PC91bmktaWNvbnM+XHJcblx0XHRcdFx0XHRcdFx0XHRcdDx0ZXh0Pnt7IGl0ZW0uc3RhdC52aWV3IH19PC90ZXh0PlxyXG5cdFx0XHRcdFx0XHRcdFx0PC92aWV3PlxyXG5cdFx0XHRcdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJ2aWRlb19saWtlXCI+XHJcblx0XHRcdFx0XHRcdFx0XHRcdDx1bmktaWNvbnMgdHlwZT1cImhhbmQtdXAtZmlsbGVkXCIgc2l6ZT1cIjE2XCIgY29sb3I9XCJncmF5XCI+PC91bmktaWNvbnM+XHJcblx0XHRcdFx0XHRcdFx0XHRcdDx0ZXh0Pnt7IGl0ZW0uc3RhdC5saWtlIH19PC90ZXh0PlxyXG5cdFx0XHRcdFx0XHRcdFx0PC92aWV3PlxyXG5cdFx0XHRcdFx0XHRcdDwvdmlldz5cclxuXHRcdFx0XHRcdFx0PC92aWV3PlxyXG5cdFx0XHRcdFx0PC92aWV3PlxyXG5cdFx0XHRcdDwvbmF2aWdhdG9yPlxyXG5cdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdDx2aWV3IHN0eWxlPVwiY29sb3I6IGdyYXk7IHBhZGRpbmc6IDIwcnB4IDBweCAyMHJweCAwcnB4O1wiIHYtaWY9XCJib3R0b21cIj5cclxuXHRcdFx0XHQ8dGV4dD7kuI3og73lvoDkuIvliJLkuoblk6YgUUFRPC90ZXh0PlxyXG5cdFx0XHQ8L3ZpZXc+XHJcblx0XHQ8L3ZpZXc+XHJcblx0XHQ8dmlldyBjbGFzcz1cInRhXCIgdi1zaG93PVwiIXZhdFNob3dcIiA6c3R5bGU9XCJ7bWFyZ2luVG9wOiBweDJycHg1MiArIDQwICsgc3lzdGVtQmFySGVpZ2h0ICsgJ3B4J31cIj5cclxuXHRcdFx0PHZpZXcgY2xhc3M9XCJ0YWFcIiB2LWZvcj1cIihpdGVtLGluZGV4KSBpbiByZXNxXCIgOmtleT0naW5kZXgnPlxyXG5cdFx0XHRcdDxpbWFnZSA6c3JjPVwiaXRlbS5tZW1iZXIuYXZhdGFyXCIgbW9kZT1cIlwiIGNsYXNzPVwiYWltZ1wiPjwvaW1hZ2U+XHJcblx0XHRcdFx0PHZpZXcgY2xhc3M9XCJpbWdBUGFcIj5cclxuXHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwicGFOYW1lXCI+XHJcblx0XHRcdFx0XHRcdHt7IGl0ZW0ubWVtYmVyLnVuYW1lIH19XHJcblx0XHRcdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cImN0aW1lXCI+XHJcblx0XHRcdFx0XHRcdHt7IHRpbWVzdGFtcFRvVGltZShpdGVtLmN0aW1lKSB9fVxyXG5cdFx0XHRcdFx0PC92aWV3PlxyXG5cdFx0XHRcdFx0e3sgaXRlbS5jb250ZW50Lm1lc3NhZ2UgfX1cclxuXHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwibGlrZXNcIj5cclxuXHRcdFx0XHRcdFx0PHVuaS1pY29ucyB0eXBlPVwiaGFuZC11cC1maWxsZWRcIiBzaXplPVwiMzBcIiA6c2l6ZT1cIjE3XCIgY29sb3I9XCJncmF5XCIgY2xhc3M9XCJsaWtlX2ljb25cIj48L3VuaS1pY29ucz5cclxuXHRcdFx0XHRcdFx0e3sgaXRlbS5saWtlIH19XHJcblx0XHRcdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdFx0PC92aWV3PlxyXG5cdFx0XHQ8L3ZpZXc+XHJcblx0XHQ8L3ZpZXc+XG5cdDwvdmlldz5cbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQ+XG5cdGV4cG9ydCBkZWZhdWx0IHtcblx0XHRkYXRhKCkge1xuXHRcdFx0cmV0dXJuIHtcblx0XHRcdFx0c3JjOiAnJyxcclxuXHRcdFx0XHR0aXRsZTogJycsXHJcblx0XHRcdFx0b3duZXJJbWc6ICcnLFxyXG5cdFx0XHRcdG93bmVyTmFtZTogJycsXHJcblx0XHRcdFx0dkluZm86ICcnLFxyXG5cdFx0XHRcdHZpZGVvVXJsOiAnJyxcclxuXHRcdFx0XHRtb3JlVmlkZW86IFtdLFxyXG5cdFx0XHRcdGJvdHRvbTogZmFsc2UsXHJcblx0XHRcdFx0dmlkZW9JbWc6ICcnLFxyXG5cdFx0XHRcdHZpZXc6ICcnLFxyXG5cdFx0XHRcdGxpa2U6ICcnLFxyXG5cdFx0XHRcdHN5c3RlbUJhckhlaWdodDogMCxcclxuXHRcdFx0XHRweDJycHg1MjogMCxcclxuXHRcdFx0XHRweDJycHg0MjogMCxcclxuXHRcdFx0XHR2YXRweDogMCxcclxuXHRcdFx0XHRzZWxDb2xvcjogJyMyMGIwZTMnLFxyXG5cdFx0XHRcdGZzZWxDb2xvcjogJ2JsYWNrJyxcclxuXHRcdFx0XHR2YXRTaG93OiB0cnVlLFxyXG5cdFx0XHRcdG9pZDogJycsXHJcblx0XHRcdFx0cmVzcTogW10sXHJcblx0XHRcdFx0Y3RpbWU6ICcnLFxyXG5cdFx0XHRcdHBuOiAxLFxyXG5cdFx0XHRcdHNjcm9sbFRvcDogMCxcclxuXHRcdFx0XHR2dHQ6IDAsXHJcblx0XHRcdFx0cHR0OiAwXG5cdFx0XHR9XG5cdFx0fSxcclxuXHRcdG9uTG9hZChvcHRpb24pIHtcclxuXHRcdFx0dGhpcy5weDJycHg1MiA9IHRoaXMucHgycnB4KDUyMilcclxuXHRcdFx0dGhpcy5weDJycHg0MiA9IHRoaXMucHgycnB4KDQyMilcclxuXHRcdFx0dGhpcy52YXRweCA9IHRoaXMucHgycnB4KDUwMClcclxuXHRcdFx0dGhpcy5nZXRTeXN0ZW1pbmZvKClcclxuXHRcdFx0dW5pLnJlcXVlc3Qoe1xyXG5cdFx0XHRcdHVybDonaHR0cHM6Ly90ZW5hcGkuY24vYmlsaXZpZGVvLycsXHJcblx0XHRcdFx0ZGF0YToge1xyXG5cdFx0XHRcdFx0dXJsOiAnaHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvLycgKyBvcHRpb24uaWRcclxuXHRcdFx0XHR9LFxyXG5cdFx0XHRcdHN1Y2Nlc3M6IChyZXMpID0+IHtcclxuXHRcdFx0XHRcdGlmICh0aGlzLnRpdGxlID09ICcnKSB7XHJcblx0XHRcdFx0XHRcdHRoaXMudGl0bGUgPSByZXMuZGF0YS50aXRsZVxyXG5cdFx0XHRcdFx0XHR1bmkuc2V0TmF2aWdhdGlvbkJhclRpdGxlKHtcclxuXHRcdFx0XHRcdFx0XHR0aXRsZTogcmVzLmRhdGEudGl0bGVcclxuXHRcdFx0XHRcdFx0fSlcclxuXHRcdFx0XHRcdH1cclxuXHRcdFx0XHRcdHRoaXMuc3JjID0gcmVzLmRhdGEudXJsXHJcblx0XHRcdFx0fVxyXG5cdFx0XHR9KVxyXG5cdFx0XHR1bmkuc2V0TmF2aWdhdGlvbkJhclRpdGxlKHtcclxuXHRcdFx0XHR0aXRsZTpvcHRpb24udGl0bGVcclxuXHRcdFx0fSlcclxuXHRcdFx0dGhpcy50aXRsZSA9IG9wdGlvbi50aXRsZVxyXG5cdFx0XHR0aGlzLm93bmVySW1nID0gb3B0aW9uLmltZ1xyXG5cdFx0XHR0aGlzLm93bmVyTmFtZSA9IG9wdGlvbi5uYW1lXHJcblx0XHRcdHRoaXMudkluZm8gPSBvcHRpb24uZGVzY1xyXG5cdFx0XHR0aGlzLnZpZGVvSW1nID0gb3B0aW9uLnBpY1xyXG5cdFx0XHR0aGlzLnZpZGVvVXJsID0gJ2h0dHBzOi8vd3d3LmJpbGliaWxpLmNvbS92aWRlby8nICsgb3B0aW9uLmlkXHJcblx0XHRcdHRoaXMudmlldyA9IG9wdGlvbi52aWV3XHJcblx0XHRcdHRoaXMubGlrZSA9IG9wdGlvbi5saWtlXHJcblx0XHRcdHVuaS5yZXF1ZXN0KHtcclxuXHRcdFx0XHR1cmw6J2h0dHA6Ly9hcGkuYmlsaWJpbGkuY29tL3gvd2ViLWludGVyZmFjZS9hcmNoaXZlL3JlbGF0ZWQnLFxyXG5cdFx0XHRcdGRhdGE6e1xyXG5cdFx0XHRcdFx0YnZpZDogb3B0aW9uLmlkXHJcblx0XHRcdFx0fSxcclxuXHRcdFx0XHRzdWNjZXNzOiAocmVzKSA9PiB7XHJcblx0XHRcdFx0XHR0aGlzLm1vcmVWaWRlbyA9IHJlcy5kYXRhLmRhdGFcclxuXHRcdFx0XHRcdHRoaXMuYm90dG9tID0gIXRoaXMuYm90dG9tXHJcblx0XHRcdFx0fVxyXG5cdFx0XHR9KVxyXG5cdFx0XHRpZiAob3B0aW9uLmltZyA9PSAnJyB8fCB0aGlzLm9pZCA9PSAnJykge1xyXG5cdFx0XHRcdHVuaS5yZXF1ZXN0KHtcclxuXHRcdFx0XHRcdHVybDogJ2h0dHA6Ly9hcGkuYmlsaWJpbGkuY29tL3gvd2ViLWludGVyZmFjZS92aWV3JyxcclxuXHRcdFx0XHRcdGRhdGE6IHtcclxuXHRcdFx0XHRcdFx0YnZpZDogb3B0aW9uLmlkXHJcblx0XHRcdFx0XHR9LFxyXG5cdFx0XHRcdFx0c3VjY2VzczogKHJlcykgPT4ge1xyXG5cdFx0XHRcdFx0XHR0aGlzLm93bmVySW1nID0gcmVzLmRhdGEuZGF0YS5vd25lci5mYWNlXHJcblx0XHRcdFx0XHRcdHRoaXMub2lkID0gcmVzLmRhdGEuZGF0YS5haWRcclxuXHRcdFx0XHRcdFx0dGhpcy5jdGltZSA9IHJlcy5kYXRhLmRhdGEuY3RpbWVcclxuXHRcdFx0XHRcdH1cclxuXHRcdFx0XHR9KVxyXG5cdFx0XHR9XHJcblx0XHR9LFxyXG5cdFx0b25SZWFkeSgpIHtcclxuXHRcdFx0dGhpcy52aWRlb0NvbnRleHQgPSB1bmkuY3JlYXRlVmlkZW9Db250ZXh0KCd2aWRlb19ibCcpXHJcblx0XHR9LFxyXG5cdFx0b25TaG93KCkge1xyXG5cdFx0XHR0aGlzLnZpZGVvQ29udGV4dC5wbGF5KClcclxuXHRcdH0sXHJcblx0XHRvblJlYWNoQm90dG9tKCkge1xyXG5cdFx0XHRpZiAoIXRoaXMudmF0U2hvdykge1xyXG5cdFx0XHRcdHRoaXMucG4gPSB0aGlzLnBuICsgMVxyXG5cdFx0XHRcdHRoaXMuZ2V0VGEoKVxyXG5cdFx0XHR9XHJcblx0XHR9LFxyXG5cdFx0b25QYWdlU2Nyb2xsKHJlcykge1xyXG5cdFx0XHR0aGlzLnNjcm9sbFRvcCA9IHJlcy5zY3JvbGxUb3BcclxuXHRcdH0sXG5cdFx0bWV0aG9kczoge1xyXG5cdFx0XHRvblNoYXJlKCkge1xyXG5cdFx0XHRcdHVuaS5zaGFyZVdpdGhTeXN0ZW0oe1xyXG5cdFx0XHRcdFx0c3VtbWFyeTogdGhpcy50aXRsZSxcclxuXHRcdFx0XHRcdGhyZWY6IHRoaXMudmlkZW9VcmxcclxuXHRcdFx0XHR9KVxyXG5cdFx0XHR9LFxyXG5cdFx0XHRwYXVzZSgpIHtcclxuXHRcdFx0XHR0aGlzLnZpZGVvQ29udGV4dC5wYXVzZSgpXHJcblx0XHRcdH0sXHJcblx0XHRcdGdldFN5c3RlbWluZm8oKSB7XHJcblx0XHRcdFx0dW5pLmdldFN5c3RlbUluZm8oe1xyXG5cdFx0XHRcdFx0c3VjY2VzczogcmVzID0+IHtcclxuXHRcdFx0XHRcdFx0dGhpcy5zeXN0ZW1CYXJIZWlnaHQgPSByZXMuc3RhdHVzQmFySGVpZ2h0O1xyXG5cdFx0XHRcdFx0fVxyXG5cdFx0XHRcdH0pO1xyXG5cdFx0XHR9LFxyXG5cdFx0XHRweDJycHgocnB4KSB7XHJcblx0XHRcdFx0cmV0dXJuIHVuaS51cHgycHgocnB4KVxyXG5cdFx0XHR9LFxyXG5cdFx0XHR2YXQodm90KSB7XHJcblx0XHRcdFx0aWYgKHZvdCA9PSAndCcpIHtcclxuXHRcdFx0XHRcdHRoaXMudmF0U2hvdyA9IGZhbHNlXHJcblx0XHRcdFx0XHR0aGlzLnNlbENvbG9yID0gJ2JsYWNrJ1xyXG5cdFx0XHRcdFx0dGhpcy5mc2VsQ29sb3IgPSAnIzIwYjBlMydcclxuXHRcdFx0XHRcdHRoaXMudnR0ID0gdGhpcy5zY3JvbGxUb3A7XHJcblx0XHRcdFx0XHR1bmkucGFnZVNjcm9sbFRvKHtcclxuXHRcdFx0XHRcdFx0c2Nyb2xsVG9wOiB0aGlzLnB0dCxcclxuXHRcdFx0XHRcdFx0ZHVyYXRpb246IDBcclxuXHRcdFx0XHRcdH0pXHJcblx0XHRcdFx0XHRpZiAoIXRoaXMucmVzcS5sZW5ndGgpIHtcclxuXHRcdFx0XHRcdFx0dGhpcy5nZXRUYSgpXHRcclxuXHRcdFx0XHRcdH1cclxuXHRcdFx0XHR9IGVsc2Uge1xyXG5cdFx0XHRcdFx0dGhpcy52YXRTaG93ID0gdHJ1ZVxyXG5cdFx0XHRcdFx0dGhpcy5zZWxDb2xvciA9ICcjMjBiMGUzJ1xyXG5cdFx0XHRcdFx0dGhpcy5mc2VsQ29sb3IgPSAnYmxhY2snXHJcblx0XHRcdFx0XHR0aGlzLnB0dCA9IHRoaXMuc2Nyb2xsVG9wXHJcblx0XHRcdFx0XHR1bmkucGFnZVNjcm9sbFRvKHtcclxuXHRcdFx0XHRcdFx0c2Nyb2xsVG9wOiB0aGlzLnZ0dCxcclxuXHRcdFx0XHRcdFx0ZHVyYXRpb246IDBcclxuXHRcdFx0XHRcdH0pXHJcblx0XHRcdFx0fVxyXG5cdFx0XHR9LFxyXG5cdFx0XHRnZXRUYSgpIHtcclxuXHRcdFx0XHR1bmkucmVxdWVzdCh7XHJcblx0XHRcdFx0XHR1cmw6J2h0dHBzOi8vYXBpLmJpbGliaWxpLmNvbS94L3YyL3JlcGx5JyxcclxuXHRcdFx0XHRcdGRhdGE6e1xyXG5cdFx0XHRcdFx0XHRqc29ucDogJ2pzb25wJyxcclxuXHRcdFx0XHRcdFx0cG46IHRoaXMucG4sXHJcblx0XHRcdFx0XHRcdHR5cGU6ICcxJyxcclxuXHRcdFx0XHRcdFx0c29ydDogJzInLFxyXG5cdFx0XHRcdFx0XHRvaWQ6IHRoaXMub2lkXHJcblx0XHRcdFx0XHR9LFxyXG5cdFx0XHRcdFx0c3VjY2VzczogKHJlcykgPT4ge1xyXG5cdFx0XHRcdFx0XHR0aGlzLnJlc3EgPSBbLi4udGhpcy5yZXNxLCAuLi5yZXMuZGF0YS5kYXRhLnJlcGxpZXNdXHJcblx0XHRcdFx0XHR9XHJcblx0XHRcdFx0fSlcclxuXHRcdFx0fSxcclxuXHRcdFx0dGltZXN0YW1wVG9UaW1lKHRpbWVzdGFtcCkge1xyXG5cdFx0XHRcdHZhciBub3dEYXRlID0gbmV3IERhdGUoKVxyXG5cdFx0XHRcdHZhciBkYXRlID0gbmV3IERhdGUodGltZXN0YW1wICogMTAwMClcclxuXHRcdFx0XHR2YXIgWSA9IGRhdGUuZ2V0RnVsbFllYXIoKSArICctJ1xyXG5cdFx0XHRcdHZhciBNID0gKGRhdGUuZ2V0TW9udGgoKSArIDEgPCAxMCA/ICcwJyArIChkYXRlLmdldE1vbnRoKCkgKyAxKSA6IGRhdGUuZ2V0TW9udGgoKSArIDEpICsgJy0nXHJcblx0XHRcdFx0dmFyIEQgPSBkYXRlLmdldERhdGUoKVxyXG5cdFx0XHRcdHZhciBoID0gJydcclxuXHRcdFx0XHR2YXIgbSA9ICcnXHJcblx0XHRcdFx0aWYgKG5vd0RhdGUuZ2V0RnVsbFllYXIoKSArICctJyA9PSBZKSB7XHJcblx0XHRcdFx0XHRZID0gJydcclxuXHRcdFx0XHR9IFxyXG5cdFx0XHRcdGlmIChub3dEYXRlLmdldERhdGUoKSA9PSBEKSB7XHJcblx0XHRcdFx0XHRNID0gJydcclxuXHRcdFx0XHRcdEQgPSAn5LuK5aSpJ1xyXG5cdFx0XHRcdFx0aCA9IChkYXRlLmdldEhvdXJzKCkgPCAxMCA/ICcwJyArIGRhdGUuZ2V0SG91cnMoKSA6IGRhdGUuZ2V0SG91cnMoKSkgKyAnOidcclxuXHRcdFx0XHRcdG0gPSAoZGF0ZS5nZXRNaW51dGVzKCkgPCAxMCA/ICcwJyArIGRhdGUuZ2V0TWludXRlcygpIDogZGF0ZS5nZXRNaW51dGVzKCkpXHJcblx0XHRcdFx0fVxyXG5cdFx0XHRcdGlmIChEIDwgMTAgJiYgRCAhPSAnJykge1xyXG5cdFx0XHRcdFx0RCA9ICcwJyArIERcclxuXHRcdFx0XHR9XHJcblx0XHRcdFx0cmV0dXJuIFkgKyBNICsgRCArICcgJyArIGggKyBtXHJcblx0XHRcdH1cblx0XHR9XG5cdH1cbjwvc2NyaXB0PlxuXG48c3R5bGU+XG5cdEBpbXBvcnQgdXJsKFwiLi9wbGF5ZXIuY3NzXCIpO1xuPC9zdHlsZT5cclxuXHJcbjxzdHlsZSBsYW5nPVwic2Nzc1wiPlxyXG5cdC5jb2xjb257XHJcblx0XHRwYWRkaW5nLWJvdHRvbTogMTVweDtcclxuXHR9XHJcbjwvc3R5bGU+Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///66\n");
+eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === \"string\") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === \"Object\" && o.constructor) n = o.constructor.name;if (n === \"Map\" || n === \"Set\") return Array.from(o);if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== \"undefined\" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;} //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      src: '',\n      title: '',\n      ownerImg: '',\n      ownerName: '',\n      vInfo: '',\n      videoUrl: '',\n      moreVideo: [],\n      bottom: false,\n      videoImg: '',\n      view: '',\n      like: '',\n      systemBarHeight: 0,\n      px2rpx52: 0,\n      px2rpx42: 0,\n      vatpx: 0,\n      selColor: '#20b0e3',\n      fselColor: 'black',\n      vatShow: true,\n      oid: '',\n      resq: [],\n      ctime: '',\n      pn: 1,\n      scrollTop: 0,\n      vtt: 0,\n      ptt: 0 };\n\n  },\n  onLoad: function onLoad(option) {var _this = this;\n    this.px2rpx52 = this.px2rpx(522);\n    this.px2rpx42 = this.px2rpx(422);\n    this.vatpx = this.px2rpx(500);\n    this.getSysteminfo();\n    uni.request({\n      url: 'https://tenapi.cn/bilivideo/',\n      data: {\n        url: 'https://www.bilibili.com/video/' + option.id },\n\n      success: function success(res) {\n        if (_this.title == '') {\n          _this.title = res.data.title;\n          uni.setNavigationBarTitle({\n            title: res.data.title });\n\n        }\n        _this.src = res.data.url;\n      } });\n\n    uni.setNavigationBarTitle({\n      title: option.title });\n\n    this.title = option.title;\n    this.ownerImg = option.img;\n    this.ownerName = option.name;\n    this.vInfo = option.desc;\n    this.videoImg = option.pic;\n    this.videoUrl = 'https://www.bilibili.com/video/' + option.id;\n    this.view = option.view;\n    this.like = option.like;\n    uni.request({\n      url: 'http://api.bilibili.com/x/web-interface/archive/related',\n      data: {\n        bvid: option.id },\n\n      success: function success(res) {\n        _this.moreVideo = res.data.data;\n        _this.bottom = !_this.bottom;\n      } });\n\n    if (option.img == '' || this.oid == '') {\n      uni.request({\n        url: 'http://api.bilibili.com/x/web-interface/view',\n        data: {\n          bvid: option.id },\n\n        success: function success(res) {\n          _this.ownerImg = res.data.data.owner.face;\n          _this.oid = res.data.data.aid;\n          _this.ctime = res.data.data.ctime;\n        } });\n\n    }\n  },\n  onReady: function onReady() {\n    this.videoContext = uni.createVideoContext('video_bl');\n  },\n  onShow: function onShow() {\n    this.videoContext.play();\n  },\n  onReachBottom: function onReachBottom() {\n    if (!this.vatShow) {\n      this.pn = this.pn + 1;\n      this.getTa();\n    }\n  },\n  onPageScroll: function onPageScroll(res) {\n    this.scrollTop = res.scrollTop;\n  },\n  methods: {\n    onShare: function onShare() {\n      uni.shareWithSystem({\n        summary: this.title,\n        href: this.videoUrl });\n\n    },\n    pause: function pause() {\n      this.videoContext.pause();\n    },\n    getSysteminfo: function getSysteminfo() {var _this2 = this;\n      uni.getSystemInfo({\n        success: function success(res) {\n          _this2.systemBarHeight = res.statusBarHeight;\n        } });\n\n    },\n    px2rpx: function px2rpx(rpx) {\n      return uni.upx2px(rpx);\n    },\n    vat: function vat(vot) {\n      if (vot == 't') {\n        this.vatShow = false;\n        this.selColor = 'black';\n        this.fselColor = '#20b0e3';\n        this.vtt = this.scrollTop;\n        uni.pageScrollTo({\n          scrollTop: this.ptt,\n          duration: 0 });\n\n        if (!this.resq.length) {\n          this.getTa();\n        }\n      } else {\n        this.vatShow = true;\n        this.selColor = '#20b0e3';\n        this.fselColor = 'black';\n        this.ptt = this.scrollTop;\n        uni.pageScrollTo({\n          scrollTop: this.vtt,\n          duration: 0 });\n\n      }\n    },\n    getTa: function getTa() {var _this3 = this;\n      uni.request({\n        url: 'https://api.bilibili.com/x/v2/reply',\n        data: {\n          jsonp: 'jsonp',\n          pn: this.pn,\n          type: '1',\n          sort: '2',\n          oid: this.oid },\n\n        success: function success(res) {\n          _this3.resq = [].concat(_toConsumableArray(_this3.resq), _toConsumableArray(res.data.data.replies));\n        } });\n\n    },\n    timestampToTime: function timestampToTime(timestamp) {\n      var nowDate = new Date();\n      var date = new Date(timestamp * 1000);\n      var Y = date.getFullYear() + '-';\n      var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';\n      var D = date.getDate();\n      var h = '';\n      var m = '';\n      if (nowDate.getFullYear() + '-' == Y) {\n        Y = '';\n      }\n      if (nowDate.getDate() == D) {\n        M = '';\n        D = '今天';\n        h = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()) + ':';\n        m = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();\n      }\n      if (D < 10 && D != '') {\n        D = '0' + D;\n      }\n      return Y + M + D + ' ' + h + m;\n    } } };exports.default = _default;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvcGxheWVyL3BsYXllci52dWUiXSwibmFtZXMiOlsiZGF0YSIsInNyYyIsInRpdGxlIiwib3duZXJJbWciLCJvd25lck5hbWUiLCJ2SW5mbyIsInZpZGVvVXJsIiwibW9yZVZpZGVvIiwiYm90dG9tIiwidmlkZW9JbWciLCJ2aWV3IiwibGlrZSIsInN5c3RlbUJhckhlaWdodCIsInB4MnJweDUyIiwicHgycnB4NDIiLCJ2YXRweCIsInNlbENvbG9yIiwiZnNlbENvbG9yIiwidmF0U2hvdyIsIm9pZCIsInJlc3EiLCJjdGltZSIsInBuIiwic2Nyb2xsVG9wIiwidnR0IiwicHR0Iiwib25Mb2FkIiwib3B0aW9uIiwicHgycnB4IiwiZ2V0U3lzdGVtaW5mbyIsInVuaSIsInJlcXVlc3QiLCJ1cmwiLCJpZCIsInN1Y2Nlc3MiLCJyZXMiLCJzZXROYXZpZ2F0aW9uQmFyVGl0bGUiLCJpbWciLCJuYW1lIiwiZGVzYyIsInBpYyIsImJ2aWQiLCJvd25lciIsImZhY2UiLCJhaWQiLCJvblJlYWR5IiwidmlkZW9Db250ZXh0IiwiY3JlYXRlVmlkZW9Db250ZXh0Iiwib25TaG93IiwicGxheSIsIm9uUmVhY2hCb3R0b20iLCJnZXRUYSIsIm9uUGFnZVNjcm9sbCIsIm1ldGhvZHMiLCJvblNoYXJlIiwic2hhcmVXaXRoU3lzdGVtIiwic3VtbWFyeSIsImhyZWYiLCJwYXVzZSIsImdldFN5c3RlbUluZm8iLCJzdGF0dXNCYXJIZWlnaHQiLCJycHgiLCJ1cHgycHgiLCJ2YXQiLCJ2b3QiLCJwYWdlU2Nyb2xsVG8iLCJkdXJhdGlvbiIsImxlbmd0aCIsImpzb25wIiwidHlwZSIsInNvcnQiLCJyZXBsaWVzIiwidGltZXN0YW1wVG9UaW1lIiwidGltZXN0YW1wIiwibm93RGF0ZSIsIkRhdGUiLCJkYXRlIiwiWSIsImdldEZ1bGxZZWFyIiwiTSIsImdldE1vbnRoIiwiRCIsImdldERhdGUiLCJoIiwibSIsImdldEhvdXJzIiwiZ2V0TWludXRlcyJd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QXZFO0FBQ0FELFNBQUMsR0FBSVIsSUFBSSxDQUFDVSxVQUFMLEtBQW9CLEVBQXBCLEdBQXlCLE1BQU1WLElBQUksQ0FBQ1UsVUFBTCxFQUEvQixHQUFtRFYsSUFBSSxDQUFDVSxVQUFMLEVBQXhEO0FBQ0E7QUFDRCxVQUFJTCxDQUFDLEdBQUcsRUFBSixJQUFVQSxDQUFDLElBQUksRUFBbkIsRUFBdUI7QUFDdEJBLFNBQUMsR0FBRyxNQUFNQSxDQUFWO0FBQ0E7QUFDRCxhQUFPSixDQUFDLEdBQUdFLENBQUosR0FBUUUsQ0FBUixHQUFZLEdBQVosR0FBa0JFLENBQWxCLEdBQXNCQyxDQUE3QjtBQUNBLEtBaEZPLEVBcEdLLEUiLCJmaWxlIjoiNjYuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG5cbmV4cG9ydCBkZWZhdWx0IHtcblx0ZGF0YSgpIHtcblx0XHRyZXR1cm4ge1xuXHRcdFx0c3JjOiAnJyxcblx0XHRcdHRpdGxlOiAnJyxcblx0XHRcdG93bmVySW1nOiAnJyxcblx0XHRcdG93bmVyTmFtZTogJycsXG5cdFx0XHR2SW5mbzogJycsXG5cdFx0XHR2aWRlb1VybDogJycsXG5cdFx0XHRtb3JlVmlkZW86IFtdLFxuXHRcdFx0Ym90dG9tOiBmYWxzZSxcblx0XHRcdHZpZGVvSW1nOiAnJyxcblx0XHRcdHZpZXc6ICcnLFxuXHRcdFx0bGlrZTogJycsXG5cdFx0XHRzeXN0ZW1CYXJIZWlnaHQ6IDAsXG5cdFx0XHRweDJycHg1MjogMCxcblx0XHRcdHB4MnJweDQyOiAwLFxuXHRcdFx0dmF0cHg6IDAsXG5cdFx0XHRzZWxDb2xvcjogJyMyMGIwZTMnLFxuXHRcdFx0ZnNlbENvbG9yOiAnYmxhY2snLFxuXHRcdFx0dmF0U2hvdzogdHJ1ZSxcblx0XHRcdG9pZDogJycsXG5cdFx0XHRyZXNxOiBbXSxcblx0XHRcdGN0aW1lOiAnJyxcblx0XHRcdHBuOiAxLFxuXHRcdFx0c2Nyb2xsVG9wOiAwLFxuXHRcdFx0dnR0OiAwLFxuXHRcdFx0cHR0OiAwXG5cdFx0fVxuXHR9LFxuXHRvbkxvYWQob3B0aW9uKSB7XG5cdFx0dGhpcy5weDJycHg1MiA9IHRoaXMucHgycnB4KDUyMilcblx0XHR0aGlzLnB4MnJweDQyID0gdGhpcy5weDJycHgoNDIyKVxuXHRcdHRoaXMudmF0cHggPSB0aGlzLnB4MnJweCg1MDApXG5cdFx0dGhpcy5nZXRTeXN0ZW1pbmZvKClcblx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHR1cmw6J2h0dHBzOi8vdGVuYXBpLmNuL2JpbGl2aWRlby8nLFxuXHRcdFx0ZGF0YToge1xuXHRcdFx0XHR1cmw6ICdodHRwczovL3d3dy5iaWxpYmlsaS5jb20vdmlkZW8vJyArIG9wdGlvbi5pZFxuXHRcdFx0fSxcblx0XHRcdHN1Y2Nlc3M6IChyZXMpID0+IHtcblx0XHRcdFx0aWYgKHRoaXMudGl0bGUgPT0gJycpIHtcblx0XHRcdFx0XHR0aGlzLnRpdGxlID0gcmVzLmRhdGEudGl0bGVcblx0XHRcdFx0XHR1bmkuc2V0TmF2aWdhdGlvbkJhclRpdGxlKHtcblx0XHRcdFx0XHRcdHRpdGxlOiByZXMuZGF0YS50aXRsZVxuXHRcdFx0XHRcdH0pXG5cdFx0XHRcdH1cblx0XHRcdFx0dGhpcy5zcmMgPSByZXMuZGF0YS51cmxcblx0XHRcdH1cblx0XHR9KVxuXHRcdHVuaS5zZXROYXZpZ2F0aW9uQmFyVGl0bGUoe1xuXHRcdFx0dGl0bGU6b3B0aW9uLnRpdGxlXG5cdFx0fSlcblx0XHR0aGlzLnRpdGxlID0gb3B0aW9uLnRpdGxlXG5cdFx0dGhpcy5vd25lckltZyA9IG9wdGlvbi5pbWdcblx0XHR0aGlzLm93bmVyTmFtZSA9IG9wdGlvbi5uYW1lXG5cdFx0dGhpcy52SW5mbyA9IG9wdGlvbi5kZXNjXG5cdFx0dGhpcy52aWRlb0ltZyA9IG9wdGlvbi5waWNcblx0XHR0aGlzLnZpZGVvVXJsID0gJ2h0dHBzOi8vd3d3LmJpbGliaWxpLmNvbS92aWRlby8nICsgb3B0aW9uLmlkXG5cdFx0dGhpcy52aWV3ID0gb3B0aW9uLnZpZXdcblx0XHR0aGlzLmxpa2UgPSBvcHRpb24ubGlrZVxuXHRcdHVuaS5yZXF1ZXN0KHtcblx0XHRcdHVybDonaHR0cDovL2FwaS5iaWxpYmlsaS5jb20veC93ZWItaW50ZXJmYWNlL2FyY2hpdmUvcmVsYXRlZCcsXG5cdFx0XHRkYXRhOntcblx0XHRcdFx0YnZpZDogb3B0aW9uLmlkXG5cdFx0XHR9LFxuXHRcdFx0c3VjY2VzczogKHJlcykgPT4ge1xuXHRcdFx0XHR0aGlzLm1vcmVWaWRlbyA9IHJlcy5kYXRhLmRhdGFcblx0XHRcdFx0dGhpcy5ib3R0b20gPSAhdGhpcy5ib3R0b21cblx0XHRcdH1cblx0XHR9KVxuXHRcdGlmIChvcHRpb24uaW1nID09ICcnIHx8IHRoaXMub2lkID09ICcnKSB7XG5cdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdHVybDogJ2h0dHA6Ly9hcGkuYmlsaWJpbGkuY29tL3gvd2ViLWludGVyZmFjZS92aWV3Jyxcblx0XHRcdFx0ZGF0YToge1xuXHRcdFx0XHRcdGJ2aWQ6IG9wdGlvbi5pZFxuXHRcdFx0XHR9LFxuXHRcdFx0XHRzdWNjZXNzOiAocmVzKSA9PiB7XG5cdFx0XHRcdFx0dGhpcy5vd25lckltZyA9IHJlcy5kYXRhLmRhdGEub3duZXIuZmFjZVxuXHRcdFx0XHRcdHRoaXMub2lkID0gcmVzLmRhdGEuZGF0YS5haWRcblx0XHRcdFx0XHR0aGlzLmN0aW1lID0gcmVzLmRhdGEuZGF0YS5jdGltZVxuXHRcdFx0XHR9XG5cdFx0XHR9KVxuXHRcdH1cblx0fSxcblx0b25SZWFkeSgpIHtcblx0XHR0aGlzLnZpZGVvQ29udGV4dCA9IHVuaS5jcmVhdGVWaWRlb0NvbnRleHQoJ3ZpZGVvX2JsJylcblx0fSxcblx0b25TaG93KCkge1xuXHRcdHRoaXMudmlkZW9Db250ZXh0LnBsYXkoKVxuXHR9LFxuXHRvblJlYWNoQm90dG9tKCkge1xuXHRcdGlmICghdGhpcy52YXRTaG93KSB7XG5cdFx0XHR0aGlzLnBuID0gdGhpcy5wbiArIDFcblx0XHRcdHRoaXMuZ2V0VGEoKVxuXHRcdH1cblx0fSxcblx0b25QYWdlU2Nyb2xsKHJlcykge1xuXHRcdHRoaXMuc2Nyb2xsVG9wID0gcmVzLnNjcm9sbFRvcFxuXHR9LFxuXHRtZXRob2RzOiB7XG5cdFx0b25TaGFyZSgpIHtcblx0XHRcdHVuaS5zaGFyZVdpdGhTeXN0ZW0oe1xuXHRcdFx0XHRzdW1tYXJ5OiB0aGlzLnRpdGxlLFxuXHRcdFx0XHRocmVmOiB0aGlzLnZpZGVvVXJsXG5cdFx0XHR9KVxuXHRcdH0sXG5cdFx0cGF1c2UoKSB7XG5cdFx0XHR0aGlzLnZpZGVvQ29udGV4dC5wYXVzZSgpXG5cdFx0fSxcblx0XHRnZXRTeXN0ZW1pbmZvKCkge1xuXHRcdFx0dW5pLmdldFN5c3RlbUluZm8oe1xuXHRcdFx0XHRzdWNjZXNzOiByZXMgPT4ge1xuXHRcdFx0XHRcdHRoaXMuc3lzdGVtQmFySGVpZ2h0ID0gcmVzLnN0YXR1c0JhckhlaWdodDtcblx0XHRcdFx0fVxuXHRcdFx0fSk7XG5cdFx0fSxcblx0XHRweDJycHgocnB4KSB7XG5cdFx0XHRyZXR1cm4gdW5pLnVweDJweChycHgpXG5cdFx0fSxcblx0XHR2YXQodm90KSB7XG5cdFx0XHRpZiAodm90ID09ICd0Jykge1xuXHRcdFx0XHR0aGlzLnZhdFNob3cgPSBmYWxzZVxuXHRcdFx0XHR0aGlzLnNlbENvbG9yID0gJ2JsYWNrJ1xuXHRcdFx0XHR0aGlzLmZzZWxDb2xvciA9ICcjMjBiMGUzJ1xuXHRcdFx0XHR0aGlzLnZ0dCA9IHRoaXMuc2Nyb2xsVG9wO1xuXHRcdFx0XHR1bmkucGFnZVNjcm9sbFRvKHtcblx0XHRcdFx0XHRzY3JvbGxUb3A6IHRoaXMucHR0LFxuXHRcdFx0XHRcdGR1cmF0aW9uOiAwXG5cdFx0XHRcdH0pXG5cdFx0XHRcdGlmICghdGhpcy5yZXNxLmxlbmd0aCkge1xuXHRcdFx0XHRcdHRoaXMuZ2V0VGEoKVx0XG5cdFx0XHRcdH1cblx0XHRcdH0gZWxzZSB7XG5cdFx0XHRcdHRoaXMudmF0U2hvdyA9IHRydWVcblx0XHRcdFx0dGhpcy5zZWxDb2xvciA9ICcjMjBiMGUzJ1xuXHRcdFx0XHR0aGlzLmZzZWxDb2xvciA9ICdibGFjaydcblx0XHRcdFx0dGhpcy5wdHQgPSB0aGlzLnNjcm9sbFRvcFxuXHRcdFx0XHR1bmkucGFnZVNjcm9sbFRvKHtcblx0XHRcdFx0XHRzY3JvbGxUb3A6IHRoaXMudnR0LFxuXHRcdFx0XHRcdGR1cmF0aW9uOiAwXG5cdFx0XHRcdH0pXG5cdFx0XHR9XG5cdFx0fSxcblx0XHRnZXRUYSgpIHtcblx0XHRcdHVuaS5yZXF1ZXN0KHtcblx0XHRcdFx0dXJsOidodHRwczovL2FwaS5iaWxpYmlsaS5jb20veC92Mi9yZXBseScsXG5cdFx0XHRcdGRhdGE6e1xuXHRcdFx0XHRcdGpzb25wOiAnanNvbnAnLFxuXHRcdFx0XHRcdHBuOiB0aGlzLnBuLFxuXHRcdFx0XHRcdHR5cGU6ICcxJyxcblx0XHRcdFx0XHRzb3J0OiAnMicsXG5cdFx0XHRcdFx0b2lkOiB0aGlzLm9pZFxuXHRcdFx0XHR9LFxuXHRcdFx0XHRzdWNjZXNzOiAocmVzKSA9PiB7XG5cdFx0XHRcdFx0dGhpcy5yZXNxID0gWy4uLnRoaXMucmVzcSwgLi4ucmVzLmRhdGEuZGF0YS5yZXBsaWVzXVxuXHRcdFx0XHR9XG5cdFx0XHR9KVxuXHRcdH0sXG5cdFx0dGltZXN0YW1wVG9UaW1lKHRpbWVzdGFtcCkge1xuXHRcdFx0dmFyIG5vd0RhdGUgPSBuZXcgRGF0ZSgpXG5cdFx0XHR2YXIgZGF0ZSA9IG5ldyBEYXRlKHRpbWVzdGFtcCAqIDEwMDApXG5cdFx0XHR2YXIgWSA9IGRhdGUuZ2V0RnVsbFllYXIoKSArICctJ1xuXHRcdFx0dmFyIE0gPSAoZGF0ZS5nZXRNb250aCgpICsgMSA8IDEwID8gJzAnICsgKGRhdGUuZ2V0TW9udGgoKSArIDEpIDogZGF0ZS5nZXRNb250aCgpICsgMSkgKyAnLSdcblx0XHRcdHZhciBEID0gZGF0ZS5nZXREYXRlKClcblx0XHRcdHZhciBoID0gJydcblx0XHRcdHZhciBtID0gJydcblx0XHRcdGlmIChub3dEYXRlLmdldEZ1bGxZZWFyKCkgKyAnLScgPT0gWSkge1xuXHRcdFx0XHRZID0gJydcblx0XHRcdH0gXG5cdFx0XHRpZiAobm93RGF0ZS5nZXREYXRlKCkgPT0gRCkge1xuXHRcdFx0XHRNID0gJydcblx0XHRcdFx0RCA9ICfku4rlpKknXG5cdFx0XHRcdGggPSAoZGF0ZS5nZXRIb3VycygpIDwgMTAgPyAnMCcgKyBkYXRlLmdldEhvdXJzKCkgOiBkYXRlLmdldEhvdXJzKCkpICsgJzonXG5cdFx0XHRcdG0gPSAoZGF0ZS5nZXRNaW51dGVzKCkgPCAxMCA/ICcwJyArIGRhdGUuZ2V0TWludXRlcygpIDogZGF0ZS5nZXRNaW51dGVzKCkpXG5cdFx0XHR9XG5cdFx0XHRpZiAoRCA8IDEwICYmIEQgIT0gJycpIHtcblx0XHRcdFx0RCA9ICcwJyArIERcblx0XHRcdH1cblx0XHRcdHJldHVybiBZICsgTSArIEQgKyAnICcgKyBoICsgbVxuXHRcdH1cblx0fVxufVxuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///66\n");
 
 /***/ }),
 /* 67 */

@@ -17,28 +17,30 @@
 			</view>
 		</view>
 		<view class="va" v-show="vatShow" :style="{marginTop: px2rpx52 + 40 + systemBarHeight + 'px'}">
-			<view class="owner">
-				<image :src="ownerImg" mode=""></image>
-				<view class="owner_text">
-					<text class="ownm">{{ ownerName }}</text>
-					<text class="owntime">{{ timestampToTime(ctime) }}</text>
-					<uni-collapse accordion :show-animation="true">
-						<uni-collapse-item :title="title" :border="false" titleBorder="none">
-							<view class="colcon">
-								<text>{{ vInfo }}</text>
-							</view>
-						</uni-collapse-item>
-					</uni-collapse>
+			<view class="vd_main">
+				<view class="owner">
+					<image :src="ownerImg" mode=""></image>
+					<view class="owner_text">
+						<text class="ownm">{{ ownerName }}</text>
+						<text class="owntime">{{ timestampToTime(ctime) }}</text>
+						<uni-collapse accordion :show-animation="true">
+							<uni-collapse-item :title="title" :border="false" titleBorder="none">
+								<view class="colcon">
+									<text>{{ vInfo }}</text>
+								</view>
+							</uni-collapse-item>
+						</uni-collapse>
+					</view>
 				</view>
-			</view>
-			<view class="vd_info">
-				<view class="video_play" style="margin-right: 10rpx;">
-					<uni-icons type="videocam-filled" size="16" color="gray"></uni-icons>
-					<text>{{ view }}</text>
-				</view>
-				<view class="video_like">
-					<uni-icons type="hand-up-filled" size="16" color="gray"></uni-icons>
-					<text>{{ like }}</text>
+				<view class="vd_info">
+					<view class="video_play" style="margin-right: 10rpx;">
+						<uni-icons type="videocam-filled" size="16" color="gray"></uni-icons>
+						<text>{{ view }}</text>
+					</view>
+					<view class="video_like">
+						<uni-icons type="hand-up-filled" size="16" color="gray"></uni-icons>
+						<text>{{ like }}</text>
+					</view>
 				</view>
 			</view>
 			<view class="fe_bar">
@@ -79,7 +81,7 @@
 					</view>
 				</navigator>
 			</view>
-			<view style="color: gray; padding: 20rpx 0px 20rpx 0rpx;" v-if="bottom">
+			<view style="color: gray; padding: 10rpx 0px 30rpx 0rpx;" v-if="bottom">
 				<text>不能往下划了哦 QAQ</text>
 			</view>
 		</view>
