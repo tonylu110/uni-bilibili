@@ -86,7 +86,7 @@
 			</view>
 		</view>
 		<view class="ta" v-show="!vatShow" :style="{marginTop: px2rpx52 + 40 + systemBarHeight + 'px'}">
-			<view class="taa atop" v-if="upper.top">
+			<view class="taa atop" v-if="upper.top" @longpress="copyMsg(upper.top.content.message)" @touchend="touchEnd" @touchmove="touchMove">
 				<image :src="upper.top.member.avatar" mode="" class="aimg"></image>
 				<view class="imgAPa">
 					<view class="paName">
@@ -102,7 +102,7 @@
 					</view>
 				</view>
 			</view>
-			<view class="taa" v-for="(item,index) in resq" :key='index'>
+			<view class="taa" v-for="(item,index) in resq" :key='index' @longpress="copyMsg(item.content.message)" @touchend="touchEnd" @touchmove="touchMove">
 				<image :src="item.member.avatar" mode="" class="aimg"></image>
 				<view class="imgAPa">
 					<view class="paName">
@@ -151,6 +151,7 @@
 				scrollTop: 0,
 				vtt: 0,
 				ptt: 0,
+				ifLongtap: true,
 				upper: {}
 			}
 		},
@@ -283,6 +284,24 @@
 						this.resq = [...this.resq, ...res.data.data.replies]
 					}
 				})
+			},
+			copyMsg(msg) {
+				if (this.ifLongtap) {
+					uni.showToast({
+						title: '复制成功：' + msg,
+						icon:"none"
+					});
+					uni.setClipboardData({
+						data: msg,
+						showToast: false
+					})
+				}
+			},
+			touchEnd() {
+				this.ifLongtap = true;
+			},
+			touchMove(e) {
+				this.ifLongtap = false;
 			},
 			timestampToTime(timestamp) {
 				var nowDate = new Date()
