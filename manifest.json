@@ -46,7 +46,9 @@
                     "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
                     "<uses-feature android:name=\"android.hardware.camera\"/>",
                     "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
-                ]
+                ],
+                "targetSdkVersion" : 32,
+                "abiFilters" : [ "armeabi-v7a", "arm64-v8a", "x86" ]
             },
             /* ios打包配置 */
             "ios" : {},
@@ -89,7 +91,8 @@
                 }
             },
             "splashscreen" : {
-                "useOriginalMsgbox" : false
+                "useOriginalMsgbox" : false,
+                "androidStyle" : "common"
             }
         }
     },

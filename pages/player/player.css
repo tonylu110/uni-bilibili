@@ -184,8 +184,20 @@ video{
 	padding-right: 20rpx;
 	margin-bottom: 20rpx;
 }
+.atop{
+	margin-bottom: 40rpx;
+}
+.atap{
+	font-size: 12px;
+	background-color: #00000010;
+	padding: 5rpx 10rpx 5rpx 10rpx;
+	border-radius: 10rpx;
+}
 .paName{
 	font-weight: bold;
+	width: 570rpx;
+	display: flex;
+	justify-content: space-between;
 }
 .aimg{
 	margin-left: 20rpx;

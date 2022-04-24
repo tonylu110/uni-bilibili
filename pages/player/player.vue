@@ -86,6 +86,22 @@
 			</view>
 		</view>
 		<view class="ta" v-show="!vatShow" :style="{marginTop: px2rpx52 + 40 + systemBarHeight + 'px'}">
+			<view class="taa atop" v-if="upper.top">
+				<image :src="upper.top.member.avatar" mode="" class="aimg"></image>
+				<view class="imgAPa">
+					<view class="paName">
+						{{ upper.top.member.uname }} <view class="atap">置顶</view>
+					</view>
+					<view class="ctime">
+						{{ timestampToTime(upper.top.ctime) }}
+					</view>
+					{{ upper.top.content.message }}
+					<view class="likes">
+						<uni-icons type="hand-up-filled" size="30" :size="17" color="gray" class="like_icon"></uni-icons>
+						{{ upper.top.like }}
+					</view>
+				</view>
+			</view>
 			<view class="taa" v-for="(item,index) in resq" :key='index'>
 				<image :src="item.member.avatar" mode="" class="aimg"></image>
 				<view class="imgAPa">
@@ -134,7 +150,8 @@
 				pn: 1,
 				scrollTop: 0,
 				vtt: 0,
-				ptt: 0
+				ptt: 0,
+				upper: {}
 			}
 		},
 		onLoad(option) {
@@ -262,6 +279,7 @@
 						oid: this.oid
 					},
 					success: (res) => {
+						this.upper = res.data.data.upper
 						this.resq = [...this.resq, ...res.data.data.replies]
 					}
 				})
