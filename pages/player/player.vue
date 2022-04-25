@@ -157,7 +157,8 @@
 				ptt: 0,
 				ifLongtap: true,
 				upper: {},
-				sort: "按热度"
+				sort: '按热度',
+				sortNum: 2
 			}
 		},
 		onLoad(option) {
@@ -224,7 +225,7 @@
 		onReachBottom() {
 			if (!this.vatShow) {
 				this.pn = this.pn + 1
-				this.getTa()
+				this.getTa(this.sortNum)
 			}
 		},
 		onPageScroll(res) {
@@ -296,6 +297,7 @@
 				} else {
 					this.sort = '按热度'
 				}
+				this.sortNum = sort
 				this.pn = 1
 				this.resq = []
 				this.getTa(sort)
