@@ -86,6 +86,10 @@
 			</view>
 		</view>
 		<view class="ta" v-show="!vatShow" :style="{marginTop: px2rpx52 + 40 + systemBarHeight + 'px'}">
+			<view class="pxx" @click="sortComment((sort == '按热度' ? 0 : 2))">
+				<uni-icons type="bars" size="17" color="gray"></uni-icons>
+				<text>{{ sort }}</text>
+			</view>
 			<view class="taa atop" v-if="upper.top" @longpress="copyMsg(upper.top.content.message)" @touchend="touchEnd" @touchmove="touchMove">
 				<image :src="upper.top.member.avatar" mode="" class="aimg"></image>
 				<view class="imgAPa">
@@ -152,7 +156,8 @@
 				vtt: 0,
 				ptt: 0,
 				ifLongtap: true,
-				upper: {}
+				upper: {},
+				sort: "按热度"
 			}
 		},
 		onLoad(option) {
@@ -256,7 +261,7 @@
 						duration: 0
 					})
 					if (!this.resq.length) {
-						this.getTa()	
+						this.getTa(2)	
 					}
 				} else {
 					this.vatShow = true
@@ -269,14 +274,14 @@
 					})
 				}
 			},
-			getTa() {
+			getTa(sort) {
 				uni.request({
 					url:'https://api.bilibili.com/x/v2/reply',
 					data:{
 						jsonp: 'jsonp',
 						pn: this.pn,
 						type: '1',
-						sort: '2',
+						sort: sort,
 						oid: this.oid
 					},
 					success: (res) => {
@@ -284,6 +289,16 @@
 						this.resq = [...this.resq, ...res.data.data.replies]
 					}
 				})
+			},
+			sortComment(sort) {
+				if (sort == 0) {
+					this.sort = '按时间'
+				} else {
+					this.sort = '按热度'
+				}
+				this.pn = 1
+				this.resq = []
+				this.getTa(sort)
 			},
 			copyMsg(msg) {
 				if (this.ifLongtap) {

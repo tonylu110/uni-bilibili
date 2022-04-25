@@ -3663,12 +3663,31 @@ var render = function() {
           attrs: { _i: 55 }
         },
         [
-          _vm._$g(56, "i")
+          _c(
+            "v-uni-view",
+            {
+              staticClass: _vm._$g(56, "sc"),
+              attrs: { _i: 56 },
+              on: {
+                click: function($event) {
+                  return _vm.$handleViewEvent($event)
+                }
+              }
+            },
+            [
+              _c("uni-icons", { attrs: { _i: 57 } }),
+              _c("v-uni-text", { attrs: { _i: 58 } }, [
+                _vm._v(_vm._$g(58, "t0-0"))
+              ])
+            ],
+            1
+          ),
+          _vm._$g(59, "i")
             ? _c(
                 "v-uni-view",
                 {
-                  staticClass: _vm._$g(56, "sc"),
-                  attrs: { _i: 56 },
+                  staticClass: _vm._$g(59, "sc"),
+                  attrs: { _i: 59 },
                   on: {
                     longpress: function($event) {
                       return _vm.$handleViewEvent($event)
@@ -3683,23 +3702,23 @@ var render = function() {
                 },
                 [
                   _c("v-uni-image", {
-                    staticClass: _vm._$g(57, "sc"),
-                    attrs: { src: _vm._$g(57, "a-src"), mode: "", _i: 57 }
+                    staticClass: _vm._$g(60, "sc"),
+                    attrs: { src: _vm._$g(60, "a-src"), mode: "", _i: 60 }
                   }),
                   _c(
                     "v-uni-view",
-                    { staticClass: _vm._$g(58, "sc"), attrs: { _i: 58 } },
+                    { staticClass: _vm._$g(61, "sc"), attrs: { _i: 61 } },
                     [
                       _c(
                         "v-uni-view",
-                        { staticClass: _vm._$g(59, "sc"), attrs: { _i: 59 } },
+                        { staticClass: _vm._$g(62, "sc"), attrs: { _i: 62 } },
                         [
-                          _vm._v(_vm._$g(59, "t0-0")),
+                          _vm._v(_vm._$g(62, "t0-0")),
                           _c(
                             "v-uni-view",
                             {
-                              staticClass: _vm._$g(60, "sc"),
-                              attrs: { _i: 60 }
+                              staticClass: _vm._$g(63, "sc"),
+                              attrs: { _i: 63 }
                             },
                             [_vm._v("置顶")]
                           )
@@ -3708,19 +3727,19 @@ var render = function() {
                       ),
                       _c(
                         "v-uni-view",
-                        { staticClass: _vm._$g(61, "sc"), attrs: { _i: 61 } },
-                        [_vm._v(_vm._$g(61, "t0-0"))]
+                        { staticClass: _vm._$g(64, "sc"), attrs: { _i: 64 } },
+                        [_vm._v(_vm._$g(64, "t0-0"))]
                       ),
-                      _vm._v(_vm._$g(58, "t2-0")),
+                      _vm._v(_vm._$g(61, "t2-0")),
                       _c(
                         "v-uni-view",
-                        { staticClass: _vm._$g(62, "sc"), attrs: { _i: 62 } },
+                        { staticClass: _vm._$g(65, "sc"), attrs: { _i: 65 } },
                         [
                           _c("uni-icons", {
-                            staticClass: _vm._$g(63, "sc"),
-                            attrs: { _i: 63 }
+                            staticClass: _vm._$g(66, "sc"),
+                            attrs: { _i: 66 }
                           }),
-                          _vm._v(_vm._$g(62, "t1-0"))
+                          _vm._v(_vm._$g(65, "t1-0"))
                         ],
                         1
                       )
@@ -3731,13 +3750,13 @@ var render = function() {
                 1
               )
             : _vm._e(),
-          _vm._l(_vm._$g(64, "f"), function(item, index, $21, $31) {
+          _vm._l(_vm._$g(67, "f"), function(item, index, $21, $31) {
             return _c(
               "v-uni-view",
               {
                 key: item,
-                staticClass: _vm._$g("64-" + $31, "sc"),
-                attrs: { _i: "64-" + $31 },
+                staticClass: _vm._$g("67-" + $31, "sc"),
+                attrs: { _i: "67-" + $31 },
                 on: {
                   longpress: function($event) {
                     return _vm.$handleViewEvent($event)
@@ -3752,49 +3771,49 @@ var render = function() {
               },
               [
                 _c("v-uni-image", {
-                  staticClass: _vm._$g("65-" + $31, "sc"),
+                  staticClass: _vm._$g("68-" + $31, "sc"),
                   attrs: {
-                    src: _vm._$g("65-" + $31, "a-src"),
+                    src: _vm._$g("68-" + $31, "a-src"),
                     mode: "",
-                    _i: "65-" + $31
+                    _i: "68-" + $31
                   }
                 }),
                 _c(
                   "v-uni-view",
                   {
-                    staticClass: _vm._$g("66-" + $31, "sc"),
-                    attrs: { _i: "66-" + $31 }
+                    staticClass: _vm._$g("69-" + $31, "sc"),
+                    attrs: { _i: "69-" + $31 }
                   },
                   [
                     _c(
                       "v-uni-view",
                       {
-                        staticClass: _vm._$g("67-" + $31, "sc"),
-                        attrs: { _i: "67-" + $31 }
+                        staticClass: _vm._$g("70-" + $31, "sc"),
+                        attrs: { _i: "70-" + $31 }
                       },
-                      [_vm._v(_vm._$g("67-" + $31, "t0-0"))]
+                      [_vm._v(_vm._$g("70-" + $31, "t0-0"))]
                     ),
                     _c(
                       "v-uni-view",
                       {
-                        staticClass: _vm._$g("68-" + $31, "sc"),
-                        attrs: { _i: "68-" + $31 }
+                        staticClass: _vm._$g("71-" + $31, "sc"),
+                        attrs: { _i: "71-" + $31 }
                       },
-                      [_vm._v(_vm._$g("68-" + $31, "t0-0"))]
+                      [_vm._v(_vm._$g("71-" + $31, "t0-0"))]
                     ),
-                    _vm._v(_vm._$g("66-" + $31, "t2-0")),
+                    _vm._v(_vm._$g("69-" + $31, "t2-0")),
                     _c(
                       "v-uni-view",
                       {
-                        staticClass: _vm._$g("69-" + $31, "sc"),
-                        attrs: { _i: "69-" + $31 }
+                        staticClass: _vm._$g("72-" + $31, "sc"),
+                        attrs: { _i: "72-" + $31 }
                       },
                       [
                         _c("uni-icons", {
-                          staticClass: _vm._$g("70-" + $31, "sc"),
-                          attrs: { _i: "70-" + $31 }
+                          staticClass: _vm._$g("73-" + $31, "sc"),
+                          attrs: { _i: "73-" + $31 }
                         }),
-                        _vm._v(_vm._$g("69-" + $31, "t1-0"))
+                        _vm._v(_vm._$g("72-" + $31, "t1-0"))
                       ],
                       1
                     )
@@ -4369,7 +4388,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../Application/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 13);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".content {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\talign-items: center;\n}\n.player{\r\n\twidth: 750rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tjustify-content: center;\r\n\talign-items: center;\n}\nuni-video{\r\n\twidth: 750rpx;\r\n\theight: 422rpx;\r\n\tposition: fixed;\r\n\tz-index: 10;\n}\n.owner{\r\n\twidth: 690rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: row;\n}\n.vd_main{\r\n\tbox-shadow: 0px 0px 15px #00000015;\r\n\tborder-radius: 20rpx;\r\n\tpadding-top: 20rpx;\r\n\tpadding-right: 20rpx;\n}\n.owner uni-image{\r\n\tmargin-left: 20rpx;\r\n\twidth: 80rpx;\r\n\theight: 80rpx;\r\n\tborder-radius: 40rpx;\n}\n.owner_text{\r\n\tmargin-left: 20rpx;\r\n\twidth: 550rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\n}\n.ownm{\r\n\tfont-weight: bold;\n}\n.danmu_main{\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\twidth: 750rpx;\r\n\tposition: fixed;\r\n\tz-index: 522;\n}\n.danmu_main uni-input{\r\n\tbackground-color: #f5f5f5;\r\n\tpadding: 15rpx;\r\n\tflex: 1;\r\n\theight: auto;\n}\n.send{\r\n\tbackground-color: #20b0e3;\r\n\twidth: 80rpx;\r\n\theight: 80rpx;\r\n\ttext-align: center;\r\n\tline-height: 80rpx;\n}\n.send:active{\r\n\tbackground-color: #1783a7;\n}\n.fe_bar{\r\n\twidth: 710rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tmargin-top: 20rpx;\r\n\tmargin-bottom: 20rpx;\r\n\tbox-shadow: 0px 0px 15px #00000015;\r\n\tjustify-content: center;\r\n\tborder-radius: 20rpx;\n}\n.fe{\r\n\tmargin: 10px 50rpx 10px 50rpx;\n}\n.keyword{\r\n\tfont-style: normal;\n}\n.video_list{\r\n\twidth: 670rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tpadding: 20rpx;\r\n\tbox-shadow: 0px 0px 15px #00000015;\r\n\tmargin-bottom: 20rpx;\r\n\tborder-radius: 20rpx;\n}\n.video_list uni-image{\r\n\tborder-radius: 16rpx;\r\n\twidth: 300rpx;\r\n\theight: 180rpx;\r\n\tmargin-right: 20rpx;\n}\n.video_info{\r\n\twidth: 390rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tjustify-content: space-between;\n}\n.video_title{\r\n\tfont-size: 14px;\r\n\tfont-weight: bold;\n}\n.up_main uni-text{\r\n\tfont-size: 14px;\r\n\tcolor: gray;\n}\n.video_in{\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tcolor: gray;\n}\n.vd_info{\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tcolor: gray;\r\n\twidth: 690rpx;\r\n\tpadding-bottom: 20rpx;\r\n\tjustify-content: center;\n}\n.system_bar{\r\n\twidth: 750px;\r\n\tbackground-color: black;\r\n\tposition: fixed;\r\n\tz-index: 520;\r\n\ttop: 0;\n}\n.title_bar{\r\n\twidth: 750rpx;\r\n\theight: 20px;\r\n\tpadding: 5px;\r\n\tline-height: 40rpx;\r\n\ttext-align: center;\r\n\tposition: fixed;\r\n\tbackground-color: black;\r\n\tcolor: white;\r\n\tz-index: 520;\r\n\toverflow: hidden;\r\n\t-webkit-line-clamp: 1;\r\n\ttext-overflow: ellipsis;\r\n\twhite-space: nowrap;\n}\n.vat{\r\n\tposition: fixed;\r\n\tz-index: 520;\r\n\theight: 40px;\r\n\tbox-shadow: 0px 0px 10px #00000020;\r\n\twidth: 750rpx;\r\n\tdisplay: flex;\r\n\tline-height: 40px;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\tbackground-color: white;\n}\n.vt{\r\n\tmargin: 0px 40px 0px 40px;\r\n\tfont-weight: bold;\n}\n.va{\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\talign-items: center;\n}\n.taa{\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tbox-shadow: 0px 0px 15px #00000015;\r\n\tpadding-top: 20rpx;\r\n\tborder-radius: 20rpx;\r\n\tpadding-bottom: 20rpx;\r\n\tpadding-right: 20rpx;\r\n\tmargin-bottom: 20rpx;\n}\n.atop{\r\n\tmargin-bottom: 40rpx;\n}\n.atap{\r\n\tcolor: #20b0e3;\r\n\tfont-size: 12px;\r\n\tbackground-color: #00000010;\r\n\tpadding: 5rpx 10rpx 5rpx 10rpx;\r\n\tborder-radius: 10rpx;\n}\n.paName{\r\n\tfont-weight: bold;\r\n\twidth: 570rpx;\r\n\tdisplay: flex;\r\n\tjustify-content: space-between;\n}\n.aimg{\r\n\tmargin-left: 20rpx;\r\n\twidth: 80rpx;\r\n\theight: 80rpx;\r\n\tborder-radius: 40rpx;\r\n\tmargin-right: 20rpx;\n}\n.imgAPa{\r\n\twidth: 570rpx;\n}\n.ctime{\r\n\tfont-size: 25rpx;\r\n\tcolor: gray;\n}\n.owntime{\r\n\tmargin-top: 5rpx;\r\n\tfont-size: 23rpx;\r\n\tcolor: gray;\n}\n.like_icon{\r\n\tmargin-right: 10rpx;\n}\n.likes{\r\n\tcolor: gray;\n}\r\n", ""]);
+exports.push([module.i, ".content {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\talign-items: center;\n}\n.player{\r\n\twidth: 750rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tjustify-content: center;\r\n\talign-items: center;\n}\nuni-video{\r\n\twidth: 750rpx;\r\n\theight: 422rpx;\r\n\tposition: fixed;\r\n\tz-index: 10;\n}\n.owner{\r\n\twidth: 690rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: row;\n}\n.vd_main{\r\n\tbox-shadow: 0px 0px 15px #00000015;\r\n\tborder-radius: 20rpx;\r\n\tpadding-top: 20rpx;\r\n\tpadding-right: 20rpx;\n}\n.owner uni-image{\r\n\tmargin-left: 20rpx;\r\n\twidth: 80rpx;\r\n\theight: 80rpx;\r\n\tborder-radius: 40rpx;\n}\n.owner_text{\r\n\tmargin-left: 20rpx;\r\n\twidth: 550rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\n}\n.ownm{\r\n\tfont-weight: bold;\n}\n.danmu_main{\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\twidth: 750rpx;\r\n\tposition: fixed;\r\n\tz-index: 522;\n}\n.danmu_main uni-input{\r\n\tbackground-color: #f5f5f5;\r\n\tpadding: 15rpx;\r\n\tflex: 1;\r\n\theight: auto;\n}\n.send{\r\n\tbackground-color: #20b0e3;\r\n\twidth: 80rpx;\r\n\theight: 80rpx;\r\n\ttext-align: center;\r\n\tline-height: 80rpx;\n}\n.send:active{\r\n\tbackground-color: #1783a7;\n}\n.fe_bar{\r\n\twidth: 710rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tmargin-top: 20rpx;\r\n\tmargin-bottom: 20rpx;\r\n\tbox-shadow: 0px 0px 15px #00000015;\r\n\tjustify-content: center;\r\n\tborder-radius: 20rpx;\n}\n.fe{\r\n\tmargin: 10px 50rpx 10px 50rpx;\n}\n.keyword{\r\n\tfont-style: normal;\n}\n.video_list{\r\n\twidth: 670rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tpadding: 20rpx;\r\n\tbox-shadow: 0px 0px 15px #00000015;\r\n\tmargin-bottom: 20rpx;\r\n\tborder-radius: 20rpx;\n}\n.video_list uni-image{\r\n\tborder-radius: 16rpx;\r\n\twidth: 300rpx;\r\n\theight: 180rpx;\r\n\tmargin-right: 20rpx;\n}\n.video_info{\r\n\twidth: 390rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tjustify-content: space-between;\n}\n.video_title{\r\n\tfont-size: 14px;\r\n\tfont-weight: bold;\n}\n.up_main uni-text{\r\n\tfont-size: 14px;\r\n\tcolor: gray;\n}\n.video_in{\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tcolor: gray;\n}\n.vd_info{\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tcolor: gray;\r\n\twidth: 690rpx;\r\n\tpadding-bottom: 20rpx;\r\n\tjustify-content: center;\n}\n.system_bar{\r\n\twidth: 750px;\r\n\tbackground-color: black;\r\n\tposition: fixed;\r\n\tz-index: 520;\r\n\ttop: 0;\n}\n.title_bar{\r\n\twidth: 750rpx;\r\n\theight: 20px;\r\n\tpadding: 5px;\r\n\tline-height: 40rpx;\r\n\ttext-align: center;\r\n\tposition: fixed;\r\n\tbackground-color: black;\r\n\tcolor: white;\r\n\tz-index: 520;\r\n\toverflow: hidden;\r\n\t-webkit-line-clamp: 1;\r\n\ttext-overflow: ellipsis;\r\n\twhite-space: nowrap;\n}\n.vat{\r\n\tposition: fixed;\r\n\tz-index: 520;\r\n\theight: 40px;\r\n\tbox-shadow: 0px 0px 10px #00000020;\r\n\twidth: 750rpx;\r\n\tdisplay: flex;\r\n\tline-height: 40px;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\tbackground-color: white;\n}\n.vt{\r\n\tmargin: 0px 40px 0px 40px;\r\n\tfont-weight: bold;\n}\n.va{\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\talign-items: center;\n}\n.taa{\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tbox-shadow: 0px 0px 15px #00000015;\r\n\tpadding-top: 20rpx;\r\n\tborder-radius: 20rpx;\r\n\tpadding-bottom: 20rpx;\r\n\tpadding-right: 20rpx;\r\n\tmargin-bottom: 20rpx;\n}\n.atop{\r\n\tmargin-bottom: 40rpx;\n}\n.atap{\r\n\tcolor: #20b0e3;\r\n\tfont-size: 12px;\r\n\tbackground-color: #00000010;\r\n\tpadding: 5rpx 10rpx 5rpx 10rpx;\r\n\tborder-radius: 10rpx;\n}\n.paName{\r\n\tfont-weight: bold;\r\n\twidth: 570rpx;\r\n\tdisplay: flex;\r\n\tjustify-content: space-between;\n}\n.aimg{\r\n\tmargin-left: 20rpx;\r\n\twidth: 80rpx;\r\n\theight: 80rpx;\r\n\tborder-radius: 40rpx;\r\n\tmargin-right: 20rpx;\n}\n.imgAPa{\r\n\twidth: 570rpx;\n}\n.ctime{\r\n\tfont-size: 25rpx;\r\n\tcolor: gray;\n}\n.owntime{\r\n\tmargin-top: 5rpx;\r\n\tfont-size: 23rpx;\r\n\tcolor: gray;\n}\n.like_icon{\r\n\tmargin-right: 10rpx;\n}\n.likes{\r\n\tcolor: gray;\n}\n.pxx{\r\n\twidth: 710rpx;\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tjustify-content: flex-end;\r\n\talign-items: center;\r\n\tmargin-bottom: 20rpx;\n}\n.pxx uni-text{\r\n\tfont-size: 13px;\r\n\tcolor: gray;\r\n\tdisplay: block;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 

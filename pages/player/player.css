@@ -226,3 +226,17 @@ video{
 .likes{
 	color: gray;
 }
+
+.pxx{
+	width: 710rpx;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	margin-bottom: 20rpx;
+}
+.pxx text{
+	font-size: 13px;
+	color: gray;
+	display: block;
+}
