@@ -100,6 +100,11 @@
 						{{ timestampToTime(upper.top.ctime) }}
 					</view>
 					{{ upper.top.content.message }}
+					<view class="more_ta" v-if="upper.top.replies[0] !== undefined">
+						<view v-for="(item,index) in upper.top.replies" :key="index">
+							{{ item.member.uname + '：' + item.content.message }}
+						</view>
+					</view>
 					<view class="likes">
 						<uni-icons type="hand-up-filled" size="30" :size="17" color="gray" class="like_icon"></uni-icons>
 						{{ upper.top.like }}
@@ -116,6 +121,11 @@
 						{{ timestampToTime(item.ctime) }}
 					</view>
 					{{ item.content.message }}
+					<view class="more_ta" v-if="item.replies[0] !== undefined">
+						<view v-for="(item,index) in item.replies" :key="index">
+							{{ item.member.uname + '：' + item.content.message }}
+						</view>
+					</view>
 					<view class="likes">
 						<uni-icons type="hand-up-filled" size="30" :size="17" color="gray" class="like_icon"></uni-icons>
 						{{ item.like }}

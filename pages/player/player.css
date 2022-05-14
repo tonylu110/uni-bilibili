@@ -241,3 +241,9 @@ video{
 	display: block;
 	margin-right: 5px;
 }
+.more_ta{
+	background-color: #00000010;
+	border-radius: 18rpx;
+	margin-top: 10rpx;
+	padding: 20rpx;
+}
