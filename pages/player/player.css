@@ -225,6 +225,9 @@ video{
 }
 .likes{
 	color: gray;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 .pxx{
@@ -245,5 +248,9 @@ video{
 	background-color: #00000010;
 	border-radius: 18rpx;
 	margin-top: 10rpx;
+	margin-bottom: 10rpx;
 	padding: 20rpx;
+}
+.reply{
+	margin-left: 20rpx;
 }

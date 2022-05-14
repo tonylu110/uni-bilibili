@@ -129,6 +129,10 @@
 					<view class="likes">
 						<uni-icons type="hand-up-filled" size="30" :size="17" color="gray" class="like_icon"></uni-icons>
 						{{ item.like }}
+						<view class="reply" v-if="item.reply_control.sub_reply_entry_text !== undefined">
+							<uni-icons type="chatboxes-filled" size="30" :size="17" color="gray" class="like_icon"></uni-icons>
+							{{ item.reply_control.sub_reply_entry_text }}
+						</view>
 					</view>
 				</view>
 			</view>
