@@ -105,9 +105,15 @@
 							{{ item.member.uname + '：' + item.content.message }}
 						</view>
 					</view>
-					<view class="likes">
-						<uni-icons type="hand-up-filled" size="30" :size="17" color="gray" class="like_icon"></uni-icons>
-						{{ upper.top.like }}
+					<view class="l_r">
+						<view class="likes">
+							<uni-icons type="hand-up-filled" size="30" :size="17" color="gray" class="like_icon"></uni-icons>
+							{{ upper.top.like }}
+						</view>
+						<view class="reply" v-if="upper.top.reply_control.sub_reply_entry_text !== undefined">
+							<uni-icons type="chatboxes-filled" size="30" :size="17" color="gray" class="like_icon"></uni-icons>
+							{{ upper.top.reply_control.sub_reply_entry_text }}
+						</view>
 					</view>
 				</view>
 			</view>
@@ -126,9 +132,11 @@
 							{{ item.member.uname + '：' + item.content.message }}
 						</view>
 					</view>
-					<view class="likes">
-						<uni-icons type="hand-up-filled" size="30" :size="17" color="gray" class="like_icon"></uni-icons>
-						{{ item.like }}
+					<view class="l_r">
+						<view class="likes">
+							<uni-icons type="hand-up-filled" size="30" :size="17" color="gray" class="like_icon"></uni-icons>
+							{{ item.like }}
+						</view>
 						<view class="reply" v-if="item.reply_control.sub_reply_entry_text !== undefined">
 							<uni-icons type="chatboxes-filled" size="30" :size="17" color="gray" class="like_icon"></uni-icons>
 							{{ item.reply_control.sub_reply_entry_text }}
