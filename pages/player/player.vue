@@ -180,7 +180,8 @@
 				ifLongtap: true,
 				upper: {},
 				sort: '按热度',
-				sortNum: 2
+				sortNum: 2,
+				firstShow: false
 			}
 		},
 		onLoad(option) {
@@ -201,6 +202,7 @@
 						})
 					}
 					this.src = res.data.url
+					this.firstShow = true
 				}
 			})
 			uni.setNavigationBarTitle({
@@ -242,7 +244,9 @@
 			this.videoContext = uni.createVideoContext('video_bl')
 		},
 		onShow() {
-			this.videoContext.play()
+			if (this.firstShow) {
+				this.videoContext.play()
+			}
 		},
 		onReachBottom() {
 			if (!this.vatShow) {
