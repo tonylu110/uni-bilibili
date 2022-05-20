@@ -14,6 +14,7 @@
 			</view>
 			<view class="vt" :style="{color: fselColor}" @click="vat('t')">
 				评论
+				<text v-if="acount">{{ acount }}</text>
 			</view>
 		</view>
 		<view class="va" v-show="vatShow" :style="{marginTop: px2rpx52 + 40 + systemBarHeight + 'px'}">
@@ -144,6 +145,9 @@
 					</view>
 				</view>
 			</view>
+			<view style="color: gray; padding: 10rpx 0px 30rpx 0rpx; width: 710rpx; text-align: center;" v-if="showBottom">
+				<text>不能往下划了哦 QAQ</text>
+			</view>
 		</view>
 	</view>
 </template>
@@ -181,7 +185,9 @@
 				upper: {},
 				sort: '按热度',
 				sortNum: 2,
-				firstShow: false
+				firstShow: false,
+				acount: 0,
+				showBottom: false
 			}
 		},
 		onLoad(option) {
@@ -236,6 +242,7 @@
 						this.ownerImg = res.data.data.owner.face
 						this.oid = res.data.data.aid
 						this.ctime = res.data.data.ctime
+						this.getAcount(res.data.data.aid)
 					}
 				})
 			}
@@ -313,7 +320,23 @@
 					},
 					success: (res) => {
 						this.upper = res.data.data.upper
+						if(this.resq.length === [...this.resq, ...res.data.data.replies].length) {
+							this.showBottom = true
+						}
 						this.resq = [...this.resq, ...res.data.data.replies]
+					}
+				})
+			},
+			getAcount(oid) {
+				uni.request({
+					url:'https://api.bilibili.com/x/v2/reply',
+					data:{
+						jsonp: 'jsonp',
+						type: '1',
+						oid: oid
+					},
+					success: (res) => {
+						this.acount = res.data.data.page.acount
 					}
 				})
 			},

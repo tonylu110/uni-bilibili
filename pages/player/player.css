@@ -168,6 +168,12 @@ video{
 	margin: 0px 40px 0px 40px;
 	font-weight: bold;
 }
+.vt text{
+	position: fixed;
+	color: #00000030;
+	margin-left: 10rpx;
+	font-size: 25rpx;
+}
 
 .va{
 	display: flex;
