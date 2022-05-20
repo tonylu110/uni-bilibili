@@ -102,7 +102,7 @@
 					{{ upper.top.content.message }}
 					<view class="more_ta" v-if="upper.top.replies[0] !== undefined">
 						<view v-for="(item,index) in upper.top.replies" :key="index">
-							{{ item.member.uname + '：' + item.content.message }}
+							<text style="color: #20b0e3;">{{ item.member.uname }}</text> {{ item.content.message.slice(0,2) == '回复' ? ' ' : ':'}} {{item.content.message }}
 						</view>
 					</view>
 					<view class="l_r">
@@ -129,7 +129,7 @@
 					{{ item.content.message }}
 					<view class="more_ta" v-if="item.replies[0] !== undefined">
 						<view v-for="(item,index) in item.replies" :key="index">
-							{{ item.member.uname + '：' + item.content.message }}
+							<text style="color: #20b0e3;">{{ item.member.uname }}</text> {{ item.content.message.slice(0,2) == '回复' ? ' ' : ':'}} {{item.content.message }}
 						</view>
 					</view>
 					<view class="l_r">
