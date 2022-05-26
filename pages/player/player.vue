@@ -101,10 +101,11 @@
 						{{ timestampToTime(upper.top.ctime) }}
 					</view>
 					{{ upper.top.content.message }}
-					<view class="more_ta" v-if="upper.top.replies[0] !== undefined">
+					<view class="more_ta" v-if="upper.top.replies[0] !== undefined" @click="showMoreRep(upper.top.rpid)">
 						<view v-for="(item,index) in upper.top.replies" :key="index">
 							<text style="color: #20b0e3;">{{ item.member.uname }}</text> {{ item.content.message.slice(0,2) == '回复' ? ' ' : ':'}} {{item.content.message }}
 						</view>
+						<text style="color: gray;">查看更多></text>
 					</view>
 					<view class="l_r">
 						<view class="likes">
@@ -128,10 +129,11 @@
 						{{ timestampToTime(item.ctime) }}
 					</view>
 					{{ item.content.message }}
-					<view class="more_ta" v-if="item.replies[0] !== undefined">
+					<view class="more_ta" v-if="item.replies[0] !== undefined" @click="showMoreRep(item.rpid)">
 						<view v-for="(item,index) in item.replies" :key="index">
 							<text style="color: #20b0e3;">{{ item.member.uname }}</text> {{ item.content.message.slice(0,2) == '回复' ? ' ' : ':'}} {{item.content.message }}
 						</view>
+						<text style="color: gray;">查看更多></text>
 					</view>
 					<view class="l_r">
 						<view class="likes">
@@ -148,6 +150,26 @@
 			<view style="color: gray; padding: 10rpx 0px 30rpx 0rpx; width: 710rpx; text-align: center;" v-if="showBottom">
 				<text>不能往下划了哦 QAQ</text>
 			</view>
+		</view>
+		<view v-if="showMoreRp" class="more_rp" 
+		  :style="{top: px2rpx52 - 10 + systemBarHeight + 'px'}">
+			<view class="close_more_rp" @click="closeMoreRep()">
+				<text style="font-size: 17px;">更多评论:</text>
+				<uni-icons :size="25" type="closeempty"></uni-icons>
+			</view>
+			<scroll-view @scrolltolower="nextPageMoreRp" scroll-y="true" :style="{height: screenHeight - (px2rpx52 + 22 + systemBarHeight) + 'px'}">
+				<view class="more_rp_list">
+					<view v-for="(item,index) in moreRpList" :key="index" class="taa mrp">
+						<image :src="item.member.avatar" mode="" class="aimg"></image>
+						<view class="imgAPa">
+							<view class="paName">
+								{{ item.member.uname }}
+							</view>
+							{{ item.content.message }}
+						</view>
+					</view>
+				</view>
+			</scroll-view>
 		</view>
 	</view>
 </template>
@@ -187,7 +209,12 @@
 				sortNum: 2,
 				firstShow: false,
 				acount: 0,
-				showBottom: false
+				showBottom: false,
+				screenHeight: '',
+				moreRpList: [],
+				showMoreRp: false,
+				moreRpPn: 1,
+				rpid: ''
 			}
 		},
 		onLoad(option) {
@@ -246,6 +273,11 @@
 					}
 				})
 			}
+			uni.getSystemInfo({
+				success: (res) => {
+					this.screenHeight = res.screenHeight
+				}
+			})
 		},
 		onReady() {
 			this.videoContext = uni.createVideoContext('video_bl')
@@ -326,6 +358,31 @@
 						this.resq = [...this.resq, ...res.data.data.replies]
 					}
 				})
+			},
+			showMoreRep(rpid) {
+				this.showMoreRp = true
+				uni.request({
+					url: 'http://api.bilibili.com/x/v2/reply/reply',
+					data: {
+						type: '1',
+						oid: this.oid,
+						root: rpid,
+						pn: this.moreRpPn
+					},
+					success: (res) => {
+						this.rpid = rpid
+						this.moreRpList = [...this.moreRpList, ...res.data.data.replies]
+					}
+				})
+			},
+			closeMoreRep() {
+				this.showMoreRp = false
+				this.moreRpPn = 1
+				this.moreRpList = []
+			},
+			nextPageMoreRp() {
+				this.moreRpPn = this.moreRpPn + 1
+				this.showMoreRep(this.rpid)
 			},
 			getAcount(oid) {
 				uni.request({

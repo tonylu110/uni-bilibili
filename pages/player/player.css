@@ -263,3 +263,30 @@ video{
 	flex-direction: row;
 	align-items: center;
 }
+
+.more_rp{
+	position: fixed;
+	width: 750rpx;
+	background-color: white;
+	z-index: 521;
+}
+.close_more_rp{
+	width: 710rpx;
+	height: 35px;
+	display: flex;
+	flex-direction: row;
+	padding-right: 20rpx;
+	padding-left: 20rpx;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0px 0px 10px #00000020;
+}
+.more_rp_list{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 10px;
+}
+.mrp{
+	width: 690rpx;
+}
