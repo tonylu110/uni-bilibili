@@ -59,10 +59,9 @@
 		},
 		onPullDownRefresh() {
 			setTimeout(() => {
-				uni.stopPullDownRefresh();
 				this.list_main = []
 				this.getList(false, 1)
-			}, 1000);
+			},300)
 		},
 		onReachBottom () {
 			var page = this.page = this.page + 1 
@@ -82,6 +81,7 @@
 						url:'https://www.bilibili.com/index/ding.json?page=' + this.page,
 						success: (res) => {
 							this.list_main = res.data.douga
+							uni.stopPullDownRefresh()
 							this.no_net = false
 						},
 						fail: () => {
